@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{k+kt}{int} \PYGdefault{n}{par}\PYGdefault{p}{[}\PYGdefault{n}{MAXN}\PYGdefault{p}{];}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{init}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{N}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{N}\PYGdefault{p}{;}\PYGdefault{o}{++}\PYGdefault{n}{i}\PYGdefault{p}{)} \PYGdefault{n}{par}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{i}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{int} \PYGdefault{n+nf}{find}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{x}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{par}\PYGdefault{p}{[}\PYGdefault{n}{x}\PYGdefault{p}{]}\PYGdefault{o}{==}\PYGdefault{n}{x}\PYGdefault{p}{)} \PYGdefault{k}{return} \PYGdefault{n}{x}\PYGdefault{p}{;}
+    \PYGdefault{k}{return} \PYGdefault{n}{par}\PYGdefault{p}{[}\PYGdefault{n}{x}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{find}\PYGdefault{p}{(}\PYGdefault{n}{par}\PYGdefault{p}{[}\PYGdefault{n}{x}\PYGdefault{p}{]);}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{uni}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{A}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{B}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{x}\PYGdefault{o}{=}\PYGdefault{n}{find}\PYGdefault{p}{(}\PYGdefault{n}{A}\PYGdefault{p}{),}\PYGdefault{n}{y}\PYGdefault{o}{=}\PYGdefault{n}{find}\PYGdefault{p}{(}\PYGdefault{n}{B}\PYGdefault{p}{);}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{x}\PYGdefault{o}{==}\PYGdefault{n}{y}\PYGdefault{p}{)} \PYGdefault{k}{return} \PYGdefault{p}{;}
+    \PYGdefault{n}{par}\PYGdefault{p}{[}\PYGdefault{n}{x}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{y}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{bool} \PYGdefault{n+nf}{same}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{A}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{B}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{return} \PYGdefault{n}{find}\PYGdefault{p}{(}\PYGdefault{n}{A}\PYGdefault{p}{)}\PYGdefault{o}{==}\PYGdefault{n}{find}\PYGdefault{p}{(}\PYGdefault{n}{B}\PYGdefault{p}{);}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

@@ -1,0 +1,53 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{k}{struct} \PYGdefault{n}{SCC}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{n}{vector}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{k+kt}{int}\PYGdefault{o}{\PYGdefaultZgt{}} \PYGdefault{n}{G}\PYGdefault{p}{[}\PYGdefault{n}{MAXN}\PYGdefault{p}{];}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{pre}\PYGdefault{p}{[}\PYGdefault{n}{MAXN}\PYGdefault{p}{],}\PYGdefault{n}{lowlink}\PYGdefault{p}{[}\PYGdefault{n}{MAXN}\PYGdefault{p}{],}\PYGdefault{n}{sccno}\PYGdefault{p}{[}\PYGdefault{n}{MAXN}\PYGdefault{p}{],}\PYGdefault{n}{dfs\PYGdefaultZus{}clock}\PYGdefault{p}{,}\PYGdefault{n}{scc}\PYGdefault{p}{;}
+    \PYGdefault{c+c1}{//scc:强连通分量个数，sccno[i]:缩点后i所在点编号}
+    \PYGdefault{n}{stack}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{k+kt}{int}\PYGdefault{o}{\PYGdefaultZgt{}} \PYGdefault{n}{s}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{void} \PYGdefault{n+nf}{init}\PYGdefault{p}{()}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{N}\PYGdefault{p}{;}\PYGdefault{o}{++}\PYGdefault{n}{i}\PYGdefault{p}{)} \PYGdefault{n}{G}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{].}\PYGdefault{n}{clear}\PYGdefault{p}{();}
+        \PYGdefault{n}{memset}\PYGdefault{p}{(}\PYGdefault{n}{sccno}\PYGdefault{p}{,}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{,}\PYGdefault{k}{sizeof}\PYGdefault{p}{(}\PYGdefault{n}{sccno}\PYGdefault{p}{));}
+        \PYGdefault{n}{memset}\PYGdefault{p}{(}\PYGdefault{n}{pre}\PYGdefault{p}{,}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{,}\PYGdefault{k}{sizeof}\PYGdefault{p}{(}\PYGdefault{n}{pre}\PYGdefault{p}{));}
+        \PYGdefault{k}{while}\PYGdefault{p}{(}\PYGdefault{o}{!}\PYGdefault{n}{s}\PYGdefault{p}{.}\PYGdefault{n}{empty}\PYGdefault{p}{())} \PYGdefault{n}{s}\PYGdefault{p}{.}\PYGdefault{n}{pop}\PYGdefault{p}{();}
+        \PYGdefault{n}{dfs\PYGdefaultZus{}clock}\PYGdefault{o}{=}\PYGdefault{n}{scc}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{k+kt}{void} \PYGdefault{n+nf}{add\PYGdefaultZus{}edge}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{u}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{v}\PYGdefault{p}{)}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{n}{G}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{].}\PYGdefault{n}{push\PYGdefaultZus{}back}\PYGdefault{p}{(}\PYGdefault{n}{v}\PYGdefault{p}{);}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{k+kt}{void} \PYGdefault{n+nf}{tarjan}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{u}\PYGdefault{p}{)}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{n}{pre}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{lowlink}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{]}\PYGdefault{o}{=++}\PYGdefault{n}{dfs\PYGdefaultZus{}clock}\PYGdefault{p}{;}
+        \PYGdefault{n}{s}\PYGdefault{p}{.}\PYGdefault{n}{push}\PYGdefault{p}{(}\PYGdefault{n}{u}\PYGdefault{p}{);}
+        \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{G}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{].}\PYGdefault{n}{size}\PYGdefault{p}{();}\PYGdefault{o}{++}\PYGdefault{n}{i}\PYGdefault{p}{)}
+        \PYGdefault{p}{\PYGdefaultZob{}}
+            \PYGdefault{k+kt}{int} \PYGdefault{n}{v}\PYGdefault{o}{=}\PYGdefault{n}{G}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{][}\PYGdefault{n}{i}\PYGdefault{p}{];}
+            \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{o}{!}\PYGdefault{n}{pre}\PYGdefault{p}{[}\PYGdefault{n}{v}\PYGdefault{p}{])}
+            \PYGdefault{p}{\PYGdefaultZob{}}
+                \PYGdefault{n}{tarjan}\PYGdefault{p}{(}\PYGdefault{n}{v}\PYGdefault{p}{);}
+                \PYGdefault{n}{lowlink}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{min}\PYGdefault{p}{(}\PYGdefault{n}{lowlink}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{],}\PYGdefault{n}{lowlink}\PYGdefault{p}{[}\PYGdefault{n}{v}\PYGdefault{p}{]);}
+            \PYGdefault{p}{\PYGdefaultZcb{}}
+            \PYGdefault{k}{else} \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{o}{!}\PYGdefault{n}{sccno}\PYGdefault{p}{[}\PYGdefault{n}{v}\PYGdefault{p}{])}
+            \PYGdefault{p}{\PYGdefaultZob{}}
+                \PYGdefault{n}{lowlink}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{min}\PYGdefault{p}{(}\PYGdefault{n}{lowlink}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{],}\PYGdefault{n}{pre}\PYGdefault{p}{[}\PYGdefault{n}{v}\PYGdefault{p}{]);}
+            \PYGdefault{p}{\PYGdefaultZcb{}}
+        \PYGdefault{p}{\PYGdefaultZcb{}}
+        \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{lowlink}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{]}\PYGdefault{o}{==}\PYGdefault{n}{pre}\PYGdefault{p}{[}\PYGdefault{n}{u}\PYGdefault{p}{])}
+        \PYGdefault{p}{\PYGdefaultZob{}}
+            \PYGdefault{o}{++}\PYGdefault{n}{scc}\PYGdefault{p}{;}
+            \PYGdefault{k}{for}\PYGdefault{p}{(;;)}
+            \PYGdefault{p}{\PYGdefaultZob{}}
+                \PYGdefault{k+kt}{int} \PYGdefault{n}{v}\PYGdefault{o}{=}\PYGdefault{n}{s}\PYGdefault{p}{.}\PYGdefault{n}{top}\PYGdefault{p}{();}\PYGdefault{n}{s}\PYGdefault{p}{.}\PYGdefault{n}{pop}\PYGdefault{p}{();}
+                \PYGdefault{n}{sccno}\PYGdefault{p}{[}\PYGdefault{n}{v}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{scc}\PYGdefault{p}{;}
+                \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{v}\PYGdefault{o}{==}\PYGdefault{n}{u}\PYGdefault{p}{)} \PYGdefault{k}{break}\PYGdefault{p}{;}
+            \PYGdefault{p}{\PYGdefaultZcb{}}
+        \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{c+cm}{/*全图缩点}
+\PYGdefault{c+cm}{        for(int i=1;i\PYGdefaultZlt{}=N;++i)}
+\PYGdefault{c+cm}{            if(!pre[i]) tarjan(i);}
+\PYGdefault{c+cm}{    */}
+\PYGdefault{p}{\PYGdefaultZcb{};}
+\end{Verbatim}

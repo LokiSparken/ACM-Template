@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+cp}{\PYGdefaultZsh{}include}\PYGdefault{c+cpf}{\PYGdefaultZlt{}iostream\PYGdefaultZgt{}}
+\PYGdefault{c+cp}{\PYGdefaultZsh{}include}\PYGdefault{c+cpf}{\PYGdefaultZlt{}cstdio\PYGdefaultZgt{}}
+\PYGdefault{k}{using} \PYGdefault{k}{namespace} \PYGdefault{n}{std}\PYGdefault{p}{;}
+\PYGdefault{k}{const} \PYGdefault{k+kt}{int} \PYGdefault{n}{maxn}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{1e3}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{5}\PYGdefault{p}{;}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{dp}\PYGdefault{p}{[}\PYGdefault{n}{maxn}\PYGdefault{p}{][}\PYGdefault{n}{maxn}\PYGdefault{p}{];}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{s}\PYGdefault{p}{[}\PYGdefault{n}{maxn}\PYGdefault{p}{];}
+\PYGdefault{c+c1}{//储存区间段的最值信息等}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{RMQ\PYGdefaultZus{}init}\PYGdefault{p}{()}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{c+c1}{//注意编号起始位置}
+    \PYGdefault{c+c1}{//依据题进行取值}
+    \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{n}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{++}\PYGdefault{p}{)}\PYGdefault{n}{dp}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{][}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{s}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{];}
+
+    \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{j}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;(}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{n}{j}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{n}\PYGdefault{p}{;}\PYGdefault{n}{j}\PYGdefault{o}{++}\PYGdefault{p}{)}
+        \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{+}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{n}{j}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{n}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{++}\PYGdefault{p}{)}
+            \PYGdefault{n}{dp}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{][}\PYGdefault{n}{j}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{min}\PYGdefault{p}{(}\PYGdefault{n}{dp}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{][}\PYGdefault{n}{j}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{],}\PYGdefault{n}{dp}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{o}{+}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{p}{(}\PYGdefault{n}{j}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{))][}\PYGdefault{n}{j}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]);}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{int} \PYGdefault{n+nf}{RMQ}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{l}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{r}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{k}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+    \PYGdefault{k}{while}\PYGdefault{p}{((}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{p}{(}\PYGdefault{n}{k}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{))}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{r}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{l}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{)}\PYGdefault{n}{k}\PYGdefault{o}{++}\PYGdefault{p}{;}
+    \PYGdefault{k}{return} \PYGdefault{n}{min}\PYGdefault{p}{(}\PYGdefault{n}{dp}\PYGdefault{p}{[}\PYGdefault{n}{l}\PYGdefault{p}{][}\PYGdefault{n}{k}\PYGdefault{p}{],}\PYGdefault{n}{dp}\PYGdefault{p}{[}\PYGdefault{n}{r}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{p}{(}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{n}{k}\PYGdefault{p}{)}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{][}\PYGdefault{n}{k}\PYGdefault{p}{]);}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

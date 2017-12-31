@@ -1,0 +1,54 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{k+kt}{int} \PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{MAXN}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{];}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{MAXN}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{];}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{pushUp}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{rt}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{lson}\PYGdefault{p}{]}\PYGdefault{o}{+}\PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{rson}\PYGdefault{p}{];}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{build}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{L}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{R}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{rt}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{L}\PYGdefault{o}{==}\PYGdefault{n}{R}\PYGdefault{p}{)}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+        \PYGdefault{k}{return} \PYGdefault{p}{;}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{mid}\PYGdefault{o}{=}\PYGdefault{p}{(}\PYGdefault{n}{L}\PYGdefault{o}{+}\PYGdefault{n}{R}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZgt{}\PYGdefaultZgt{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+    \PYGdefault{n}{build}\PYGdefault{p}{(}\PYGdefault{n}{Lson}\PYGdefault{p}{);}
+    \PYGdefault{n}{build}\PYGdefault{p}{(}\PYGdefault{n}{Rson}\PYGdefault{p}{);}
+    \PYGdefault{n}{pushUp}\PYGdefault{p}{(}\PYGdefault{n}{rt}\PYGdefault{p}{);}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{pushDown}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{rt}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{len}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{==}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{)} \PYGdefault{k}{return} \PYGdefault{p}{;}
+    \PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{lson}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{];}
+    \PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rson}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{];}
+    \PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{lson}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{*}\PYGdefault{p}{(}\PYGdefault{n}{len}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{p}{(}\PYGdefault{n}{len}\PYGdefault{o}{\PYGdefaultZgt{}\PYGdefaultZgt{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{));}
+    \PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{rson}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{*}\PYGdefault{p}{(}\PYGdefault{n}{len}\PYGdefault{o}{\PYGdefaultZgt{}\PYGdefaultZgt{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{);}
+    \PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{update}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{l}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{r}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{val}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{L}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{R}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{rt}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{l}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{L} \PYGdefault{o}{\PYGdefaultZam{}\PYGdefaultZam{}} \PYGdefault{n}{R}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{r}\PYGdefault{p}{)}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{n}{seg}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{val}\PYGdefault{p}{;}
+        \PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{val}\PYGdefault{o}{*}\PYGdefault{p}{(}\PYGdefault{n}{R}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{L}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{);}            \PYGdefault{c+c1}{//注意所做操作}
+        \PYGdefault{k}{return} \PYGdefault{p}{;}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{n}{pushDown}\PYGdefault{p}{(}\PYGdefault{n}{rt}\PYGdefault{p}{,(}\PYGdefault{n}{R}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{L}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{));}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{mid}\PYGdefault{o}{=}\PYGdefault{p}{(}\PYGdefault{n}{L}\PYGdefault{o}{+}\PYGdefault{n}{R}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZgt{}\PYGdefaultZgt{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{l}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{mid}\PYGdefault{p}{)} \PYGdefault{n}{update}\PYGdefault{p}{(}\PYGdefault{n}{l}\PYGdefault{p}{,}\PYGdefault{n}{r}\PYGdefault{p}{,}\PYGdefault{n}{val}\PYGdefault{p}{,}\PYGdefault{n}{Lson}\PYGdefault{p}{);}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{mid}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{r}\PYGdefault{p}{)} \PYGdefault{n}{update}\PYGdefault{p}{(}\PYGdefault{n}{l}\PYGdefault{p}{,}\PYGdefault{n}{r}\PYGdefault{p}{,}\PYGdefault{n}{val}\PYGdefault{p}{,}\PYGdefault{n}{Rson}\PYGdefault{p}{);}
+    \PYGdefault{n}{pushUp}\PYGdefault{p}{(}\PYGdefault{n}{rt}\PYGdefault{p}{);}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{int} \PYGdefault{n+nf}{query}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{l}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{r}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{L}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{R}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{rt}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{l}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{L} \PYGdefault{o}{\PYGdefaultZam{}\PYGdefaultZam{}} \PYGdefault{n}{r}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{R}\PYGdefault{p}{)} \PYGdefault{k}{return} \PYGdefault{n}{sum}\PYGdefault{p}{[}\PYGdefault{n}{rt}\PYGdefault{p}{];}
+    \PYGdefault{n}{pushDown}\PYGdefault{p}{(}\PYGdefault{n}{rt}\PYGdefault{p}{,}\PYGdefault{n}{R}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{L}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{);}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{mid}\PYGdefault{o}{=}\PYGdefault{p}{(}\PYGdefault{n}{L}\PYGdefault{o}{+}\PYGdefault{n}{R}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZgt{}\PYGdefaultZgt{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{s}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{l}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{mid}\PYGdefault{p}{)} \PYGdefault{n}{s}\PYGdefault{o}{+=}\PYGdefault{n}{query}\PYGdefault{p}{(}\PYGdefault{n}{l}\PYGdefault{p}{,}\PYGdefault{n}{r}\PYGdefault{p}{,}\PYGdefault{n}{Lson}\PYGdefault{p}{);}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{mid}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{r}\PYGdefault{p}{)} \PYGdefault{n}{s}\PYGdefault{o}{+=}\PYGdefault{n}{query}\PYGdefault{p}{(}\PYGdefault{n}{l}\PYGdefault{p}{,}\PYGdefault{n}{r}\PYGdefault{p}{,}\PYGdefault{n}{Rson}\PYGdefault{p}{);}
+    \PYGdefault{k}{return} \PYGdefault{n}{s}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

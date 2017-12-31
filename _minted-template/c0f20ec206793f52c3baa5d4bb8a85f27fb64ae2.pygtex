@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+cp}{\PYGdefaultZsh{}include} \PYGdefault{c+cpf}{\PYGdefaultZlt{}bits/stdc++.h\PYGdefaultZgt{}}
+\PYGdefault{k}{using} \PYGdefault{k}{namespace} \PYGdefault{n}{std}\PYGdefault{p}{;}
+\PYGdefault{c+cp}{\PYGdefaultZsh{}define X first}
+\PYGdefault{c+cp}{\PYGdefaultZsh{}define Y second}
+\PYGdefault{k}{const} \PYGdefault{k+kt}{int} \PYGdefault{n}{INF}\PYGdefault{o}{=}\PYGdefault{l+m+mh}{0x3f3f3f3f}\PYGdefault{p}{;}
+\PYGdefault{k}{const} \PYGdefault{k+kt}{double} \PYGdefault{n}{eps}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{1e\PYGdefaultZhy{}6}\PYGdefault{p}{;}
+\PYGdefault{c+cm}{/*}
+\PYGdefault{c+cm}{    整型初始化memset(d,0x3f,sizeof(d));}
+\PYGdefault{c+cm}{    浮点初始化memset(d,0x7f,sizeof(d));}
+\PYGdefault{c+cm}{    浮点数比较大小:  相等 if(fabs(a\PYGdefaultZhy{}b)\PYGdefaultZlt{}=eps)}
+\PYGdefault{c+cm}{                     大于 if(a\PYGdefaultZgt{}b \PYGdefaultZam{}\PYGdefaultZam{} fabs(a\PYGdefaultZhy{}b)\PYGdefaultZgt{}eps)}
+\PYGdefault{c+cm}{                     小于 if(a\PYGdefaultZlt{}b \PYGdefaultZam{}\PYGdefaultZam{} fabs(a\PYGdefaultZhy{}b)\PYGdefaultZgt{}eps)}
+\PYGdefault{c+cm}{*/}
+\end{Verbatim}

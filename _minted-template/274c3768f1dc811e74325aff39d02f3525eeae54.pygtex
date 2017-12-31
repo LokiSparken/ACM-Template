@@ -1,0 +1,53 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{k}{const} \PYGdefault{k+kt}{int} \PYGdefault{n}{maxn}\PYGdefault{o}{=}\PYGdefault{l+m+mf}{1e5}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{5}\PYGdefault{p}{;}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{c}\PYGdefault{p}{[}\PYGdefault{n}{maxn}\PYGdefault{p}{],}\PYGdefault{n}{r}\PYGdefault{p}{[}\PYGdefault{n}{maxn}\PYGdefault{p}{];}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{n}\PYGdefault{p}{;}
+\PYGdefault{c+c1}{//模线性同余方程组（CRT非素数）}
+\PYGdefault{c+c1}{//两两方程结合法}
+\PYGdefault{c+c1}{//r[i]=x\PYGdefaultZpc{}chu[i],r[i]存余数,chu[i]存除数}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{exgcd}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{a}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{b}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{o}{\PYGdefaultZam{}}\PYGdefault{n}{d}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{o}{\PYGdefaultZam{}}\PYGdefault{n}{x}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{o}{\PYGdefaultZam{}}\PYGdefault{n}{y}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{o}{!}\PYGdefault{n}{b}\PYGdefault{p}{)}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{n}{x}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}\PYGdefault{n}{y}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}\PYGdefault{n}{d}\PYGdefault{o}{=}\PYGdefault{n}{a}\PYGdefault{p}{;}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{k}{else}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{n}{exgcd}\PYGdefault{p}{(}\PYGdefault{n}{b}\PYGdefault{p}{,}\PYGdefault{n}{a}\PYGdefault{o}{\PYGdefaultZpc{}}\PYGdefault{n}{b}\PYGdefault{p}{,}\PYGdefault{n}{d}\PYGdefault{p}{,}\PYGdefault{n}{y}\PYGdefault{p}{,}\PYGdefault{n}{x}\PYGdefault{p}{);}
+        \PYGdefault{n}{y}\PYGdefault{o}{\PYGdefaultZhy{}=}\PYGdefault{n}{a}\PYGdefault{o}{/}\PYGdefault{n}{b}\PYGdefault{o}{*}\PYGdefault{n}{x}\PYGdefault{p}{;}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{int} \PYGdefault{n+nf}{Chinese\PYGdefaultZus{}Remainder}\PYGdefault{p}{()}
+\PYGdefault{p}{\PYGdefaultZob{}}
+         \PYGdefault{k+kt}{int} \PYGdefault{n}{c1}\PYGdefault{o}{=}\PYGdefault{n}{c}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{],}\PYGdefault{n}{r1}\PYGdefault{o}{=}\PYGdefault{n}{r}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{];}
+         \PYGdefault{c+c1}{//a1,r1为合并项}
+         \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{n}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{++}\PYGdefault{p}{)}
+         \PYGdefault{p}{\PYGdefaultZob{}}
+             \PYGdefault{k+kt}{int} \PYGdefault{n}{c2}\PYGdefault{o}{=}\PYGdefault{n}{c}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{],}\PYGdefault{n}{r2}\PYGdefault{o}{=}\PYGdefault{n}{r}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{];}
+             \PYGdefault{c+c1}{//a2,r2为当前项}
+             \PYGdefault{k+kt}{int} \PYGdefault{n}{d}\PYGdefault{p}{,}\PYGdefault{n}{x}\PYGdefault{p}{,}\PYGdefault{n}{y}\PYGdefault{p}{,}\PYGdefault{n}{p}\PYGdefault{o}{=}\PYGdefault{n}{r2}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{r1}\PYGdefault{p}{;}
+
+             \PYGdefault{n}{exgcd}\PYGdefault{p}{(}\PYGdefault{n}{c1}\PYGdefault{p}{,}\PYGdefault{n}{c2}\PYGdefault{p}{,}\PYGdefault{n}{d}\PYGdefault{p}{,}\PYGdefault{n}{x}\PYGdefault{p}{,}\PYGdefault{n}{y}\PYGdefault{p}{);}
+
+             \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{p}\PYGdefault{o}{\PYGdefaultZpc{}}\PYGdefault{n}{d}\PYGdefault{p}{)} \PYGdefault{k}{return} \PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+
+             \PYGdefault{k+kt}{int} \PYGdefault{n}{z}\PYGdefault{o}{=}\PYGdefault{n}{c2}\PYGdefault{o}{/}\PYGdefault{n}{d}\PYGdefault{p}{;}
+             \PYGdefault{n}{x}\PYGdefault{o}{=}\PYGdefault{p}{(}\PYGdefault{n}{x}\PYGdefault{o}{*}\PYGdefault{p}{(}\PYGdefault{n}{p}\PYGdefault{o}{/}\PYGdefault{n}{d}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZpc{}}\PYGdefault{n}{z}\PYGdefault{o}{+}\PYGdefault{n}{z}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZpc{}}\PYGdefault{n}{z}\PYGdefault{p}{;}
+             \PYGdefault{n}{r1}\PYGdefault{o}{=}\PYGdefault{n}{x}\PYGdefault{o}{*}\PYGdefault{n}{c1}\PYGdefault{o}{+}\PYGdefault{n}{r1}\PYGdefault{p}{;}
+             \PYGdefault{n}{c1}\PYGdefault{o}{=}\PYGdefault{n}{c1}\PYGdefault{o}{*}\PYGdefault{p}{(}\PYGdefault{n}{c2}\PYGdefault{o}{/}\PYGdefault{n}{d}\PYGdefault{p}{);}
+             \PYGdefault{n}{r1}\PYGdefault{o}{=}\PYGdefault{p}{(}\PYGdefault{n}{r1}\PYGdefault{o}{\PYGdefaultZpc{}}\PYGdefault{n}{c1}\PYGdefault{o}{+}\PYGdefault{n}{c1}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZpc{}}\PYGdefault{n}{c1}\PYGdefault{p}{;}
+         \PYGdefault{p}{\PYGdefaultZcb{}}
+         \PYGdefault{k}{return} \PYGdefault{p}{(}\PYGdefault{n}{r1}\PYGdefault{o}{\PYGdefaultZpc{}}\PYGdefault{n}{c1}\PYGdefault{o}{+}\PYGdefault{n}{c1}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZpc{}}\PYGdefault{n}{c1}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{c+c1}{//队长后面是我测试的}
+\PYGdefault{k+kt}{int} \PYGdefault{n+nf}{main}\PYGdefault{p}{()}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{n}{cin}\PYGdefault{o}{\PYGdefaultZgt{}\PYGdefaultZgt{}}\PYGdefault{n}{n}\PYGdefault{p}{;}
+
+         \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{n}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{++}\PYGdefault{p}{)}
+        \PYGdefault{p}{\PYGdefaultZob{}}
+            \PYGdefault{n}{cin}\PYGdefault{o}{\PYGdefaultZgt{}\PYGdefaultZgt{}}\PYGdefault{n}{c}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{]}\PYGdefault{o}{\PYGdefaultZgt{}\PYGdefaultZgt{}}\PYGdefault{n}{r}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{];}
+        \PYGdefault{p}{\PYGdefaultZcb{}}
+        \PYGdefault{n}{cout}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{n}{Chinese\PYGdefaultZus{}Remainder}\PYGdefault{p}{()}\PYGdefault{o}{\PYGdefaultZlt{}\PYGdefaultZlt{}}\PYGdefault{n}{endl}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

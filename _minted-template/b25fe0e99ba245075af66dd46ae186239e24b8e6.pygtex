@@ -1,0 +1,37 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{k}{struct} \PYGdefault{n}{kmp}\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{s}\PYGdefault{p}{[}\PYGdefault{n}{maxN}\PYGdefault{p}{];}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{p}\PYGdefault{p}{[}\PYGdefault{n}{maxM}\PYGdefault{p}{];}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{f}\PYGdefault{p}{[}\PYGdefault{n}{maxM}\PYGdefault{p}{];}
+    \PYGdefault{k+kt}{void} \PYGdefault{n+nf}{getfail}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{o}{*}\PYGdefault{n}{p}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{o}{*}\PYGdefault{n}{f}\PYGdefault{p}{)}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{k+kt}{int} \PYGdefault{n}{m}\PYGdefault{o}{=}\PYGdefault{n}{M}\PYGdefault{p}{;}
+        \PYGdefault{n}{f}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+        \PYGdefault{n}{f}\PYGdefault{p}{[}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+        \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{m}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{++}\PYGdefault{p}{)}
+        \PYGdefault{p}{\PYGdefaultZob{}}
+            \PYGdefault{k+kt}{int} \PYGdefault{n}{j}\PYGdefault{o}{=}\PYGdefault{n}{f}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{];}
+            \PYGdefault{k}{while}\PYGdefault{p}{(}\PYGdefault{n}{j}\PYGdefault{o}{\PYGdefaultZam{}\PYGdefaultZam{}}\PYGdefault{n}{p}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{]}\PYGdefault{o}{!=}\PYGdefault{n}{p}\PYGdefault{p}{[}\PYGdefault{n}{j}\PYGdefault{p}{])}
+                \PYGdefault{n}{j}\PYGdefault{o}{=}\PYGdefault{n}{f}\PYGdefault{p}{[}\PYGdefault{n}{j}\PYGdefault{p}{];}
+            \PYGdefault{n}{f}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{]}\PYGdefault{o}{=}\PYGdefault{n}{p}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{]}\PYGdefault{o}{==}\PYGdefault{n}{p}\PYGdefault{p}{[}\PYGdefault{n}{j}\PYGdefault{p}{]}\PYGdefault{o}{?}\PYGdefault{n}{j}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{o}{:}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+        \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{k+kt}{int} \PYGdefault{n+nf}{find}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{o}{*}\PYGdefault{n}{t}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{o}{*}\PYGdefault{n}{p}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{o}{*}\PYGdefault{n}{f}\PYGdefault{p}{)}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{k+kt}{int} \PYGdefault{n}{n}\PYGdefault{o}{=}\PYGdefault{n}{N}\PYGdefault{p}{;}
+        \PYGdefault{k+kt}{int} \PYGdefault{n}{m}\PYGdefault{o}{=}\PYGdefault{n}{M}\PYGdefault{p}{;}
+        \PYGdefault{n}{getfail}\PYGdefault{p}{(}\PYGdefault{n}{p}\PYGdefault{p}{,}\PYGdefault{n}{f}\PYGdefault{p}{);}
+        \PYGdefault{k+kt}{int} \PYGdefault{n}{j}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+        \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{n}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{++}\PYGdefault{p}{)}
+        \PYGdefault{p}{\PYGdefaultZob{}}
+            \PYGdefault{k}{while}\PYGdefault{p}{(}\PYGdefault{n}{j}\PYGdefault{o}{\PYGdefaultZam{}\PYGdefaultZam{}}\PYGdefault{n}{p}\PYGdefault{p}{[}\PYGdefault{n}{j}\PYGdefault{p}{]}\PYGdefault{o}{!=}\PYGdefault{n}{t}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{])}
+                \PYGdefault{n}{j}\PYGdefault{o}{=}\PYGdefault{n}{f}\PYGdefault{p}{[}\PYGdefault{n}{j}\PYGdefault{p}{];}
+            \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{p}\PYGdefault{p}{[}\PYGdefault{n}{j}\PYGdefault{p}{]}\PYGdefault{o}{==}\PYGdefault{n}{t}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{])}
+                \PYGdefault{n}{j}\PYGdefault{o}{++}\PYGdefault{p}{;}
+            \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{j}\PYGdefault{o}{==}\PYGdefault{n}{m}\PYGdefault{p}{)}
+                \PYGdefault{k}{return} \PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{m}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{2}\PYGdefault{p}{;}
+        \PYGdefault{p}{\PYGdefaultZcb{}}
+        \PYGdefault{k}{return} \PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{p}{\PYGdefaultZcb{}}\PYGdefault{n}{ans}\PYGdefault{p}{;}
+\end{Verbatim}

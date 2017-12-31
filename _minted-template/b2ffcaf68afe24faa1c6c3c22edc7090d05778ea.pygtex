@@ -1,0 +1,30 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+cm}{/*}
+\PYGdefault{c+cm}{    一、set}
+\PYGdefault{c+cm}{    set和multiset用法一样，multiset允许重复元素}
+\PYGdefault{c+cm}{    利用set从大到小排序（自定义排序函数）}
+\PYGdefault{c+cm}{*/}
+\PYGdefault{k}{struct} \PYGdefault{n}{classcmp}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k+kt}{bool} \PYGdefault{k}{operator}\PYGdefault{p}{()(}\PYGdefault{k}{const} \PYGdefault{k+kt}{int} \PYGdefault{o}{\PYGdefaultZam{}}\PYGdefault{n}{lhs}\PYGdefault{p}{,}\PYGdefault{k}{const} \PYGdefault{k+kt}{int} \PYGdefault{o}{\PYGdefaultZam{}}\PYGdefault{n}{rhs}\PYGdefault{p}{)}\PYGdefault{k}{const}
+    \PYGdefault{p}{\PYGdefaultZob{}}\PYGdefault{k}{return} \PYGdefault{n}{lhs}\PYGdefault{o}{\PYGdefaultZgt{}}\PYGdefault{n}{rhs}\PYGdefault{p}{;\PYGdefaultZcb{}}
+\PYGdefault{p}{\PYGdefaultZcb{};}
+\PYGdefault{n}{multiset}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{k+kt}{int}\PYGdefault{p}{,}\PYGdefault{n}{classcmp}\PYGdefault{o}{\PYGdefaultZgt{}} \PYGdefault{n}{s}\PYGdefault{p}{;}
+\PYGdefault{c+c1}{//结构体自定义排序函数}
+\PYGdefault{k}{struct} \PYGdefault{n}{Node}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{x}\PYGdefault{p}{,}\PYGdefault{n}{y}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{};}
+\PYGdefault{k}{struct} \PYGdefault{n}{classcmp}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k+kt}{bool} \PYGdefault{k}{operator}\PYGdefault{p}{()(}\PYGdefault{k}{const} \PYGdefault{n}{Node} \PYGdefault{o}{\PYGdefaultZam{}}\PYGdefault{n}{a}\PYGdefault{p}{,}\PYGdefault{k}{const} \PYGdefault{n}{Node} \PYGdefault{o}{\PYGdefaultZam{}}\PYGdefault{n}{b}\PYGdefault{p}{)}\PYGdefault{k}{const}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{k}{if}\PYGdefault{p}{(}\PYGdefault{n}{a}\PYGdefault{p}{.}\PYGdefault{n}{x}\PYGdefault{o}{!=}\PYGdefault{n}{b}\PYGdefault{p}{.}\PYGdefault{n}{x}\PYGdefault{p}{)} \PYGdefault{k}{return} \PYGdefault{n}{a}\PYGdefault{p}{.}\PYGdefault{n}{x}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{b}\PYGdefault{p}{.}\PYGdefault{n}{x}\PYGdefault{p}{;}
+        \PYGdefault{k}{else} \PYGdefault{k}{return} \PYGdefault{n}{a}\PYGdefault{p}{.}\PYGdefault{n}{y}\PYGdefault{o}{\PYGdefaultZgt{}}\PYGdefault{n}{b}\PYGdefault{p}{.}\PYGdefault{n}{y}\PYGdefault{p}{;}
+    \PYGdefault{p}{\PYGdefaultZcb{}}\PYGdefault{c+c1}{//按x从小到大，按y从大到小}
+\PYGdefault{p}{\PYGdefaultZcb{};}
+\PYGdefault{n}{multiset}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{Node}\PYGdefault{p}{,}\PYGdefault{n}{classcmp}\PYGdefault{o}{\PYGdefaultZgt{}} \PYGdefault{n}{s}\PYGdefault{p}{;}
+\PYGdefault{n}{multiset}\PYGdefault{o}{\PYGdefaultZlt{}}\PYGdefault{n}{Node}\PYGdefault{p}{,}\PYGdefault{n}{classcmp}\PYGdefault{o}{\PYGdefaultZgt{}::}\PYGdefault{n}{iterator} \PYGdefault{n}{it}\PYGdefault{p}{;}\PYGdefault{c+c1}{//若定义迭代器也要带排序函数}
+
+\PYGdefault{c+c1}{//二、string}
+\end{Verbatim}

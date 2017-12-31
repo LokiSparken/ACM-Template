@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{k+kt}{int} \PYGdefault{n}{d}\PYGdefault{p}{[}\PYGdefault{n}{maxn}\PYGdefault{p}{],}\PYGdefault{n}{sum}\PYGdefault{p}{,}\PYGdefault{n}{n}\PYGdefault{p}{;}
+\PYGdefault{c+c1}{//树状数组,n为上界}
+\PYGdefault{c+c1}{//d[maxn]为信息,sum为前d[x]项和,单点更新,区间段求和。}
+\PYGdefault{c+c1}{//解决逆序对,连线交叉点问题等普通一维问题}
+\PYGdefault{c+c1}{//可将非线性排列通过如dfs序转化为线性排列}
+\PYGdefault{k+kt}{int} \PYGdefault{n+nf}{lowbit}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{x}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{return} \PYGdefault{n}{x}\PYGdefault{o}{\PYGdefaultZam{}}\PYGdefault{p}{(}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{x}\PYGdefault{p}{);}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{void} \PYGdefault{n+nf}{add}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{x}\PYGdefault{p}{,}\PYGdefault{k+kt}{int} \PYGdefault{n}{v}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{n}{x}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{n}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{+=}\PYGdefault{n}{lowbit}\PYGdefault{p}{(}\PYGdefault{n}{i}\PYGdefault{p}{))}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{n}{d}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{]}\PYGdefault{o}{+=}\PYGdefault{n}{v}\PYGdefault{p}{;}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\PYGdefault{k+kt}{int} \PYGdefault{n+nf}{getsum}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{x}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{k+kt}{int} \PYGdefault{n}{sum}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}
+    \PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{n}{x}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZgt{}}\PYGdefault{l+m+mi}{0}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZhy{}=}\PYGdefault{n}{lowbit}\PYGdefault{p}{(}\PYGdefault{n}{i}\PYGdefault{p}{))}
+    \PYGdefault{p}{\PYGdefaultZob{}}
+        \PYGdefault{n}{sum}\PYGdefault{o}{+=}\PYGdefault{n}{d}\PYGdefault{p}{[}\PYGdefault{n}{i}\PYGdefault{p}{];}
+    \PYGdefault{p}{\PYGdefaultZcb{}}
+    \PYGdefault{k}{return} \PYGdefault{n}{sum}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}

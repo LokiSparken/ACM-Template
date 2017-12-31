@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYGdefault{c+c1}{//v.push\PYGdefaultZus{}back(old);}
+\PYGdefault{n}{sort}\PYGdefault{p}{(}\PYGdefault{n}{v}\PYGdefault{p}{.}\PYGdefault{n}{begin}\PYGdefault{p}{(),}\PYGdefault{n}{v}\PYGdefault{p}{.}\PYGdefault{n}{end}\PYGdefault{p}{());}
+\PYGdefault{k+kt}{int} \PYGdefault{n}{size}\PYGdefault{o}{=}\PYGdefault{n}{unique}\PYGdefault{p}{(}\PYGdefault{n}{v}\PYGdefault{p}{.}\PYGdefault{n}{begin}\PYGdefault{p}{(),}\PYGdefault{n}{v}\PYGdefault{p}{.}\PYGdefault{n}{end}\PYGdefault{p}{())}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{v}\PYGdefault{p}{.}\PYGdefault{n}{begin}\PYGdefault{p}{();}
+\PYGdefault{k}{for}\PYGdefault{p}{(}\PYGdefault{k+kt}{int} \PYGdefault{n}{i}\PYGdefault{o}{=}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}\PYGdefault{n}{i}\PYGdefault{o}{\PYGdefaultZlt{}=}\PYGdefault{n}{N}\PYGdefault{p}{;}\PYGdefault{o}{++}\PYGdefault{n}{i}\PYGdefault{p}{)}
+\PYGdefault{p}{\PYGdefaultZob{}}
+    \PYGdefault{n}{newData}\PYGdefault{o}{=}\PYGdefault{n}{lower\PYGdefaultZus{}bound}\PYGdefault{p}{(}\PYGdefault{n}{v}\PYGdefault{p}{.}\PYGdefault{n}{begin}\PYGdefault{p}{(),}\PYGdefault{n}{v}\PYGdefault{p}{.}\PYGdefault{n}{begin}\PYGdefault{p}{()}\PYGdefault{o}{+}\PYGdefault{n}{size}\PYGdefault{p}{,}\PYGdefault{n}{oldData}\PYGdefault{p}{)}\PYGdefault{o}{\PYGdefaultZhy{}}\PYGdefault{n}{v}\PYGdefault{p}{.}\PYGdefault{n}{begin}\PYGdefault{p}{()}\PYGdefault{o}{+}\PYGdefault{l+m+mi}{1}\PYGdefault{p}{;}
+\PYGdefault{p}{\PYGdefaultZcb{}}
+\end{Verbatim}
