@@ -1,0 +1,53 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{const} \PYG{k+kt}{int} \PYG{n}{maxn}\PYG{o}{=}\PYG{l+m+mf}{1e5}\PYG{o}{+}\PYG{l+m+mi}{5}\PYG{p}{;}
+\PYG{k+kt}{int} \PYG{n}{c}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{r}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{;}
+\PYG{c+c1}{//模线性同余方程组（CRT非素数）}
+\PYG{c+c1}{//两两方程结合法}
+\PYG{c+c1}{//r[i]=x\PYGZpc{}chu[i],r[i]存余数,chu[i]存除数}
+\PYG{k+kt}{void} \PYG{n+nf}{exgcd}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{a}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{b}\PYG{p}{,}\PYG{k+kt}{int} \PYG{o}{\PYGZam{}}\PYG{n}{d}\PYG{p}{,}\PYG{k+kt}{int} \PYG{o}{\PYGZam{}}\PYG{n}{x}\PYG{p}{,}\PYG{k+kt}{int} \PYG{o}{\PYGZam{}}\PYG{n}{y}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{b}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{x}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{n}{y}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{d}\PYG{o}{=}\PYG{n}{a}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{exgcd}\PYG{p}{(}\PYG{n}{b}\PYG{p}{,}\PYG{n}{a}\PYG{o}{\PYGZpc{}}\PYG{n}{b}\PYG{p}{,}\PYG{n}{d}\PYG{p}{,}\PYG{n}{y}\PYG{p}{,}\PYG{n}{x}\PYG{p}{);}
+        \PYG{n}{y}\PYG{o}{\PYGZhy{}=}\PYG{n}{a}\PYG{o}{/}\PYG{n}{b}\PYG{o}{*}\PYG{n}{x}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{Chinese\PYGZus{}Remainder}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+         \PYG{k+kt}{int} \PYG{n}{c1}\PYG{o}{=}\PYG{n}{c}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{n}{r1}\PYG{o}{=}\PYG{n}{r}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{];}
+         \PYG{c+c1}{//a1,r1为合并项}
+         \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}=}\PYG{n}{n}\PYG{p}{;}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+         \PYG{p}{\PYGZob{}}
+             \PYG{k+kt}{int} \PYG{n}{c2}\PYG{o}{=}\PYG{n}{c}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],}\PYG{n}{r2}\PYG{o}{=}\PYG{n}{r}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+             \PYG{c+c1}{//a2,r2为当前项}
+             \PYG{k+kt}{int} \PYG{n}{d}\PYG{p}{,}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{,}\PYG{n}{p}\PYG{o}{=}\PYG{n}{r2}\PYG{o}{\PYGZhy{}}\PYG{n}{r1}\PYG{p}{;}
+
+             \PYG{n}{exgcd}\PYG{p}{(}\PYG{n}{c1}\PYG{p}{,}\PYG{n}{c2}\PYG{p}{,}\PYG{n}{d}\PYG{p}{,}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{);}
+
+             \PYG{k}{if}\PYG{p}{(}\PYG{n}{p}\PYG{o}{\PYGZpc{}}\PYG{n}{d}\PYG{p}{)} \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+
+             \PYG{k+kt}{int} \PYG{n}{z}\PYG{o}{=}\PYG{n}{c2}\PYG{o}{/}\PYG{n}{d}\PYG{p}{;}
+             \PYG{n}{x}\PYG{o}{=}\PYG{p}{(}\PYG{n}{x}\PYG{o}{*}\PYG{p}{(}\PYG{n}{p}\PYG{o}{/}\PYG{n}{d}\PYG{p}{)}\PYG{o}{\PYGZpc{}}\PYG{n}{z}\PYG{o}{+}\PYG{n}{z}\PYG{p}{)}\PYG{o}{\PYGZpc{}}\PYG{n}{z}\PYG{p}{;}
+             \PYG{n}{r1}\PYG{o}{=}\PYG{n}{x}\PYG{o}{*}\PYG{n}{c1}\PYG{o}{+}\PYG{n}{r1}\PYG{p}{;}
+             \PYG{n}{c1}\PYG{o}{=}\PYG{n}{c1}\PYG{o}{*}\PYG{p}{(}\PYG{n}{c2}\PYG{o}{/}\PYG{n}{d}\PYG{p}{);}
+             \PYG{n}{r1}\PYG{o}{=}\PYG{p}{(}\PYG{n}{r1}\PYG{o}{\PYGZpc{}}\PYG{n}{c1}\PYG{o}{+}\PYG{n}{c1}\PYG{p}{)}\PYG{o}{\PYGZpc{}}\PYG{n}{c1}\PYG{p}{;}
+         \PYG{p}{\PYGZcb{}}
+         \PYG{k}{return} \PYG{p}{(}\PYG{n}{r1}\PYG{o}{\PYGZpc{}}\PYG{n}{c1}\PYG{o}{+}\PYG{n}{c1}\PYG{p}{)}\PYG{o}{\PYGZpc{}}\PYG{n}{c1}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//队长后面是我测试的}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{cin}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{n}{n}\PYG{p}{;}
+
+         \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}=}\PYG{n}{n}\PYG{p}{;}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+        \PYG{p}{\PYGZob{}}
+            \PYG{n}{cin}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{n}{c}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{n}{r}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+        \PYG{p}{\PYGZcb{}}
+        \PYG{n}{cout}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{Chinese\PYGZus{}Remainder}\PYG{p}{()}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{endl}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

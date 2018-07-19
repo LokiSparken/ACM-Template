@@ -1,0 +1,51 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int} \PYG{n}{par}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+\PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{N}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}=}\PYG{n}{N}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)} \PYG{n}{par}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{=}\PYG{n}{i}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{find}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{x}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{par}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{==}\PYG{n}{x}\PYG{p}{)} \PYG{k}{return} \PYG{n}{x}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{par}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=}\PYG{n}{find}\PYG{p}{(}\PYG{n}{par}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]);}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void} \PYG{n+nf}{uni}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{A}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{B}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{x}\PYG{o}{=}\PYG{n}{find}\PYG{p}{(}\PYG{n}{A}\PYG{p}{),}\PYG{n}{y}\PYG{o}{=}\PYG{n}{find}\PYG{p}{(}\PYG{n}{B}\PYG{p}{);}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{x}\PYG{o}{==}\PYG{n}{y}\PYG{p}{)} \PYG{k}{return} \PYG{p}{;}
+    \PYG{n}{par}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=}\PYG{n}{y}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{bool} \PYG{n+nf}{same}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{A}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{B}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{n}{find}\PYG{p}{(}\PYG{n}{A}\PYG{p}{)}\PYG{o}{==}\PYG{n}{find}\PYG{p}{(}\PYG{n}{B}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//按秩合并}
+\PYG{k+kt}{void} \PYG{n+nf}{unite}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{x}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{y}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{x}\PYG{o}{=}\PYG{n}{find}\PYG{p}{(}\PYG{n}{x}\PYG{p}{),}\PYG{n}{y}\PYG{o}{=}\PYG{n}{find}\PYG{p}{(}\PYG{n}{y}\PYG{p}{);}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{x}\PYG{o}{==}\PYG{n}{y}\PYG{p}{)} \PYG{k}{return} \PYG{p}{;}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{rank}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{\PYGZlt{}}\PYG{n}{rank}\PYG{p}{[}\PYG{n}{y}\PYG{p}{])}
+        \PYG{n}{parent}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{=}\PYG{n}{y}\PYG{p}{;}  \PYG{c+c1}{// 从rank小的向rank大的连边}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{parent}\PYG{p}{[}\PYG{n}{y}\PYG{p}{]}\PYG{o}{=}\PYG{n}{x}\PYG{p}{;}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{rank}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{==}\PYG{n}{rank}\PYG{p}{[}\PYG{n}{y}\PYG{p}{])} \PYG{n}{rank}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{o}{++}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//非递归路径压缩（避免栈溢出RE）}
+\PYG{k+kt}{int} \PYG{n+nf}{find}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{x}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{,} \PYG{n}{j}\PYG{p}{,} \PYG{n}{r}\PYG{p}{;}
+    \PYG{n}{r} \PYG{o}{=} \PYG{n}{x}\PYG{p}{;}
+    \PYG{k}{while}\PYG{p}{(}\PYG{n}{r} \PYG{o}{!=} \PYG{n}{parent}\PYG{p}{[}\PYG{n}{r}\PYG{p}{])}     \PYG{c+c1}{//查找跟节点}
+        \PYG{n}{r} \PYG{o}{=} \PYG{n}{parent}\PYG{p}{[}\PYG{n}{r}\PYG{p}{];}        \PYG{c+c1}{//找到跟节点，用r记录下}
+    \PYG{n}{k} \PYG{o}{=} \PYG{n}{x}\PYG{p}{;}
+    \PYG{k}{while}\PYG{p}{(}\PYG{n}{k} \PYG{o}{!=} \PYG{n}{r}\PYG{p}{)}             \PYG{c+c1}{//非递归路径压缩操作}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{j} \PYG{o}{=} \PYG{n}{parent}\PYG{p}{[}\PYG{n}{k}\PYG{p}{];}        \PYG{c+c1}{//用j暂存parent[k]的父节点}
+        \PYG{n}{parent}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]} \PYG{o}{=} \PYG{n}{r}\PYG{p}{;}        \PYG{c+c1}{//parent[x]指向跟节点}
+        \PYG{n}{k} \PYG{o}{=} \PYG{n}{j}\PYG{p}{;}                \PYG{c+c1}{//k移到父节点}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{r}\PYG{p}{;}                 \PYG{c+c1}{//返回根节点的值}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -32,7 +32,7 @@
 \usepackage{minted}
 \setminted{tabsize=4,breaklines}
 %\setminted{tabsize=4,breaklines,linenos}			%选项设置：tabsize, 语法高亮, 行号
-%格式：\inputminted{c++}{~/*.cpp}
+%格式：\inputminted{c++}{"~/*.cpp}
 %{minted} manual: https://github.com/gpoore/minted/blob/master/source/minted.pdf
 
 %目录超链接
@@ -48,7 +48,7 @@
 \newpage 																%换页
 \section{Pretreatment}												%一级标题
 	\subsection{头文件Headers and constants}
-	\inputminted[breaklines]{c++}{Other/headers.cpp}
+	\inputminted[breaklines]{c++}{"Other/headers.cpp"}
 	\newpage
 	\subsection{配置Vim setting}
 		\noindent==========================================\\
@@ -88,57 +88,57 @@
 \section{图论Graph Theory}
 	\subsection{最短路The shortest path}
 		\subsubsection{Dijkstra}
-		\inputminted{c++}{Gragh Theory/The shortest path/dijkstra.cpp}
+		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/dijkstra.cpp"}
 		\subsubsection{Spfa}
-		\inputminted{c++}{Gragh Theory/The shortest path/spfa.cpp}
+		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/spfa.cpp"}
 		\subsubsection{Floyd}
-		\inputminted{c++}{Gragh Theory/The shortest path/floyd.cpp}
+		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/floyd.cpp"}
 		\subsubsection{次短路}
-		\inputminted{c++}{Gragh Theory/The shortest path/secdij.cpp}
+		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/secdij.cpp"}
 		\subsubsection{第K短路}
-		\inputminted{c++}{Gragh Theory/The shortest path/Astar.cpp}
+		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/Astar.cpp"}
 
 	\subsection{生成树Spanning tree}
 		\subsubsection{最小生成树Minimum spanning tree}
-		\inputminted{c++}{Gragh Theory/MST/kruskal.cpp}
-		\inputminted{c++}{Gragh Theory/MST/prim.cpp}
+		\inputminted[breaklines]{c++}{"Gragh Theory/MST/kruskal.cpp"}
+		\inputminted[breaklines]{c++}{"Gragh Theory/MST/prim.cpp"}
 		\subsubsection{次小生成树}
-		\inputminted{c++}{Gragh Theory/MST/secmst.cpp}
+		\inputminted{c++}{"Gragh Theory/MST/secmst.cpp"}
 		\subsubsection{最小树形图Minimum Arborescence}
 		
 
 	\subsection{网络流Network flow}
 		\subsubsection{最大流Max flow-Dinic}
-		\inputminted{c++}{Gragh Theory/Network Flow/dinic.cpp}
+		\inputminted{c++}{"Gragh Theory/Network Flow/dinic.cpp"}
 		\subsubsection{最大流Max flow-ISAP}
-		\inputminted{c++}{Gragh Theory/Network Flow/ISAP.cpp}
+		\inputminted{c++}{"Gragh Theory/Network Flow/ISAP.cpp"}
 		\subsubsection{最小费用最大流Min cost max flow-EdmondsKarp}
-		\inputminted{c++}{Gragh Theory/Network Flow/MCMF.cpp}
+		\inputminted{c++}{"Gragh Theory/Network Flow/MCMF.cpp"}
 		\subsubsection{有上下界的可行流}
-		\inputminted{c++}{Gragh Theory/Network Flow/lowup.cpp}
+		\inputminted{c++}{"Gragh Theory/Network Flow/lowup.cpp"}
 
 	\subsection{二分图}
 		\subsubsection{概念公式}
-		\inputminted{c++}{Gragh Theory/Bipartite gragh/emmm.cpp}
+		\inputminted{c++}{"Gragh Theory/Bipartite gragh/emmm.cpp"}
 		\subsubsection{最大匹配-匈牙利}
-		\inputminted{c++}{Gragh Theory/Bipartite gragh/hungary.cpp}
-		\inputminted{c++}{Gragh Theory/Bipartite gragh/hungarymatrix.cpp}
+		\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungary.cpp"}
+		\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungarymatrix.cpp"}
 		%\subsubsection{最大匹配-Hopcroft-Karp}
-		%\inputminted{c++}{Gragh Theory/Bipartite gragh/HK.cpp}
+		%\inputminted{c++}{"Gragh Theory/Bipartite gragh/HK.cpp"}
 		%\subsubsection{最大权匹配-KM}
-		%\inputminted{c++}{Gragh Theory/Bipartite gragh/KM.cpp}
+		%\inputminted{c++}{"Gragh Theory/Bipartite gragh/KM.cpp"}
 
 	\subsection{强连通缩点tarjan}
-	\inputminted{c++}{Gragh Theory/SCC.cpp}
+	\inputminted{c++}{"Gragh Theory/SCC.cpp"}
 
 	\subsection{最近公共祖先LCA}
 
 
 	\subsection{欧拉回路}
 		\subsubsection{判定}
-		%\inputminted{c++}{Gragh Theory/ouraroad.cpp}
+		%\inputminted{c++}{"Gragh Theory/ouraroad.cpp"}
 		\subsubsection{求解}
-		%\inputminted{c++}{Gragh Theory/ouraroadsolve.cpp}
+		%\inputminted{c++}{"Gragh Theory/ouraroadsolve.cpp"}
 
 	\subsection{哈密顿回路}
 
@@ -146,43 +146,43 @@
 \newpage
 \section{数据结构Data Structure}
 	\subsection{并查集Union-Find Set}
-	\inputminted{c++}{Data Structure/union-find-set.cpp}
+	\inputminted{c++}{"Data Structure/union-find-set.cpp"}
 	\subsection{拓扑排序Topological Sorting}
-	\inputminted{c++}{Data Structure/topo.cpp}
+	\inputminted{c++}{"Data Structure/topo.cpp"}
 	\subsection{树状数组}
 		\subsubsection{一维}
-		\inputminted{c++}{Data Structure/szsz.cpp}
+		\inputminted{c++}{"Data Structure/szsz.cpp"}
 		\subsubsection{二维}
-		\inputminted{c++}{Data Structure/2Dszsz.cpp}
+		\inputminted{c++}{"Data Structure/2Dszsz.cpp"}
 	\subsection{RMQ}
 		\subsubsection{一维}
-		\inputminted{c++}{Data Structure/RMQ.cpp}
+		\inputminted{c++}{"Data Structure/RMQ.cpp"}
 		\subsubsection{二维}
-		\inputminted{c++}{Data Structure/2DRMQ.cpp}
+		\inputminted{c++}{"Data Structure/2DRMQ.cpp"}
 	\subsection{线段树Segment Tree}
 		\subsubsection{单点更新区间查询}
-		\inputminted{c++}{Data Structure/segment tree/point-range.cpp}
+		\inputminted{c++}{"Data Structure/segment tree/point-range.cpp"}
 		\subsubsection{区间更新区间查询}
-		\inputminted{c++}{Data Structure/segment tree/range-range.cpp}
+		\inputminted{c++}{"Data Structure/segment tree/range-range.cpp"}
 	%\subsection{}
 		
 
 \newpage
 \section{数学Math}
 	\subsection{快速乘-快速幂}
-	\inputminted{c++}{Maths/fastmul.cpp}
-	\inputminted{c++}{Maths/fastpow.cpp}
+	\inputminted{c++}{"Maths/fastmul.cpp"}
+	\inputminted{c++}{"Maths/fastpow.cpp"}
 	\subsection{矩阵快速幂}
-	\inputminted{c++}{Maths/MatrixFastpow.cpp}
+	\inputminted{c++}{"Maths/MatrixFastpow.cpp"}
 	\subsection{扩展欧几里得}
-	\inputminted{c++}{Maths/exgcd.cpp}
+	\inputminted{c++}{"Maths/exgcd.cpp"}
 	\subsection{欧拉函数}
-	\inputminted{c++}{Maths/Elur.cpp}
+	\inputminted{c++}{"Maths/Elur.cpp"}
 	\subsection{中国剩余定理求同余方程组}
 		\subsubsection{素数}
-		\inputminted{c++}{Maths/CRT(prime).cpp}
+		\inputminted{c++}{"Maths/CRT(prime).cpp"}
 		\subsubsection{非素数}
-		\inputminted{c++}{Maths/CRT(notprime).cpp}
+		\inputminted{c++}{"Maths/CRT(notprime).cpp"}
 	%\subsection{FFT}
 	%\subsection{卢卡斯Lucas}
 	%\subsection{结论}
@@ -190,19 +190,19 @@
 
 \section{字符串}
 	\subsection{字典树}
-	\inputminted{c++}{String/Trie.cpp}
+	\inputminted{c++}{"String/Trie.cpp"}
 	\subsection{KMP}
-	\inputminted{c++}{String/KMP.cpp}
+	\inputminted{c++}{"String/KMP.cpp"}
 	\subsection{扩展KMP}
-	\inputminted{c++}{String/EXKMP.cpp}
+	\inputminted{c++}{"String/EXKMP.cpp"}
 	\subsection{最长回文子串Manacher}
-	\inputminted{c++}{String/Manacher.cpp}
+	\inputminted{c++}{"String/Manacher.cpp"}
 	\subsection{AC自动机}
-	\inputminted{c++}{String/AC.cpp}
+	\inputminted{c++}{"String/AC.cpp"}
 
 \section{动态规划}
 	\subsection{背包}
-	\inputminted{c++}{Dynamic Programme/bag.cpp}
+	\inputminted{c++}{"Dynamic Programme/bag.cpp"}
 
 %\section{计算几何}
 	%\subsection{基础函数}
@@ -213,15 +213,15 @@
 \newpage
 \section{其它Other}
 	\subsection{输入输出外挂}
-	\inputminted{c++}{Other/ioadd-on.cpp}
+	\inputminted{c++}{"Other/ioadd-on.cpp"}
 	\subsection{高精度}
-	\inputminted{c++}{Other/high-precision.cpp}
+	\inputminted{c++}{"Other/high-precision.cpp"}
 	\subsection{离散化}
-	\inputminted{c++}{Other/lisanhua.cpp}
+	\inputminted{c++}{"Other/lisanhua.cpp"}
 	\subsection{STL}
-	\inputminted{c++}{Other/STL.cpp}
+	\inputminted{c++}{"Other/STL.cpp"}
 	%\subsection{数组模拟乘法}
-	%\inputminted{c++}{Other/jiechengmoni.cpp}
+	%\inputminted{c++}{"Other/jiechengmoni.cpp"}
 
 
 \end{document}

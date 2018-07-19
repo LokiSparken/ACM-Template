@@ -1,0 +1,82 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{struct} \PYG{n}{Edge}
+\PYG{p}{\PYGZob{}}
+	\PYG{k+kt}{int} \PYG{n}{from}\PYG{p}{;}
+	\PYG{k+kt}{int} \PYG{n}{d}\PYG{p}{,}\PYG{n}{f}\PYG{p}{;}
+	\PYG{n}{Edge}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{d}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{f}\PYG{p}{)}\PYG{o}{:}\PYG{n}{from}\PYG{p}{(}\PYG{n}{u}\PYG{p}{),}\PYG{n}{d}\PYG{p}{(}\PYG{n}{d}\PYG{p}{),}\PYG{n}{f}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)\PYGZob{}\PYGZcb{}}
+	\PYG{k+kt}{bool} \PYG{k}{operator} \PYG{o}{\PYGZlt{}}\PYG{p}{(}\PYG{k}{const} \PYG{n}{Edge} \PYG{o}{\PYGZam{}}\PYG{n}{a}\PYG{p}{)}\PYG{k}{const}     \PYG{c+c1}{//从大到小排序，避免用反pq}
+	\PYG{p}{\PYGZob{}}
+		\PYG{k}{if}\PYG{p}{(}\PYG{n}{f}\PYG{o}{==}\PYG{n}{a}\PYG{p}{.}\PYG{n}{f}\PYG{p}{)} \PYG{k}{return} \PYG{n}{a}\PYG{p}{.}\PYG{n}{d}\PYG{o}{\PYGZlt{}}\PYG{n}{d}\PYG{p}{;}
+		\PYG{k}{return} \PYG{n}{a}\PYG{p}{.}\PYG{n}{f}\PYG{o}{\PYGZlt{}}\PYG{n}{f}\PYG{p}{;}
+	\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\PYG{k}{struct} \PYG{n}{Kpath}
+\PYG{p}{\PYGZob{}}
+	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{pair}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{o}{\PYGZgt{}} \PYG{n}{GB}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+	\PYG{k+kt}{bool} \PYG{n}{vis}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+	\PYG{k+kt}{int} \PYG{n}{h}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+	\PYG{k+kt}{int} \PYG{n}{t}\PYG{p}{;}
+	\PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{()}
+	\PYG{p}{\PYGZob{}}
+		\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}=}\PYG{n}{N}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+		\PYG{p}{\PYGZob{}}
+			\PYG{n}{G}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{clear}\PYG{p}{();}
+			\PYG{n}{GB}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{clear}\PYG{p}{();}
+		\PYG{p}{\PYGZcb{}}
+		\PYG{n}{t}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+		\PYG{n}{memset}\PYG{p}{(}\PYG{n}{h}\PYG{p}{,}\PYG{l+m+mh}{0x3f}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{h}\PYG{p}{));}
+		\PYG{n}{memset}\PYG{p}{(}\PYG{n}{vis}\PYG{p}{,}\PYG{n+nb}{false}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{vis}\PYG{p}{));}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k+kt}{void} \PYG{n+nf}{addEdge}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{cost}\PYG{p}{)}
+	\PYG{p}{\PYGZob{}}
+		\PYG{n}{G}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{mp}\PYG{p}{(}\PYG{n}{cost}\PYG{p}{,}\PYG{n}{v}\PYG{p}{));}
+		\PYG{n}{GB}\PYG{p}{[}\PYG{n}{v}\PYG{p}{].}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{mp}\PYG{p}{(}\PYG{n}{cost}\PYG{p}{,}\PYG{n}{u}\PYG{p}{));}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k+kt}{void} \PYG{n+nf}{spfa}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{)}    \PYG{c+c1}{//dijstra可能效率更高，另注意题目会不会有负圈}
+	\PYG{p}{\PYGZob{}}
+		\PYG{n}{queue}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{q}\PYG{p}{;}
+		\PYG{n}{h}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+		\PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{s}\PYG{p}{);}
+		\PYG{n}{vis}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{o}{=}\PYG{n+nb}{true}\PYG{p}{;}
+		\PYG{k}{while}\PYG{p}{(}\PYG{o}{!}\PYG{n}{q}\PYG{p}{.}\PYG{n}{empty}\PYG{p}{())}
+		\PYG{p}{\PYGZob{}}
+			\PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{=}\PYG{n}{q}\PYG{p}{.}\PYG{n}{front}\PYG{p}{();}\PYG{n}{q}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
+			\PYG{n}{vis}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n+nb}{false}\PYG{p}{;}
+			\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{GB}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{size}\PYG{p}{();}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+			\PYG{p}{\PYGZob{}}
+				\PYG{k+kt}{int} \PYG{n}{v}\PYG{o}{=}\PYG{n}{GB}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{i}\PYG{p}{].}\PYG{n}{Y}\PYG{p}{,}\PYG{n}{cost}\PYG{o}{=}\PYG{n}{GB}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{i}\PYG{p}{].}\PYG{n}{X}\PYG{p}{;}
+				\PYG{k}{if}\PYG{p}{(}\PYG{n}{h}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{\PYGZgt{}}\PYG{n}{h}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{+}\PYG{n}{cost}\PYG{p}{)}
+				\PYG{p}{\PYGZob{}}
+					\PYG{n}{h}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{=}\PYG{n}{h}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{+}\PYG{n}{cost}\PYG{p}{;}
+					\PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{vis}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])}
+					\PYG{p}{\PYGZob{}}
+						\PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
+						\PYG{n}{vis}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{=}\PYG{n+nb}{true}\PYG{p}{;}
+					\PYG{p}{\PYGZcb{}}
+				\PYG{p}{\PYGZcb{}}
+			\PYG{p}{\PYGZcb{}}
+		\PYG{p}{\PYGZcb{}}
+	\PYG{p}{\PYGZcb{}}
+	\PYG{k+kt}{int} \PYG{n+nf}{Astar}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{S}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{T}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{K}\PYG{p}{)}
+	\PYG{p}{\PYGZob{}}
+		\PYG{k}{if}\PYG{p}{(}\PYG{n}{S}\PYG{o}{==}\PYG{n}{T}\PYG{p}{)} \PYG{o}{++}\PYG{n}{K}\PYG{p}{;}       \PYG{c+c1}{//如果S==T，d=0不算一条路}
+		\PYG{k}{if}\PYG{p}{(}\PYG{n}{h}\PYG{p}{[}\PYG{n}{S}\PYG{p}{]}\PYG{o}{==}\PYG{n}{INF}\PYG{p}{)} \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+		\PYG{n}{priority\PYGZus{}queue}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{q}\PYG{p}{;}
+		\PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{Edge}\PYG{p}{(}\PYG{n}{S}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{h}\PYG{p}{[}\PYG{n}{S}\PYG{p}{]));}
+		\PYG{k}{while}\PYG{p}{(}\PYG{o}{!}\PYG{n}{q}\PYG{p}{.}\PYG{n}{empty}\PYG{p}{())}
+		\PYG{p}{\PYGZob{}}
+			\PYG{n}{Edge} \PYG{n}{temp}\PYG{o}{=}\PYG{n}{q}\PYG{p}{.}\PYG{n}{top}\PYG{p}{();}\PYG{n}{q}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
+			\PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{=}\PYG{n}{temp}\PYG{p}{.}\PYG{n}{from}\PYG{p}{,}\PYG{n}{d}\PYG{o}{=}\PYG{n}{temp}\PYG{p}{.}\PYG{n}{d}\PYG{p}{;}
+			\PYG{k}{if}\PYG{p}{(}\PYG{n}{u}\PYG{o}{==}\PYG{n}{T}\PYG{p}{)} \PYG{o}{++}\PYG{n}{t}\PYG{p}{;}
+			\PYG{k}{if}\PYG{p}{(}\PYG{n}{t}\PYG{o}{==}\PYG{n}{K}\PYG{p}{)} \PYG{k}{return} \PYG{n}{d}\PYG{p}{;}
+			\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{G}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{size}\PYG{p}{();}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+			\PYG{p}{\PYGZob{}}
+				\PYG{k+kt}{int} \PYG{n}{v}\PYG{o}{=}\PYG{n}{G}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{i}\PYG{p}{].}\PYG{n}{Y}\PYG{p}{,}\PYG{n}{cost}\PYG{o}{=}\PYG{n}{G}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{i}\PYG{p}{].}\PYG{n}{X}\PYG{p}{;}
+				\PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{Edge}\PYG{p}{(}\PYG{n}{v}\PYG{p}{,}\PYG{n}{d}\PYG{o}{+}\PYG{n}{cost}\PYG{p}{,}\PYG{n}{d}\PYG{o}{+}\PYG{n}{cost}\PYG{o}{+}\PYG{n}{h}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]));}
+			\PYG{p}{\PYGZcb{}}
+		\PYG{p}{\PYGZcb{}}
+		\PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+	\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}
