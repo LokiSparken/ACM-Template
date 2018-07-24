@@ -1,45 +1,31 @@
-struct Trie{
-    int ch[maxnode][sigma_size];
-    int val[maxnode];
-    int sz;
-    void clear()
+/* 
+ * 插入和查询时间复杂度：O(length)
+ * 空间换时间，利用“公共前缀”降低查询时间的开销。
+ * 使用时注意点：需要维护的信息。
+ */
+struct Trie
+{
+    int ch[MAXN][26];
+    int val[MAXN];
+    int id,rt;
+    void init() { id=0,rt=newNode(); }
+    int idx(char c) { return c-'a'; }
+    int newNode()
     {
-        sz=1;
-        memset(ch[0],0,sizeof(ch[0]));
-        memset(val,0,sizeof(val));
+        memset(ch[id],-1,sizeof(ch[id]));
+        val[id]=0;
+        return id++;
     }
-    int idx(char c)
+    void insert(string &s)
     {
-        return c-'a';
-    }
-    void insert(const char*s)
-    {
-        int u=0,n=strlen(s);
-        for(int i=0;i<n;i++)
+        int u=rt;
+        for(auto &it:s)
         {
-            int c=idx(s[i]);
-            if(!ch[u][c])
-            {
-                memset(ch[sz],0,sizeof(sz));
-                val[sz]=0;
-                ch[u][c]=sz++;
-            }
-            u=ch[u][c];
-            val[u]++;
-        }
-    }
-    int search(const char *s)
-    {
-        int u=0,n=strlen(s);
-        for(int i=0;i<n;i++)
-        {
-            int c=idx(s[i]);
-            if(!ch[u][c])
-            {
-                return 0;
-            }
+            int c=idx(it);
+            if(ch[u][c]==-1) ch[u][c]=newNode();
             u=ch[u][c];
         }
-        return val[u];
+        val[u]=1;
     }
-}ans;
+    // query is similar to the insert function
+}t;
