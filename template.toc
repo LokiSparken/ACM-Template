@@ -55,7 +55,8 @@
 \contentsline {section}{\numberline {6}动态规划}{54}{section.6}
 \contentsline {subsection}{\numberline {6.1}背包}{54}{subsection.6.1}
 \contentsline {section}{\numberline {7}其它Other}{56}{section.7}
-\contentsline {subsection}{\numberline {7.1}输入输出外挂}{56}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}高精度}{56}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}离散化}{58}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}STL}{59}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.1}离散化}{56}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}STL}{56}{subsection.7.2}
+\contentsline {section}{\numberline {8}输入输出IO}{58}{section.8}
+\contentsline {subsection}{\numberline {8.1}输入输出外挂}{58}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}简单大数}{58}{subsection.8.2}

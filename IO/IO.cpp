@@ -1,6 +1,8 @@
-//¹ØÍ¬²½
-//ios_base::sync_with_stdio(0);
-//cin.tie(0);
+\Large{å…³åŒæ­¥}
+ios_base::sync_with_stdio(0);
+cin.tie(0);
+
+\Large{kuangbinçš„IOæŒ‚}
 template <class T>
 inline bool scan_d(T &ret)
 {

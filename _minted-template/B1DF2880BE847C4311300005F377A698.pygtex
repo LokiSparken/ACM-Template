@@ -1,7 +1,9 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{//πÿÕ¨≤Ω}
-\PYG{c+c1}{//ios\PYGZus{}base::sync\PYGZus{}with\PYGZus{}stdio(0);}
-\PYG{c+c1}{//cin.tie(0);}
+\PYG{err}{\PYGZbs{}}\PYG{n}{Large}\PYG{p}{\PYGZob{}}\PYG{err}{ÂÖ≥ÂêåÊ≠•}\PYG{p}{\PYGZcb{}}
+\PYG{n}{ios\PYGZus{}base}\PYG{o}{::}\PYG{n}{sync\PYGZus{}with\PYGZus{}stdio}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+\PYG{n}{cin}\PYG{p}{.}\PYG{n}{tie}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{);}
+
+\PYG{err}{\PYGZbs{}}\PYG{n}{Large}\PYG{p}{\PYGZob{}}\PYG{n}{kuangbin}\PYG{err}{ÁöÑ}\PYG{n}{IO}\PYG{err}{ÊåÇ}\PYG{p}{\PYGZcb{}}
 \PYG{k}{template} \PYG{o}{\PYGZlt{}}\PYG{k}{class} \PYG{n+nc}{T}\PYG{o}{\PYGZgt{}}
 \PYG{k+kr}{inline} \PYG{k+kt}{bool} \PYG{n}{scan\PYGZus{}d}\PYG{p}{(}\PYG{n}{T} \PYG{o}{\PYGZam{}}\PYG{n}{ret}\PYG{p}{)}
 \PYG{p}{\PYGZob{}}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.7.18)  20 JUL 2018 16:35
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.7.18)  24 JUL 2018 17:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2297,35 +2297,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55] (./_minted-template/EDAC049C32C26A9D28C6710107821813.pygtex
-Invalid UTF-8 byte or sequence at line 2 replaced by U+FFFD.
-Missing character: There is no � in font [lmmono10-italic]:!
-Missing character: There is no ͬ in font [lmmono10-italic]:!
-Missing character: There is no � in font [lmmono10-italic]:!
-Missing character: There is no ͬ in font [lmmono10-italic]:!
-)
-(./_minted-template/BE2A6FC858150A0F2284F4062A9F5491.pygtex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64723pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[56]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64723pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[57]) (./_minted-template/42D5FA0978E4D9B175CD379A09844298.pygtex)
+[55] (./_minted-template/CBBD00C42ECAAC03D9CA19BE1828230F.pygtex)
 (./_minted-template/49AA98E5A4CAFF6389EA62FE704DAA27.pygtex
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
 
+[56])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[57] (./_minted-template/B1DF2880BE847C4311300005F377A698.pygtex)
+(./_minted-template/289720A47918653A92D604744CEC26FF.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2343,7 +2331,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [59])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 233.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2352,20 +2340,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [60]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
  (./template.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 227.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 233.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 233.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 30960 strings out of 493007
- 617291 string characters out of 6136719
- 712120 words of memory out of 5000000
- 34502 multiletter control sequences out of 15000+600000
+ 30962 strings out of 493007
+ 617342 string characters out of 6136719
+ 712263 words of memory out of 5000000
+ 34504 multiletter control sequences out of 15000+600000
  534598 words of font info for 62 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  57i,12n,74p,10476b,581s stack positions out of 5000i,500n,10000p,200000b,80000s

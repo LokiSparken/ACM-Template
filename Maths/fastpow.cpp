@@ -1,5 +1,3 @@
-typedef long long ll;
-//边乘边模
 ll fast(ll base,ll exp)
 {
     ll ans=1;

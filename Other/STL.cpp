@@ -1,6 +1,6 @@
-//一、set
-//set和multiset用法一样，multiset允许重复元素
-//利用set从大到小排序（自定义排序函数）
+一、set
+set和multiset用法一样，multiset允许重复元素
+利用set从大到小排序（自定义排序函数）
 struct classcmp
 {
     bool operator()(const int &lhs,const int &rhs)const
