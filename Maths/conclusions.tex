@@ -1,0 +1,37 @@
+%\begin{eqnarray}
+%I_{a_1a_2 \cdots a_n}&=&
+%\left\{
+%\begin{array}{lll}
+%1, \ \ a_1=a_2=\cdots=a_n. \\
+%0, \ \ otherwise.
+%\end{array}
+%\right.
+%\end{eqnarray}
+\subsection{定理公式与结论Conclusions}
+1、费马小定理：$ a^{p-1} \equiv \ 1 \ (mod \ p) $ \quad 当 $(a,p)=1$ \par
+2、欧拉降幂公式：
+    % a^{x} \left ( \  mod \ p \right \ ) = \left\{\begin{matrix}
+    % a^{x \ \% \ \varphi (p) } & (a,p)=1. & \\ 
+    % a^{x \ \% \ \varphi (p) \ + \ \varphi (p)} & (a,p)\not=1, \ x \ge \varphi(p). & \\ 
+    % a^x & (a,p)\not=1, \ x< \varphi(p). & 
+    % \end{matrix}\right.
+        \begin{eqnarray}
+            a^x \ (mod \ p) \ = &
+            \left\{
+            \begin{array}{lr}
+                a^{x \% \varphi(p)}, \ \ (a,p)=1. \\
+                a^{x \% \varphi(p) + \varphi(p)}, \ \ (a,p)\not=1, \ x \ge \varphi(p). \\
+                a^x, \ \ (a,p)\not=1, \ x< \varphi(p).
+            \end{array}
+            \right.
+        \end{eqnarray}
+    % $$ a^x \ (mod \ p) \ =  $$
+    %     \begin{equation}
+    %     \left\{
+    %                  \begin{array}{lr}
+    %                  x=a^{x \% \varphi(p)}, & (a,p)=1 \\
+    %                  y=a^{x \% \varphi(p) + \varphi(p)}, & (a,p)\not=1, \ x \ge \varphi(p)\\
+    %                  z=a^x, & (a,p)\not=1, \ x< \varphi(p)
+    %                  \end{array}
+    %     \right.
+    %     \end{equation}

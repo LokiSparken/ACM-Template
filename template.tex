@@ -35,10 +35,13 @@
 %格式：\inputminted{c++}{"~/*.cpp}
 %{minted} manual: https://github.com/gpoore/minted/blob/master/source/minted.pdf
 
+%数学公式相关
+\usepackage{amsmath,epsfig,amssymb,subfigure,bm,dsfont}
+
 %目录超链接
 \usepackage[colorlinks,linkcolor=black]{hyperref}
-
-%====================导言区==========================
+	
+%====================以上导言区==========================
 \begin{document}
 \maketitle
 
@@ -165,10 +168,10 @@
 		\subsubsection{区间更新区间查询}
 		\inputminted{c++}{"Data Structure/segment tree/range-range.cpp"}
 	%\subsection{}
-		
 
 \newpage
 \section{数学Math}
+	\input{"Maths/conclusions.tex"}
 	\subsection{快速乘-快速幂}
 	\inputminted{c++}{"Maths/fastmul.cpp"}
 	\inputminted{c++}{"Maths/fastpow.cpp"}
