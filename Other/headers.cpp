@@ -12,3 +12,9 @@ const double eps=1e-6; // WA了就加精度，T了就减精度
                 大于 if(a>b && fabs(a-b)>eps)
                 小于 if(a<b && fabs(a-b)>eps)
 */
+/*
+ * 热身赛：
+ * 1、测pb_ds
+ * 2、python3计算器
+ * 3、
+ */
