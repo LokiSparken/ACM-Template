@@ -5,7 +5,7 @@
  */
 typedef unsigned long long ull;
 const ull Seed_Pool[] = {146527, 19260817};
-const ull Mod_Pool[] = {1000000009, 998244353};
+const ull Mod_Pool[] = {1000000009, 998244353};// 19260817,1e9+7
 struct Hash
 {
     ull SEED, MOD;
@@ -22,5 +22,5 @@ struct Hash
         for (int i = 1; i <= n; i++) h[i] = (h[i - 1] * SEED % MOD + s[i - 1]) % MOD;
     }
     ull get(int l, int r) { return (h[r] - h[l] * p[r - l] % MOD + MOD) % MOD; }// [l,r)
-    ull substr(int l, int m) { return get(l, l + m); }// 
+    ull substr(int l, int m) { return get(l, l + m); }// [l,l+m)
 };

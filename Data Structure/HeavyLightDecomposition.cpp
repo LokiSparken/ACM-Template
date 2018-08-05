@@ -1,14 +1,14 @@
 struct HLD
 {
     vector<int> G[MAXN];
-    // 对i：sz以i为根子树大小，dep深度，par父亲，son重儿子，top所在链顶，id入栈序
+    // 对i：sz以i为根子树大小，dep深度，par父亲，son重儿子，top所在链顶，id入栈序([题目编号]=树链编号)
     int sz[MAXN],dep[MAXN],par[MAXN],son[MAXN],top[MAXN],id[MAXN];
-    /* 题目相关信息自己设，###特别注意输入编号与dfs序之间的转换。### */
+    /* 题目相关信息自己设，###特别注意输入编号与dfs序之间的转换。视情况看要不要reflect[]（[树链编号]=题目编号）### */
     int n,clk;
     void init(int n)
     {
         for(int i=0;i<=n;++i) G[i].clear();
-        memset(son,0,sizeof(son));
+        memset(son,0,sizeof(son));// 如果某结点没有儿子会被之前的数据影响
         this->n=n,clk=0;
     }
     void addedge(int u,int v) { G[u].push_back(v);G[v].push_back(u); }
@@ -34,7 +34,8 @@ struct HLD
     }
 
     // 数据结构相关操作，一般线段树或树状数组（维护一段连续区间）
-    // 注意：更新操作要更新对应的dfs序号id[pos]，可另外写个接口用于在外面调用，和DS分开
+    // 注意：更新和查找操作要用对应的dfs序号id[pos]，可另外写个接口用于在外面调用，和DS分开
+    // 接口里面二次调用一定要id[pos]啊啊啊啊啊啊啊啊猪！！！
 
     int query(int u,int v)
     {

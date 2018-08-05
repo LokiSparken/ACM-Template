@@ -1,9 +1,5 @@
-int sum[MAXN<<2];
-int seg[MAXN<<2];
-void pushUp(int rt)
-{
-    sum[rt]=sum[lson]+sum[rson];
-}
+int sum[MAXN<<2],seg[MAXN<<2];
+void pushUp(int rt) { sum[rt]=sum[lson]+sum[rson]; }
 void build(int L,int R,int rt)
 {
     seg[rt]=0;
@@ -20,10 +16,10 @@ void build(int L,int R,int rt)
 void pushDown(int rt,int len)
 {
     if(seg[rt]==0) return ;
+    sum[lson]=seg[rt]*(len-(len>>1));
+    sum[rson]=seg[rt]*(len>>1);    
     seg[lson]=seg[rt];
     seg[rson]=seg[rt];
-    sum[lson]=seg[rt]*(len-(len>>1));
-    sum[rson]=seg[rt]*(len>>1);
     seg[rt]=0;
 }
 void update(int l,int r,int val,int L,int R,int rt)
