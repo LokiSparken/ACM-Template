@@ -3,7 +3,7 @@ struct HLD
     vector<int> G[MAXN];
     // 对i：sz以i为根子树大小，dep深度，par父亲，son重儿子，top所在链顶，id入栈序([题目编号]=树链编号)
     int sz[MAXN],dep[MAXN],par[MAXN],son[MAXN],top[MAXN],id[MAXN];
-    /* 题目相关信息自己设，###特别注意输入编号与dfs序之间的转换。视情况看要不要reflect[]（[树链编号]=题目编号）### */
+    /* 题目相关信息自己设，###注意输入编号、映射编号、数据结构编号间的映射和转换。### */
     int n,clk;
     void init(int n)
     {
