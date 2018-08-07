@@ -42,6 +42,11 @@ bool operator==(const Point &a, const Point &b)
 {
     return dcmp(a.x - b.x) == 0 && dcmp(a.y - b.y) == 0;
 }
+DB PointDis(Point a, Point b)
+{
+    DB l = a.x - b.x, r = a.y - b.y;
+    return sqrt(l * l + r * r);
+}
 // 向量A,向量B的点积：A到B逆时针旋转，>90点积为负
 DB Dot(Vector A,Vector B)
 {
