@@ -11,10 +11,7 @@ void uni(int A,int B)
     if(x==y) return ;
     par[x]=y;
 }
-bool same(int A,int B)
-{
-    return find(A)==find(B);
-}
+bool same(int A,int B) { return find(A)==find(B); }
 //按秩合并
 void unite(int x,int y)
 {
