@@ -1,12 +1,12 @@
 /* 
  * 插入和查询时间复杂度：O(length)
  * 空间换时间，利用“公共前缀”降低查询时间的开销。
- * 使用时注意点：需要维护的信息。
+ * 使用时注意点：需要维护的信息。maxn开所有串总长。
  */
 struct Trie
 {
-    int ch[MAXN][26];
-    int val[MAXN];
+    int ch[maxn][26];
+    int val[maxn];
     int id,rt;
     void init() { id=0,rt=newNode(); }
     int idx(char c) { return c-'a'; }
