@@ -12,7 +12,28 @@ void uni(int A,int B)
     par[x]=y;
 }
 bool same(int A,int B) { return find(A)==find(B); }
-//按秩合并
+// 带权
+int find(int x)
+{
+    if(par[x]==x) return x;
+    int temp=par[x];
+    par[x]=find(par[x]);
+    rk[x]^=rk[temp];
+    return par[x];
+}
+void uni(int A,int B,int type)
+{
+    int x=find(A),y=find(B);
+    if(x==y) return ;
+
+    int relat;
+    if(type==1) relat=0;
+    else relat=1;
+
+    rk[y]=(rk[A]+relat-rk[B]+2)%2;
+    par[y]=x;
+}
+// 按秩合并
 void unite(int x,int y)
 {
     x=find(x),y=find(y);

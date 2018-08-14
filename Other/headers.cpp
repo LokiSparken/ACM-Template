@@ -3,7 +3,7 @@ using namespace std;
 typedef long long ll;
 #define X first
 #define Y second
-const int INF=0x3f3f3f3f; // long long则为0x8个3f
+const int inf=0x3f3f3f3f; // long long则为0x8个3f
 const double eps=1e-6; // WA了就加精度，T了就减精度
 /*
     整型初始化memset(d,0x3f,sizeof(d));
@@ -27,3 +27,7 @@ const double eps=1e-6; // WA了就加精度，T了就减精度
  * 4294967296：2^32。有时4294967295=2^32-1会作为32bit无符号整数（C/C++:uint32_t）的最大值，出现在类似65535的计算错误场合。
  * 92233720368547758072：2^63-1。64bit带符号整数（C/C++:int64_t）的最大值。可是由于这个数太大，很少被留意
  */
+
+Debug：
+1、初始化，清空图，0和n的地方，mem里面sizeof(int)还是ll
+2、for里是给本层循环变量++咩？
