@@ -31,3 +31,4 @@ const double eps=1e-6; // WA了就加精度，T了就减精度
 Debug：
 1、初始化，清空图，0和n的地方，mem里面sizeof(int)还是ll
 2、for里是给本层循环变量++咩？
+3、区间l,r为防坑，if(l>r) swap(l,r);
