@@ -11,7 +11,7 @@ void init()
     memset(mark,0,sizeof(mark));
     memset(S,0,sizeof(S));
 }
-void add(int x,int xval,int y,int yval)
+void add(int x,int xval,int y,int yval)// x的xval^1和y的yval^1是矛盾的
 {
     x=x*2+xval,y=y*2+yval;
     G[x^1].push_back(y);
