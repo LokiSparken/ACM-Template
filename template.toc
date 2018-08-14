@@ -5,60 +5,60 @@
 \contentsline {subsection}{\numberline {2.1}最短路The shortest path}{6}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Dijkstra}{6}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Spfa}{7}{subsubsection.2.1.2}
-\contentsline {subsubsection}{\numberline {2.1.3}Floyd}{8}{subsubsection.2.1.3}
-\contentsline {subsubsection}{\numberline {2.1.4}次短路}{8}{subsubsection.2.1.4}
-\contentsline {subsubsection}{\numberline {2.1.5}第K短路}{10}{subsubsection.2.1.5}
-\contentsline {subsection}{\numberline {2.2}生成树Spanning tree}{12}{subsection.2.2}
-\contentsline {subsubsection}{\numberline {2.2.1}最小生成树Minimum spanning tree}{12}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.1.3}次短路}{8}{subsubsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.4}第K短路}{9}{subsubsection.2.1.4}
+\contentsline {subsection}{\numberline {2.2}生成树Spanning tree}{11}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}最小生成树Minimum spanning tree}{11}{subsubsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.2}次小生成树}{14}{subsubsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.3}最小树形图Minimum Arborescence}{16}{subsubsection.2.2.3}
 \contentsline {subsection}{\numberline {2.3}网络流Network flow}{16}{subsection.2.3}
-\contentsline {subsubsection}{\numberline {2.3.1}最大流Max flow-Dinic}{16}{subsubsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.2}最大流Max flow-ISAP}{18}{subsubsection.2.3.2}
-\contentsline {subsubsection}{\numberline {2.3.3}最小费用最大流Min cost max flow-EdmondsKarp}{21}{subsubsection.2.3.3}
-\contentsline {subsubsection}{\numberline {2.3.4}有上下界的可行流}{23}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.1}最大流-Dinic}{16}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}最大流-ISAP}{18}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}最小费用最大流-EdmondsKarp}{21}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}建图-有上下界的可行流}{23}{subsubsection.2.3.4}
 \contentsline {subsection}{\numberline {2.4}二分图}{29}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}概念公式}{29}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}最大匹配-匈牙利}{29}{subsubsection.2.4.2}
-\contentsline {subsection}{\numberline {2.5}强连通缩点tarjan}{32}{subsection.2.5}
+\contentsline {subsection}{\numberline {2.5}强连通缩点tarjan}{31}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}最近公共祖先LCA}{33}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}欧拉回路}{33}{subsection.2.7}
-\contentsline {subsubsection}{\numberline {2.7.1}判定}{33}{subsubsection.2.7.1}
-\contentsline {subsubsection}{\numberline {2.7.2}求解}{33}{subsubsection.2.7.2}
-\contentsline {subsection}{\numberline {2.8}哈密顿回路}{33}{subsection.2.8}
-\contentsline {section}{\numberline {3}数据结构Data Structure}{34}{section.3}
-\contentsline {subsection}{\numberline {3.1}并查集Union-Find Set}{34}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}拓扑排序Topological Sorting}{35}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}树状数组}{36}{subsection.3.3}
-\contentsline {subsubsection}{\numberline {3.3.1}一维}{36}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}二维}{37}{subsubsection.3.3.2}
-\contentsline {subsection}{\numberline {3.4}RMQ}{37}{subsection.3.4}
-\contentsline {subsubsection}{\numberline {3.4.1}一维}{37}{subsubsection.3.4.1}
-\contentsline {subsubsection}{\numberline {3.4.2}二维}{38}{subsubsection.3.4.2}
+\contentsline {subsubsection}{\numberline {2.6.1}tarjan}{33}{subsubsection.2.6.1}
+\contentsline {subsubsection}{\numberline {2.6.2}dfs+ST}{33}{subsubsection.2.6.2}
+\contentsline {subsection}{\numberline {2.7}欧拉回路}{35}{subsection.2.7}
+\contentsline {subsubsection}{\numberline {2.7.1}判定}{35}{subsubsection.2.7.1}
+\contentsline {subsubsection}{\numberline {2.7.2}求解}{35}{subsubsection.2.7.2}
+\contentsline {subsection}{\numberline {2.8}哈密顿回路}{35}{subsection.2.8}
+\contentsline {section}{\numberline {3}数据结构Data Structure}{36}{section.3}
+\contentsline {subsection}{\numberline {3.1}并查集Union-Find Set}{36}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}拓扑排序Topological Sorting}{37}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}树状数组}{38}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}RMQ}{39}{subsection.3.4}
 \contentsline {subsection}{\numberline {3.5}线段树Segment Tree}{39}{subsection.3.5}
-\contentsline {subsubsection}{\numberline {3.5.1}单点更新区间查询}{39}{subsubsection.3.5.1}
-\contentsline {subsubsection}{\numberline {3.5.2}区间更新区间查询}{40}{subsubsection.3.5.2}
-\contentsline {section}{\numberline {4}数学Math}{42}{section.4}
-\contentsline {subsection}{\numberline {4.1}定理公式与结论Conclusions}{42}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}快速乘-快速幂}{42}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}矩阵快速幂}{42}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}扩展欧几里得}{43}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}欧拉函数}{44}{subsection.4.5}
-\contentsline {subsection}{\numberline {4.6}中国剩余定理求同余方程组}{45}{subsection.4.6}
-\contentsline {subsubsection}{\numberline {4.6.1}素数}{45}{subsubsection.4.6.1}
-\contentsline {subsubsection}{\numberline {4.6.2}非素数}{46}{subsubsection.4.6.2}
-\contentsline {section}{\numberline {5}字符串String}{47}{section.5}
-\contentsline {subsection}{\numberline {5.1}字典树Trie}{47}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}KMP}{48}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}扩展KMP}{49}{subsection.5.3}
-\contentsline {subsection}{\numberline {5.4}最长回文子串Manacher}{51}{subsection.5.4}
-\contentsline {subsection}{\numberline {5.5}AC自动机}{52}{subsection.5.5}
-\contentsline {section}{\numberline {6}动态规划}{54}{section.6}
-\contentsline {subsection}{\numberline {6.1}背包}{54}{subsection.6.1}
-\contentsline {section}{\numberline {7}其它Other}{56}{section.7}
-\contentsline {subsection}{\numberline {7.1}离散化}{56}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}STL}{56}{subsection.7.2}
-\contentsline {section}{\numberline {8}输入输出IO}{58}{section.8}
-\contentsline {subsection}{\numberline {8.1}输入输出外挂}{58}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}简单大数}{58}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Python输入输出}{60}{subsection.8.3}
+\contentsline {subsection}{\numberline {3.6}树链剖分HeavyLightDecomposition}{41}{subsection.3.6}
+\contentsline {subsection}{\numberline {3.7}伸展树splay}{42}{subsection.3.7}
+\contentsline {subsubsection}{\numberline {3.7.1}维护序列}{42}{subsubsection.3.7.1}
+\contentsline {subsubsection}{\numberline {3.7.2}平衡树}{45}{subsubsection.3.7.2}
+\contentsline {section}{\numberline {4}数学Math}{46}{section.4}
+\contentsline {subsection}{\numberline {4.1}定理公式与结论Conclusions}{46}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}快速乘-快速幂}{46}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}矩阵快速幂}{46}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}扩展欧几里得}{47}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}欧拉函数}{48}{subsection.4.5}
+\contentsline {subsection}{\numberline {4.6}中国剩余定理求同余方程组}{49}{subsection.4.6}
+\contentsline {subsubsection}{\numberline {4.6.1}素数}{49}{subsubsection.4.6.1}
+\contentsline {subsubsection}{\numberline {4.6.2}非素数}{50}{subsubsection.4.6.2}
+\contentsline {section}{\numberline {5}字符串String}{51}{section.5}
+\contentsline {subsection}{\numberline {5.1}字典树Trie}{51}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}KMP}{52}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}扩展KMP}{53}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}最长回文子串Manacher}{55}{subsection.5.4}
+\contentsline {subsection}{\numberline {5.5}AC自动机}{56}{subsection.5.5}
+\contentsline {section}{\numberline {6}动态规划}{58}{section.6}
+\contentsline {subsection}{\numberline {6.1}背包}{58}{subsection.6.1}
+\contentsline {section}{\numberline {7}其它Other}{60}{section.7}
+\contentsline {subsection}{\numberline {7.1}莫队}{60}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}离散化}{61}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}STL}{61}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}pbds}{62}{subsection.7.4}
+\contentsline {section}{\numberline {8}输入输出IO}{63}{section.8}
+\contentsline {subsection}{\numberline {8.1}输入输出外挂}{63}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}简单大数}{63}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Python输入输出}{65}{subsection.8.3}

@@ -3,7 +3,7 @@
 \documentclass[twoside,sub3section,UTF8]{ctexart}						%可使用中文
 %====================导言区==========================
 %封面设置
-\title{Simple template by Mirai}						%标题
+\title{Simple template}									%标题
 \author{Sparken}										%作者
 \CTEXoptions[today=old]								%使显示英文日期
 \date{\today}											%显示日期
@@ -94,8 +94,8 @@
 		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/dijkstra.cpp"}
 		\subsubsection{Spfa}
 		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/spfa.cpp"}
-		\subsubsection{Floyd}
-		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/floyd.cpp"}
+		% \subsubsection{Floyd}
+		% \inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/floyd.cpp"}
 		\subsubsection{次短路}
 		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/secdij.cpp"}
 		\subsubsection{第K短路}
@@ -107,35 +107,38 @@
 		\inputminted[breaklines]{c++}{"Gragh Theory/MST/prim.cpp"}
 		\subsubsection{次小生成树}
 		\inputminted{c++}{"Gragh Theory/MST/secmst.cpp"}
-		\subsubsection{最小树形图Minimum Arborescence}
+		% \subsubsection{最小树形图Minimum Arborescence}
 		
 
 	\subsection{网络流Network flow}
-		\subsubsection{最大流Max flow-Dinic}
+		\subsubsection{最大流-Dinic}
 		\inputminted{c++}{"Gragh Theory/Network Flow/dinic.cpp"}
-		\subsubsection{最大流Max flow-ISAP}
+		\subsubsection{最大流-ISAP}
 		\inputminted{c++}{"Gragh Theory/Network Flow/ISAP.cpp"}
-		\subsubsection{最小费用最大流Min cost max flow-EdmondsKarp}
+		\subsubsection{最小费用最大流-EdmondsKarp}
 		\inputminted{c++}{"Gragh Theory/Network Flow/MCMF.cpp"}
-		\subsubsection{有上下界的可行流}
+		\subsubsection{建图-有上下界的可行流}
 		\inputminted{c++}{"Gragh Theory/Network Flow/lowup.cpp"}
 
 	\subsection{二分图}
 		\subsubsection{概念公式}
 		\inputminted{c++}{"Gragh Theory/Bipartite gragh/emmm.cpp"}
 		\subsubsection{最大匹配-匈牙利}
-		\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungary.cpp"}
-		\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungarymatrix.cpp"}
+			\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungary.cpp"}
+			\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungarymatrix.cpp"}
 		%\subsubsection{最大匹配-Hopcroft-Karp}
 		%\inputminted{c++}{"Gragh Theory/Bipartite gragh/HK.cpp"}
-		%\subsubsection{最大权匹配-KM}
+		%\subsubsection{最大权完美匹配-KM}
 		%\inputminted{c++}{"Gragh Theory/Bipartite gragh/KM.cpp"}
 
 	\subsection{强连通缩点tarjan}
 	\inputminted{c++}{"Gragh Theory/SCC.cpp"}
 
 	\subsection{最近公共祖先LCA}
-
+		\subsubsection{tarjan}
+		\inputminted{c++}{"Gragh Theory/LeastCommonAncestors/tarjan.cpp"}
+		\subsubsection{dfs+ST}
+		\inputminted{c++}{"Gragh Theory/LeastCommonAncestors/dfs+ST.cpp"}
 
 	\subsection{欧拉回路}
 		\subsubsection{判定}
@@ -153,21 +156,18 @@
 	\subsection{拓扑排序Topological Sorting}
 	\inputminted{c++}{"Data Structure/topo.cpp"}
 	\subsection{树状数组}
-		\subsubsection{一维}
-		\inputminted{c++}{"Data Structure/szsz.cpp"}
-		\subsubsection{二维}
-		\inputminted{c++}{"Data Structure/2Dszsz.cpp"}
+		\inputminted{c++}{"Data Structure/BinaryIndexedTree.cpp"}
 	\subsection{RMQ}
-		\subsubsection{一维}
 		\inputminted{c++}{"Data Structure/RMQ.cpp"}
-		\subsubsection{二维}
-		\inputminted{c++}{"Data Structure/2DRMQ.cpp"}
 	\subsection{线段树Segment Tree}
-		\subsubsection{单点更新区间查询}
-		\inputminted{c++}{"Data Structure/segment tree/point-range.cpp"}
-		\subsubsection{区间更新区间查询}
-		\inputminted{c++}{"Data Structure/segment tree/range-range.cpp"}
-	%\subsection{}
+		\inputminted{c++}{"Data Structure/segmentTree.cpp"}
+	\subsection{树链剖分HeavyLightDecomposition}
+		\inputminted{c++}{"Data Structure/HeavyLightDecomposition.cpp"}
+	\subsection{伸展树splay}
+		\subsubsection{维护序列}
+		\inputminted{c++}{"Data Structure/splay.cpp"}
+		\subsubsection{平衡树}
+
 
 \newpage
 \section{数学Math}
@@ -190,7 +190,7 @@
 	%\subsection{卢卡斯Lucas}
 	%\subsection{结论}
 	%1、两素数最大不能生成数为m*n-m-n
- 
+
 \section{字符串String}
 	\subsection{字典树Trie}
 	\inputminted{c++}{"String/Trie.cpp"}
@@ -215,10 +215,14 @@
 
 \newpage
 \section{其它Other}
+	\subsection{莫队}
+	\inputminted{c++}{"Other/Mos.cpp"}
 	\subsection{离散化}
 	\inputminted{c++}{"Other/discretization.cpp"}
 	\subsection{STL}
 	\inputminted{c++}{"Other/STL.cpp"}
+	\subsection{pbds}
+	\inputminted{c++}{"Other/pbds.cpp"}
 	%\subsection{数组模拟乘法}
 	%\inputminted{c++}{"Other/jiechengmoni.cpp"}
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.7.18)  29 JUL 2018 23:13
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.7.18)  14 AUG 2018 20:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1997,8 +1997,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7]) (./_minted-template/98A7E0A18B20EF9293DEBD0F067B34B1.pygtex)
-(./_minted-template/540CB71AE58AF4A30F51D7F213CC3B4D.pygtex
+[7]) (./_minted-template/540CB71AE58AF4A30F51D7F213CC3B4D.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2006,9 +2005,6 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [8]) (./_minted-template/BDC664DD7A0D283C6AEC19F14E96AAE4.pygtex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2025,7 +2021,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[10]
+[10]) (./_minted-template/B807B62905B44E60F1B404AEFF946B3E.pygtex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2035,21 +2038,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[11]) (./_minted-template/B807B62905B44E60F1B404AEFF946B3E.pygtex
+[12]) (./_minted-template/53695102D7FACF419C3C67B4A73130F9.pygtex)
+(./_minted-template/E0889ACA38B0023E66122A10B86EA6B8.pygtex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12]) (./_minted-template/53695102D7FACF419C3C67B4A73130F9.pygtex
+[13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64723pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
 
-[13]) (./_minted-template/E0889ACA38B0023E66122A10B86EA6B8.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2174,7 +2177,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[27]
+[27]) (./_minted-template/E2071BF9FF3C58F51BC0ACBE049227F2.pygtex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2184,15 +2187,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[28]) (./_minted-template/E2071BF9FF3C58F51BC0ACBE049227F2.pygtex)
-(./_minted-template/17FB3C917A236A78C29D409AC109BCA7.pygtex
+[28]) (./_minted-template/17FB3C917A236A78C29D409AC109BCA7.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[29]
+[29]) (./_minted-template/4E6FF0B45F76D41436F0C273466F4E27.pygtex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[30]) (./_minted-template/178FAE2A74CE90A046F5ED35A03A834E.pygtex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[31]) (./_minted-template/F2D4EDF5BEADC116D11217DE115A1EB6.pygtex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2202,28 +2218,31 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30]) (./_minted-template/4E6FF0B45F76D41436F0C273466F4E27.pygtex
+[32]) (./_minted-template/E2A0B6727DC31FA75AD98A98CC3E5BC0.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[31]) (./_minted-template/178FAE2A74CE90A046F5ED35A03A834E.pygtex
+[33])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[32])
+[34]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[33] (./_minted-template/15D4832EDF696BC44211278A912A0996.pygtex
+[35] (./_minted-template/15D4832EDF696BC44211278A912A0996.pygtex
 Underfull \vbox (badness 4193) has occurred while \output is active []
 
 
@@ -2233,57 +2252,80 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[34]) (./_minted-template/79A57CAF3C6542BD8E26F9E97D899ABC.pygtex
+[36]) (./_minted-template/79A57CAF3C6542BD8E26F9E97D899ABC.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[35]) (./_minted-template/02F1777695DDC3BD684FD053E17228AB.pygtex)
-(./_minted-template/059BA0AA9AC5CC7C9B6DB98C949B42F7.pygtex
+[37]) (./_minted-template/6A478345C422F8F2D4ED2174C921EC19.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36]) (./_minted-template/9E5E3E3110BDC4A749A310DFDABBEB59.pygtex
+[38]) (./_minted-template/9E5E3E3110BDC4A749A310DFDABBEB59.pygtex)
+(./_minted-template/3970E3B5374B27F2F76B8E71FEAD9E96.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[37]) (./_minted-template/CDB66555B3AE30F1D3E73BF4FB595C85.pygtex
+[39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]) (./_minted-template/2AE088904BED4350F58B91BB8684BA55.pygtex
+[40]) (./_minted-template/93398DD072268137D05F356A2BBBC8A7.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39]) (./_minted-template/90CDB7F685A1628519574B791143FB89.pygtex
+[41]) (./_minted-template/F11E461F58BE078A6AD7509EF5118E74.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40])
+[42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41] (./Maths/conclusions.tex)
+[43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[44])
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[45] (./Maths/conclusions.tex)
 (./_minted-template/CFAC8979CBC49931271C3F2516910949.pygtex)
 (./_minted-template/E4B875A91009402A97A00679B493C3C9.pygtex)
 (./_minted-template/FAD7CB192BFD76B1BEB647A9BF3F9C7D.pygtex
@@ -2293,56 +2335,56 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[42]) (./_minted-template/8858A56705E1C48DEB2A5C7B4DD73C3E.pygtex
+[46]) (./_minted-template/8858A56705E1C48DEB2A5C7B4DD73C3E.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[43]) (./_minted-template/4C15C705C617D0C481F88910138865E7.pygtex
+[47]) (./_minted-template/4C15C705C617D0C481F88910138865E7.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[44]) (./_minted-template/AD122BD397945B987CA2549D7FB20F02.pygtex
+[48]) (./_minted-template/AD122BD397945B987CA2549D7FB20F02.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[45]) (./_minted-template/FCEA86E9857E14BCA8F98D5F35D08CCF.pygtex
+[49]) (./_minted-template/FCEA86E9857E14BCA8F98D5F35D08CCF.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[46]) (./_minted-template/E9EBDD21006073A573BFD84392C36D99.pygtex
+[50]) (./_minted-template/E9EBDD21006073A573BFD84392C36D99.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[47]) (./_minted-template/F082A7D66F20D27BFF4C7E064E378EE7.pygtex
+[51]) (./_minted-template/F082A7D66F20D27BFF4C7E064E378EE7.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[48]) (./_minted-template/C84279BFDBB4E48044ED95AA2D885530.pygtex
+[52]) (./_minted-template/C84279BFDBB4E48044ED95AA2D885530.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[49]
+[53]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2352,21 +2394,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[50]) (./_minted-template/C517D6C5911A1AC2ACA4024AA84E7844.pygtex
+[54]) (./_minted-template/C517D6C5911A1AC2ACA4024AA84E7844.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[51]) (./_minted-template/C538B7A72FCF6F5F6E093F8EDC279A91.pygtex
+[55]) (./_minted-template/C538B7A72FCF6F5F6E093F8EDC279A91.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52]
+[56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2376,36 +2418,46 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[53]) (./_minted-template/58F0BC0A24C8F33EB3398EFE5FAC4041.pygtex
+[57]) (./_minted-template/58F0BC0A24C8F33EB3398EFE5FAC4041.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54])
+[58])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[55] (./_minted-template/CBBD00C42ECAAC03D9CA19BE1828230F.pygtex)
-(./_minted-template/49AA98E5A4CAFF6389EA62FE704DAA27.pygtex
+[59] (./_minted-template/C7A8C71562F789E47A3C94DA06EB5CEC.pygtex)
+(./_minted-template/CBBD00C42ECAAC03D9CA19BE1828230F.pygtex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[56])
+[60]) (./_minted-template/49AA98E5A4CAFF6389EA62FE704DAA27.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57] (./_minted-template/B1DF2880BE847C4311300005F377A698.pygtex)
+[61]) (./_minted-template/2E881E20C40F937EA06678CE4C4F9280.pygtex)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[62] (./_minted-template/B1DF2880BE847C4311300005F377A698.pygtex)
 (./_minted-template/289720A47918653A92D604744CEC26FF.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2413,7 +2465,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58]
+[63]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2423,15 +2475,15 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59]) (./_minted-template/657418B150060A7433A2A1A6D9CE1DB0.pygtex
+[64]) (./_minted-template/657418B150060A7433A2A1A6D9CE1DB0.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[60])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
+[65])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2439,23 +2491,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
+[66]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
  (./template.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 236.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 236.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 240.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 240.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32162 strings out of 493007
- 633230 string characters out of 6136719
- 727911 words of memory out of 5000000
- 35629 multiletter control sequences out of 15000+600000
+ 32212 strings out of 493007
+ 637055 string characters out of 6136719
+ 728790 words of memory out of 5000000
+ 35673 multiletter control sequences out of 15000+600000
  546417 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 57i,12n,74p,10476b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 57i,12n,74p,10470b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on template.pdf (61 pages).
+Output written on template.pdf (66 pages).

@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 红黑树，不能有重复元素，有重复就pair加个捣乱值}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}bits/stdc++.h\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}ext/pb\PYGZus{}ds/tree\PYGZus{}policy.hpp\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include} \PYG{c+cpf}{\PYGZlt{}ext/pb\PYGZus{}ds/assoc\PYGZus{}container.hpp\PYGZgt{}}
+\PYG{k}{using} \PYG{k}{namespace} \PYG{n}{\PYGZus{}\PYGZus{}gnu\PYGZus{}pbds}\PYG{p}{;}
+\PYG{k}{typedef} \PYG{n}{tree}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,} \PYG{n}{null\PYGZus{}type}\PYG{p}{,} \PYG{n}{less}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{p}{,} \PYG{n}{rb\PYGZus{}tree\PYGZus{}tag}\PYG{p}{,} \PYG{n}{tree\PYGZus{}order\PYGZus{}statistics\PYGZus{}node\PYGZus{}update}\PYG{o}{\PYGZgt{}} \PYG{n}{rbtree}\PYG{p}{;}
+
+\PYG{c+cm}{/*}
+\PYG{c+cm}{    定义一颗红黑树}
+\PYG{c+cm}{    int 关键字类型}
+\PYG{c+cm}{    null\PYGZus{}type无映射(低版本g++为null\PYGZus{}mapped\PYGZus{}type)}
+\PYG{c+cm}{    less\PYGZlt{}int\PYGZgt{}从小到大排序 greater\PYGZlt{}int\PYGZgt{}从大到小}
+\PYG{c+cm}{    rb\PYGZus{}tree\PYGZus{}tag 红黑树（splay\PYGZus{}tree\PYGZus{}tag）}
+\PYG{c+cm}{    tree\PYGZus{}order\PYGZus{}statistics\PYGZus{}node\PYGZus{}update结点更新}
+\PYG{c+cm}{    插入t.insert();}
+\PYG{c+cm}{    删除t.erase();}
+\PYG{c+cm}{    Rank:t.order\PYGZus{}of\PYGZus{}key(key);}
+\PYG{c+cm}{    第K小值:t.find\PYGZus{}by\PYGZus{}order(K\PYGZhy{}1);从0开始}
+\PYG{c+cm}{    // 前驱:t.lower\PYGZus{}bound();}
+\PYG{c+cm}{    // 后继t.upper\PYGZus{}bound();}
+\PYG{c+cm}{    a.join(b)b并入a 前提是两棵树的key的取值范围不相交}
+\PYG{c+cm}{    a.split(v,b)key小于等于v的元素属于a，其余的属于b}
+\PYG{c+cm}{    T.lower\PYGZus{}bound(x)   \PYGZgt{}=x的min的迭代器}
+\PYG{c+cm}{    T.upper\PYGZus{}bound((x)  \PYGZgt{}x的min的迭代器}
+\PYG{c+cm}{    T.find\PYGZus{}by\PYGZus{}order(k) 有k个数比它小的数}
+\PYG{c+cm}{*/}
+\end{Verbatim}

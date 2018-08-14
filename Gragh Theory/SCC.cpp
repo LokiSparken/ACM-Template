@@ -1,7 +1,7 @@
 struct SCC
 {
     vector<int> G[MAXN];
-    int pre[MAXN],lowlink[MAXN],sccno[MAXN],dfs_clock,scc;
+    int pre[MAXN],low[MAXN],sccno[MAXN],dfs_clock,scc;
     // scc:强连通分量个数，sccno[i]:缩点后i所在点编号
     stack<int> s;
     void init()
@@ -12,13 +12,10 @@ struct SCC
         while(!s.empty()) s.pop();
         dfs_clock=scc=0;
     }
-    void addEdge(int u,int v)
-    {
-        G[u].push_back(v);
-    }
+    void addEdge(int u,int v) { G[u].push_back(v); }
     void tarjan(int u)
     {
-        pre[u]=lowlink[u]=++dfs_clock;
+        pre[u]=low[u]=++dfs_clock;
         s.push(u);
         for(int i=0;i<G[u].size();++i)
         {
@@ -26,17 +23,14 @@ struct SCC
             if(!pre[v])
             {
                 tarjan(v);
-                lowlink[u]=min(lowlink[u],lowlink[v]);
+                low[u]=min(low[u],low[v]);
             }
-            else if(!sccno[v])
-            {
-                lowlink[u]=min(lowlink[u],pre[v]);
-            }
+            else if(!sccno[v]) low[u]=min(low[u],pre[v]);
         }
-        if(lowlink[u]==pre[u])
+        if(low[u]==pre[u])
         {
             ++scc;
-            for(;;)
+            while(1)
             {
                 int v=s.top();s.pop();
                 sccno[v]=scc;
@@ -44,9 +38,5 @@ struct SCC
             }
         }
     }
-    void findscc()
-    {
-        for(int i=1;i<=n;++i)
-            if(!pre[i]) tarjan(i);
-    }
+    void findscc() { for(int i=1;i<=n;++i) if(!pre[i]) tarjan(i); }
 };

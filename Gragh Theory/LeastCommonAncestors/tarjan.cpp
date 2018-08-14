@@ -11,7 +11,8 @@ inline void init(int n)
     }
 }
 inline void add_edge(int u,int v) { G[u].pb(v); }
-inline void add_query(int u,int v,int id) { query[u].pb({v, id}); query[v].pb({u, id}); }
+inline void add_query(int u,int v,int id) 
+{ query[u].pb({v, id}); query[v].pb({u, id}); }
 void tarjan(int u)
 {
     vis[u] = 1;
