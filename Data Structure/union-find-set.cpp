@@ -30,7 +30,7 @@ void uni(int A,int B,int type)
     if(type==1) relat=0;
     else relat=1;
 
-    rk[y]=(rk[A]+relat-rk[B]+2)%2;
+    rk[y]=(rk[A]+relat-rk[B]+2)%2;// 三角形法则
     par[y]=x;
 }
 // 按秩合并
