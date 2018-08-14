@@ -1,19 +1,14 @@
 // 欧拉序列+ST表，时间复杂度O(2nlog(2n)+q)
 vector<int> G[maxn];
 vector<int> seq;// 欧拉序列（但叶子处只放了一个）
-int dep[maxn], in[maxn];// 深度和各点进栈时间(0~2n-1)
+int dep[maxn], in[maxn];// 深度和各点进栈时间(从0开始)
 pair<int,int> dp[21][maxn << 1];// dp[log(maxn)][maxn<<1],.X为深度，.Y为位置
 void init(int n)
 {
     for (int i = 0; i <= n; i++) G[i].clear();
-    for(int i=0;i<=n;++i) par[i]=i;
     seq.clear();
 }
-void addedge(int u,int v,int cost)
-{
-    G[u].emplace_back(cost,v);
-    G[v].emplace_back(cost,u);
-}
+void addedge(int u,int v) { G[u].emplace_back(v); G[v].emplace_back(u); }
 void dfs(int u, int fa)
 {
     dep[u] = dep[fa] + 1;

@@ -1,20 +1,14 @@
 typedef pair<int,int> P;
 struct Dijkstra
 {
-    vector<P> G[MAXN];
-    int d[MAXN],d2[MAXN];
-    void init(int N)
-    {
-        for(int i=0;i<=N;++i) G[i].clear();
-        memset(d,0x3f,sizeof(d));
-        memset(d2,0x3f,sizeof(d2));
-    }
-    void addEdge(int u,int v,int cost)
-    {
-        G[u].push_back(make_pair(cost,v));
-    }
+    vector<P> G[maxn];
+    int d[maxn],d2[maxn];
+    void init(int n) { for(int i=0;i<=n;++i) G[i].clear(); }
+    void addEdge(int u,int v,int cost) { G[u].push_back(make_pair(cost,v)); }
     void dij(int s)
     {
+        memset(d,0x3f,sizeof(int)*(n+5));
+        memset(d2,0x3f,sizeof(int)*(n+5));
         priority_queue<P,vector<P>,greater<P> > q;
         d[s]=0;
         q.push(make_pair(d[s],s));
@@ -41,4 +35,4 @@ struct Dijkstra
         }
     }
 };
-//另一种做法：正反跑最短路，枚举每边是否在最短路，非则记此时路长
+// 另：正反最短路，枚举边<u,v,cost>是否在最短路，非则ds[u]+dt[v]+cost可能是次短路

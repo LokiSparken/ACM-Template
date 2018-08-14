@@ -1,21 +1,15 @@
+// 时间复杂度：eloge
 typedef pair<int,int> P;
 struct Dijkstra
 {
-    vector<P> G[MAXN];
-    bool vis[MAXN];
-    int d[MAXN];
-    void init(int N)
-    {
-        for(int i=0;i<=N;++i) G[i].clear();
-        memset(vis,false,sizeof(vis));
-        memset(d,0x3f,sizeof(d));
-    }
-    void addEdge(int u,int v,int cost)
-    {
-        G[u].push_back(make_pair(cost,v));
-    }
+    vector<P> G[maxn];
+    int d[maxn],vis[maxn];
+    void init(int n) { for(int i=0;i<=n;++i) G[i].clear(); }
+    void addEdge(int u,int v,int cost) { G[u].push_back({cost,v}); }
     void dij(int s)
     {
+        memset(d,0,sizeof(int)*(n+5)));
+        memset(vis,0,sizeof(int)*(n+5));
         priority_queue<P,vector<P>,greater<P> > q;
         d[s]=0;
         q.push(make_pair(d[s],s));

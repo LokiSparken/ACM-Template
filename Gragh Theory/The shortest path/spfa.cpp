@@ -1,20 +1,18 @@
+// O(ke),稀疏图k<2，一般为常数，网格图可hack
 typedef pair<int,int> P;
 struct Spfa
 {
-    vector<pair<int,int> > G[MAXN];
-    bool vis[MAXN];
-    int inq[MAXN],d[MAXN];
+    vector<pair<int,int> > G[maxn];
+    bool vis[maxn];
+    int inq[maxn],d[maxn];
     void init()
     {
-        for(int i=0;i<=MAXN;++i) G[i].clear();
+        for(int i=0;i<=maxn;++i) G[i].clear();
         memset(vis,false,sizeof(vis));
         memset(inq,0,sizeof(inq));
         memset(d,0x3f,sizeof(d));
     }
-    void add_edge(int u,int v,int cost)
-    {
-        G[u].push_back(make_pair(cost,v));
-    }
+    void addedge(int u,int v,int cost) { G[u].push_back(make_pair(cost,v)); }
     int spfa(int s)
     {
         queue<int> q;
@@ -40,9 +38,9 @@ struct Spfa
                     }
                 }
             }
-            if(inq[v]>N) return -1;     //有负圈
+            if(inq[v]>n) return -1;     //有负圈
         }
-        if(d[N]==INF) return -2;        //不可达
-        return d[N];
+        if(d[n]==inf) return -2;        //不可达
+        return d[n];
     }
 };
