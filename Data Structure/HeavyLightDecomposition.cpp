@@ -47,6 +47,7 @@ struct HLD
             ans=max(ans,dsquery(id[top[u]],id[u],1,n,1));// 查要上跳的点所在链的信息
             u=par[top[u]];// 然后跳出这条链，上跳到该链链顶的父亲
         }
+        // if(u==v) return ans;// 树状数组玄学RE时用
         // 此时u,v已经在同一条链上，又可以直接调用维护信息的数据结构的查询操作了qaq
         if(dep[u]>dep[v]) swap(u,v);// 记深度小的点为u（令其dfs入栈序小）
         //此时的u应该是原来u,v的LCA了，因此注意若边权下放点权要去掉LCA
