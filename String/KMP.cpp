@@ -1,35 +1,17 @@
-struct kmp{
-    int s[maxN];
-    int p[maxM];
-    int f[maxM];
-    void getfail(int *p,int *f)
+/*
+ * fail为最终直接跳到底的地方，fail2原始跳转点。
+ */
+int fail[maxn],fail2[maxn];
+void getfail(string &s,int fail[])
+{
+    int m=s.size();
+    fail[0]=0,fail[1]=0;
+    fail2[0]=fail2[1]=0;
+    for(int i=1;i<m;++i)
     {
-        int m=M;
-        f[0]=0;
-        f[1]=0;
-        for(int i=1;i<m;i++)
-        {
-            int j=f[i];
-            while(j&&p[i]!=p[j])
-                j=f[j];
-            f[i+1]=p[i]==p[j]?j+1:0;
-        }
+        int j=fail2[i];
+        while(j && s[i]!=s[j]) j=fail2[j];
+        fail2[i+1] = fail[i+1]=(s[i]==s[j])?j+1:0;
+        if(fail[i+1]==j+1 && s[i+1]==s[j+1]) fail[i+1]=fail[j+1];
     }
-    int find(int *t,int *p,int *f)
-    {
-        int n=N;
-        int m=M;
-        getfail(p,f);
-        int j=0;
-        for(int i=0;i<n;i++)
-        {
-            while(j&&p[j]!=t[i])
-                j=f[j];
-            if(p[j]==t[i])
-                j++;
-            if(j==m)
-                return i-m+2;
-        }
-        return -1;
-    }
-}ans;
+}

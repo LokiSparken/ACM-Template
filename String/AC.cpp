@@ -1,89 +1,67 @@
-struct AC
+/*
+ * maxn为模式串可能的总长，init,insert后别忘了build得fail。
+ * 时间复杂度：建树O(n个*len),失配O(n个*len),文本O(长m*失配跳转)？
+ */
+struct ACchicken
 {
-    int ch[maxnode][sigma_size];
-    int val[maxnode],f[maxnode],last[maxnode];
-    int sz;
-    void init()
+    int ch[maxn][26],fail[maxn];
+    int val[maxn];
+    int sz,rt;
+    void init() { sz=0,rt=newNode(); }
+    int newNode()
     {
-        sz=1;
-        memset(ch[0],0,sizeof(ch[0]));
-        memset(val,0,sizeof(val));
-        memset(f,0,sizeof(f));
-        memset(last,0,sizeof(last));
+        memset(ch[sz],-1,sizeof(ch[sz]));
+        val[sz]=0;
+        return sz++;
     }
-    int idx(char c){return c-'A';}
-    void insert(char *s,int id)
+    inline int idx(char c) { return c-'a'; }
+    void insert(const char *s)// 建字典树
     {
-        int n=strlen(s),u=0;
-        for(int i=0;i<n;i++)
+        int u=rt, len=strlen(s);
+        for(int i=0;i<len;++i)
         {
             int c=idx(s[i]);
-            if(!ch[u][c])
-            {
-                memset(ch[sz],0,sizeof(ch[sz]));
-                val[sz]=0;
-                ch[u][c]=sz++;
-            }
+            if(ch[u][c]==-1) ch[u][c]=newNode();
             u=ch[u][c];
         }
-        val[u]=id;
+        ++val[u];
     }
-    void getfail(int *f)
+    void build()// 跑fail，其实同时把各个ch[id][0~size]也都补全了
     {
         queue<int> q;
-        f[0]=0;
-        for(int c=0;c<sigma_size;c++)
+        fail[rt]=rt;
+        for(int c=0;c<26;++c)
         {
-            int u=ch[0][c];
-            if(u)
-            {
-                f[u]=0;
-                q.push(u);
-                last[u]=0;
-            }
+            if(ch[rt][c]!=-1) fail[ch[rt][c]]=rt,q.push(ch[rt][c]);
+            else ch[rt][c]=rt;// 令根不存在的后继回到根重新走
         }
         while(!q.empty())
         {
-            int r=q.front();q.pop();
-            for(int c=0;c<sigma_size;c++)
+            int u=q.front();q.pop();
+            for(int c=0;c<26;++c)
             {
-                int u=ch[r][c];
-                if(!u)
-                {
-                    ch[r][c]=ch[f[r]][c];
-                    continue;
-                }
-                q.push(u);
-                int v=f[r];
-                while(v &&!ch[v][c]) v=f[v];
-                f[u]=ch[v][c];
-                last[u]= val[f[u]]? f[u]:last[f[u]];
+                // 后继的失配应看前驱失配的下一个能否匹配，能就连过去，否则看根那有没有能配的
+                if(ch[u][c]!=-1) fail[ch[u][c]]=ch[fail[u]][c],q.push(ch[u][c]);
+                else ch[u][c]=ch[fail[u]][c];// 没有这种后继的话就从其它能走的模式串后面继续走
             }
         }
     }
-    void find(char *t,int *f)
+    int query(const char *s)
     {
-        int n=strlen(t);
-        int j=0;
-        for(int i=0;i<n;i++)
+        int u=rt, len=strlen(s);
+        int ans=0;
+        for(int i=0;i<len;++i)
         {
-            if(t[i]>'Z'||t[i]<'A')
+            int c=idx(s[i]);
+            u=ch[u][c];
+            int temp=u;
+            while(temp!=rt)
             {
-                j=0;
-                continue;
+                ans+=val[temp];
+                val[temp]=0;
+                temp=fail[temp];
             }
-            int c=idx(t[i]);
-            j=ch[j][c];
-            if(val[j]) vis[val[j]]++;
-            if(last[j]) bfind(last[j]);
         }
+        return ans;
     }
-    void bfind(int j)
-    {
-        if(j)
-        {
-            vis[j]++;
-            bfind(last[j]);
-        }
-    }
-};
+}t;
