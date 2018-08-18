@@ -1,6 +1,7 @@
 /*
  * maxn为模式串可能的总长，init,insert后别忘了build得fail。
- * 时间复杂度：建树O(n个*len),失配O(n个*len),文本O(长m*失配跳转)？
+ * 时间复杂度：建树O(n个*len),失配O(n个*len),文本O(长m*失配跳转)
+ * 因为失配指针构成失配树，所以失配跳转总数
  */
 struct ACchicken
 {
@@ -17,8 +18,8 @@ struct ACchicken
     inline int idx(char c) { return c-'a'; }
     void insert(const char *s)// 建字典树
     {
-        int u=rt, len=strlen(s);
-        for(int i=0;i<len;++i)
+        int u=rt;
+        for(int i=0;s[i];++i)
         {
             int c=idx(s[i]);
             if(ch[u][c]==-1) ch[u][c]=newNode();
@@ -26,7 +27,7 @@ struct ACchicken
         }
         ++val[u];
     }
-    void build()// 跑fail，其实同时把各个ch[id][0~size]也都补全了
+    void build()// 跑fail同时把各个ch[id][0~size]补全了，所以不该还有走到-1空的情况了
     {
         queue<int> q;
         fail[rt]=rt;
@@ -50,7 +51,7 @@ struct ACchicken
     {
         int u=rt, len=strlen(s);
         int ans=0;
-        for(int i=0;i<len;++i)
+        for(int i=0;s[i];++i)
         {
             int c=idx(s[i]);
             u=ch[u][c];
