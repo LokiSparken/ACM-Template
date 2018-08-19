@@ -1,7 +1,7 @@
 /*
  * maxn为模式串可能的总长，init,insert后别忘了build得fail。
  * 时间复杂度：建树O(n个*len),失配O(n个*len),文本O(长m*失配跳转)
- * 因为失配指针构成失配树，所以失配跳转总数
+ * 因为失配指针构成失配树，所以失配跳转总数上界n
  */
 struct ACchicken
 {
@@ -49,8 +49,7 @@ struct ACchicken
     }
     int query(const char *s)
     {
-        int u=rt, len=strlen(s);
-        int ans=0;
+        int u=rt, ans=0;
         for(int i=0;s[i];++i)
         {
             int c=idx(s[i]);
