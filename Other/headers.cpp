@@ -33,3 +33,12 @@ Debug：
 2、for里是给本层循环变量++咩？
 3、区间l,r为防坑，if(l>r) swap(l,r);
 4、考虑小数据有没有发生突变的地方
+
+计算器：
+1、终端：(1)分解素因数factor num
+        (2)逆串rev+enter string
+2、python3：from fractions import *(Fraction, gcd)
+            (1)最简分数fraction(a,b)
+            (2)gcd(a,b)
+           from math import *
+            (3)阶乘factorial(num)
