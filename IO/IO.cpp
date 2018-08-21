@@ -1,8 +1,8 @@
-\Large{关同步}
+// 关同步
 ios_base::sync_with_stdio(0);
 cin.tie(0);
 
-\Large{kuangbin的IO挂}
+// kuangbin的IO挂
 template <class T>
 inline bool scan_d(T &ret)
 {

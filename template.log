@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.7.18)  14 AUG 2018 20:12
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.7.18)  21 AUG 2018 17:32
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2377,7 +2377,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52]) (./_minted-template/C84279BFDBB4E48044ED95AA2D885530.pygtex
+[52]) (./_minted-template/C538B7A72FCF6F5F6E093F8EDC279A91.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2394,21 +2394,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54]) (./_minted-template/C517D6C5911A1AC2ACA4024AA84E7844.pygtex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64723pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[55]) (./_minted-template/C538B7A72FCF6F5F6E093F8EDC279A91.pygtex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64723pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[56]
+[54]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2418,22 +2404,40 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]) (./_minted-template/58F0BC0A24C8F33EB3398EFE5FAC4041.pygtex
+[55]) (./_minted-template/58F0BC0A24C8F33EB3398EFE5FAC4041.pygtex)
+(./_minted-template/78B0988025063096547C595C53EC3AF0.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[58])
+[56])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[59] (./_minted-template/C7A8C71562F789E47A3C94DA06EB5CEC.pygtex)
+[57] (./_minted-template/C7A8C71562F789E47A3C94DA06EB5CEC.pygtex)
 (./_minted-template/CBBD00C42ECAAC03D9CA19BE1828230F.pygtex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[58]) (./_minted-template/289720A47918653A92D604744CEC26FF.pygtex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[59]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2450,22 +2454,66 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61]) (./_minted-template/2E881E20C40F937EA06678CE4C4F9280.pygtex)
+[61]) (./_minted-template/2E881E20C40F937EA06678CE4C4F9280.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[62] (./_minted-template/B1DF2880BE847C4311300005F377A698.pygtex)
-(./_minted-template/289720A47918653A92D604744CEC26FF.pygtex
+[62])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63]
+[63] (./_minted-template/B1DF2880BE847C4311300005F377A698.pygtex)
+(./_minted-template/657418B150060A7433A2A1A6D9CE1DB0.pygtex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[64]) (./_minted-template/51E0F764030BE19C22B1C4C80F34363E.pygtex
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.64723pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[65]
+Overfull \hbox (14.88765pt too wide) in paragraph at lines 22--22
+| | | |[][][]\TU/lmtt/m/n/10.53937 temp[].[][]x[][]=[]a[].[][]x[][].[][]add[][]
+(([]c1[].[][]multiply[][]([]b2[]).[][]subtract[][]([]c2[].[][]multiply[][]([]b1
+[]))).[][]divide[][]([]dd[],[][]20[][],[][]0[][]));[]|  
+ []
+
+
+Overfull \hbox (14.88765pt too wide) in paragraph at lines 23--23
+| | | |[][][]\TU/lmtt/m/n/10.53937 temp[].[][]y[][]=[]a[].[][]y[][].[][]add[][]
+(([]a1[].[][]multiply[][]([]c2[]).[][]subtract[][]([]a2[].[][]multiply[][]([]c1
+[]))).[][]divide[][]([]dd[],[][]20[][],[][]0[][]));[]|  
+ []
+
+
+Overfull \hbox (274.9467pt too wide) in paragraph at lines 42--42
+\TU/lmtt/m/n/10.53937 r[]=(([]temp[].[][]x[][].[][]subtract[][]([]a[].[][]x[][]
+)).[][]multiply[][]([]temp[].[][]x[][].[][]subtract[][]([]a[].[][]x[][]))).[][]
+add[][]((([]temp[].[][]y[][].[][]subtract[][]([]a[].[][]y[][])).[][]multiply[][
+]([]temp[].[][]y[][].[][]subtract[][]([]a[].[][]y[][]))));[]|  
+ []
+
+
+Overfull \hbox (286.01303pt too wide) in paragraph at lines 43--43
+\TU/lmtt/m/n/10.53937 dis[]=(([]temp[].[][]x[][].[][]subtract[][]([]d[].[][]x[]
+[])).[][]multiply[][]([]temp[].[][]x[][].[][]subtract[][]([]d[].[][]x[][]))).[]
+[]add[][]((([]temp[].[][]y[][].[][]subtract[][]([]d[].[][]y[][])).[][]multiply[
+][]([]temp[].[][]y[][].[][]subtract[][]([]d[].[][]y[][]))));[]|  
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2475,15 +2523,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[64]) (./_minted-template/657418B150060A7433A2A1A6D9CE1DB0.pygtex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 12.64723pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[65])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 240.
+[66])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 246.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2491,23 +2532,23 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[66]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 240.
+[67]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 246.
  (./template.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 240.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 240.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 246.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 246.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32212 strings out of 493007
- 637055 string characters out of 6136719
- 728790 words of memory out of 5000000
- 35673 multiletter control sequences out of 15000+600000
+ 32226 strings out of 493007
+ 637956 string characters out of 6136719
+ 736804 words of memory out of 5000000
+ 35687 multiletter control sequences out of 15000+600000
  546417 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  57i,12n,74p,10470b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on template.pdf (66 pages).
+Output written on template.pdf (67 pages).
