@@ -1,3 +1,4 @@
+// 时间复杂度，一般为O(ev^2)，但是e一般为v^2
 struct Edge
 {
     int from,to,cap,flow;

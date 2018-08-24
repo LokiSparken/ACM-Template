@@ -1,4 +1,4 @@
-//最大费用最大流则费用取反
+// 最大费用最大流则费用取反，时间复杂度O(maxflow*e)
 struct Edge
 {
 	int from,to,cap,flow,cost;

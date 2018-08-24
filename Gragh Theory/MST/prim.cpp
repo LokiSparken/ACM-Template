@@ -1,3 +1,4 @@
+// O(v^2)
 struct Prim
 {
     bool vis[MAXN];

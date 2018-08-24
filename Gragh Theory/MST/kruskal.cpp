@@ -1,3 +1,4 @@
+// O(eloge)
 struct Edge
 {
     int u,v,d;

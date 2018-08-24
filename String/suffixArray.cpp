@@ -64,3 +64,5 @@ int lcp(int a, int b)
     if (a > b) swap(a, b);
     return rmq(a + 1, b);
 }
+
+// DC3
