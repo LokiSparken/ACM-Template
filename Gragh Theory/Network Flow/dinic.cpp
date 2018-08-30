@@ -8,9 +8,9 @@ struct Dinic
 {
     int n,m,s,t;
     vector<Edge> edges;
-    vector<int> G[MAXN];
-    bool vis[MAXN];
-    int d[MAXN],cur[MAXN];
+    vector<int> G[maxn];
+    bool vis[maxn];
+    int d[maxn],cur[maxn];
     void init(int n)
     {
         for(int i=0;i<=n;++i) G[i].clear();
@@ -24,7 +24,7 @@ struct Dinic
         G[from].push_back(m-2);
         G[to].push_back(m-1);
     }
-    bool BFS()
+    bool bfs()
     {
         memset(vis,false,sizeof(vis));
         queue<int> q;
@@ -48,7 +48,7 @@ struct Dinic
         }
         return vis[t];
     }
-    int DFS(int v,int a)
+    int dfs(int v,int a)
     {
         if(v==t || a==0) return a;
         int flow=0,f;
@@ -56,7 +56,7 @@ struct Dinic
         {
             int ecode=G[v][i];
             Edge &e=edges[ecode];
-            if(d[v]+1==d[e.to] && (f=DFS(e.to,min(a,e.cap-e.flow)))>0)
+            if(d[v]+1==d[e.to] && (f=dfs(e.to,min(a,e.cap-e.flow)))>0)
             {
                 e.flow+=f;
                 edges[ecode^1].flow-=f;
@@ -67,14 +67,14 @@ struct Dinic
         }
         return flow;
     }
-    int maxFlow(int s,int t)
+    int maxflow(int s,int t)
     {
         this->s=s;this->t=t;
         int flow=0;
-        while(BFS())
+        while(bfs())
         {
             memset(cur,0,sizeof(cur));
-            flow+=DFS(s,INF);
+            flow+=dfs(s,inf);
         }
         return flow;
     }
