@@ -31,14 +31,18 @@ const double eps=1e-6; // WA了就加精度，T了就减精度
 Debug：
 1、初始化，清空图，0和n的地方，mem里面sizeof(int)还是ll
 2、for里是给本层循环变量++咩？
-3、区间l,r为防坑，if(l>r) swap(l,r);
+3、区间l,r为防坑：if(l>r) swap(l,r);
 4、考虑小数据有没有发生突变的地方
 
 计算器：
 1、终端：(1)分解素因数factor num
         (2)逆串rev+enter string
 2、python3：from fractions import *(Fraction, gcd)
-            (1)最简分数fraction(a,b)
-            (2)gcd(a,b)
+             (1)最简分数fraction(a,b)        
+             (2)gcd(a,b)
            from math import *
-            (3)阶乘factorial(num)
+             (3)阶乘factorial(num)
+
+Attention:
+1、审题请仔细，题面注意限制条件，不清楚的善用Clarification
+2、打表想清楚打哪些量，代码乱改前注意备份。善用打印。
