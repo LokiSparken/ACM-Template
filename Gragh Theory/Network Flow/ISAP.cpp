@@ -7,10 +7,10 @@ struct ISAP
 {
 	int n,m,s,t;
 	vector<Edge> edges;
-	vector<int> G[MAXN];
-	bool vis[MAXN];
-	int d[MAXN],cur[MAXN];
-	int p[MAXN],num[MAXN];
+	vector<int> G[maxn];
+	bool vis[maxn];
+	int d[maxn],cur[maxn];
+	int p[maxn],num[maxn];
 	void init(int n)
 	{
 		this->n=n;
@@ -64,7 +64,7 @@ struct ISAP
 		}
 		return flow;
 	}
-	int Maxflow(int s,int t)
+	int Maxflow(int s,int t)// 可以再加第三个参数流量>=UP剪枝直接return
 	{
 		this->s=s;this->t=t;
 		int flow=0;
@@ -72,7 +72,7 @@ struct ISAP
 		if(d[s]>=n) return 0;
 		memset(num,0,sizeof(num));
 		for(int i=0;i<n;++i)
-			if(d[i]<INF) ++num[d[i]];
+			if(d[i]<inf) ++num[d[i]];
 		int u=s;
 		memset(cur,0,sizeof(cur));
 		while(d[s]<n)
@@ -80,6 +80,7 @@ struct ISAP
 			if(u==t)
 			{
 				flow+=Augment();
+				// if(flow>=up) return flow;
 				u=s;
 			}
 			int ok=0;
