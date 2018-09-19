@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{c+c1}{//最大费用最大流则费用取反}
+\PYG{c+c1}{// 最大费用最大流则费用取反，时间复杂度O(maxflow*e)}
 \PYG{k}{struct} \PYG{n}{Edge}
 \PYG{p}{\PYGZob{}}
 	\PYG{k+kt}{int} \PYG{n}{from}\PYG{p}{,}\PYG{n}{to}\PYG{p}{,}\PYG{n}{cap}\PYG{p}{,}\PYG{n}{flow}\PYG{p}{,}\PYG{n}{cost}\PYG{p}{;}
@@ -9,8 +9,8 @@
 \PYG{p}{\PYGZob{}}
 	\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,}\PYG{n}{m}\PYG{p}{;}
 	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{edges}\PYG{p}{;}
-	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-	\PYG{k+kt}{int} \PYG{n}{inq}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{d}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{p}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{a}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+	\PYG{k+kt}{int} \PYG{n}{inq}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{d}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{p}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{a}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
 
 	\PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)}
 	\PYG{p}{\PYGZob{}}

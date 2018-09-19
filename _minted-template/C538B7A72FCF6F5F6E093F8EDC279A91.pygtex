@@ -1,91 +1,69 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{struct} \PYG{n}{AC}
+\PYG{c+cm}{/*}
+\PYG{c+cm}{ * maxn为模式串可能的总长，init,insert后别忘了build得fail。}
+\PYG{c+cm}{ * 时间复杂度：建树O(n个*len),失配O(n个*len),文本O(长m*失配跳转)}
+\PYG{c+cm}{ * 因为失配指针构成失配树，所以失配跳转总数上界n\PYGZhy{}1（但aaa...沿来路每次跳回去也会退化到O(n\PYGZca{}2)）}
+\PYG{c+cm}{ */}
+\PYG{k}{struct} \PYG{n}{ACchicken}
 \PYG{p}{\PYGZob{}}
-    \PYG{k+kt}{int} \PYG{n}{ch}\PYG{p}{[}\PYG{n}{maxnode}\PYG{p}{][}\PYG{n}{sigma\PYGZus{}size}\PYG{p}{];}
-    \PYG{k+kt}{int} \PYG{n}{val}\PYG{p}{[}\PYG{n}{maxnode}\PYG{p}{],}\PYG{n}{f}\PYG{p}{[}\PYG{n}{maxnode}\PYG{p}{],}\PYG{n}{last}\PYG{p}{[}\PYG{n}{maxnode}\PYG{p}{];}
-    \PYG{k+kt}{int} \PYG{n}{sz}\PYG{p}{;}
-    \PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{()}
+    \PYG{k+kt}{int} \PYG{n}{ch}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{][}\PYG{l+m+mi}{26}\PYG{p}{],}\PYG{n}{fail}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+    \PYG{k+kt}{int} \PYG{n}{val}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+    \PYG{k+kt}{int} \PYG{n}{sz}\PYG{p}{,}\PYG{n}{rt}\PYG{p}{;}
+    \PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{n}{sz}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{rt}\PYG{o}{=}\PYG{n}{newNode}\PYG{p}{();} \PYG{p}{\PYGZcb{}}
+    \PYG{k+kt}{int} \PYG{n+nf}{newNode}\PYG{p}{()}
     \PYG{p}{\PYGZob{}}
-        \PYG{n}{sz}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}
-        \PYG{n}{memset}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]));}
-        \PYG{n}{memset}\PYG{p}{(}\PYG{n}{val}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{val}\PYG{p}{));}
-        \PYG{n}{memset}\PYG{p}{(}\PYG{n}{f}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{f}\PYG{p}{));}
-        \PYG{n}{memset}\PYG{p}{(}\PYG{n}{last}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{last}\PYG{p}{));}
+        \PYG{n}{memset}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{sz}\PYG{p}{],}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{sz}\PYG{p}{]));}
+        \PYG{n}{val}\PYG{p}{[}\PYG{n}{sz}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{return} \PYG{n}{sz}\PYG{o}{++}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
-    \PYG{k+kt}{int} \PYG{n+nf}{idx}\PYG{p}{(}\PYG{k+kt}{char} \PYG{n}{c}\PYG{p}{)\PYGZob{}}\PYG{k}{return} \PYG{n}{c}\PYG{o}{\PYGZhy{}}\PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{;\PYGZcb{}}
-    \PYG{k+kt}{void} \PYG{n+nf}{insert}\PYG{p}{(}\PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{s}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{id}\PYG{p}{)}
+    \PYG{k+kr}{inline} \PYG{k+kt}{int} \PYG{n+nf}{idx}\PYG{p}{(}\PYG{k+kt}{char} \PYG{n}{c}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n}{c}\PYG{o}{\PYGZhy{}}\PYG{l+s+sc}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+    \PYG{k+kt}{void} \PYG{n+nf}{insert}\PYG{p}{(}\PYG{k}{const} \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{s}\PYG{p}{)}\PYG{c+c1}{// 建字典树}
     \PYG{p}{\PYGZob{}}
-        \PYG{k+kt}{int} \PYG{n}{n}\PYG{o}{=}\PYG{n}{strlen}\PYG{p}{(}\PYG{n}{s}\PYG{p}{),}\PYG{n}{u}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{n}\PYG{p}{;}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+        \PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{=}\PYG{n}{rt}\PYG{p}{;}
+        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
         \PYG{p}{\PYGZob{}}
             \PYG{k+kt}{int} \PYG{n}{c}\PYG{o}{=}\PYG{n}{idx}\PYG{p}{(}\PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
-            \PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{])}
-            \PYG{p}{\PYGZob{}}
-                \PYG{n}{memset}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{sz}\PYG{p}{],}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{sz}\PYG{p}{]));}
-                \PYG{n}{val}\PYG{p}{[}\PYG{n}{sz}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-                \PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]}\PYG{o}{=}\PYG{n}{sz}\PYG{o}{++}\PYG{p}{;}
-            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{if}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]}\PYG{o}{==\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]}\PYG{o}{=}\PYG{n}{newNode}\PYG{p}{();}
             \PYG{n}{u}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{];}
         \PYG{p}{\PYGZcb{}}
-        \PYG{n}{val}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{id}\PYG{p}{;}
+        \PYG{o}{++}\PYG{n}{val}\PYG{p}{[}\PYG{n}{u}\PYG{p}{];}
     \PYG{p}{\PYGZcb{}}
-    \PYG{k+kt}{void} \PYG{n+nf}{getfail}\PYG{p}{(}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{f}\PYG{p}{)}
+    \PYG{k+kt}{void} \PYG{n+nf}{build}\PYG{p}{()}\PYG{c+c1}{// 跑fail同时把各个ch[id][0\PYGZti{}size]补全了，所以不该还有走到\PYGZhy{}1空的情况了}
     \PYG{p}{\PYGZob{}}
         \PYG{n}{queue}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{q}\PYG{p}{;}
-        \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{c}\PYG{o}{\PYGZlt{}}\PYG{n}{sigma\PYGZus{}size}\PYG{p}{;}\PYG{n}{c}\PYG{o}{++}\PYG{p}{)}
+        \PYG{n}{fail}\PYG{p}{[}\PYG{n}{rt}\PYG{p}{]}\PYG{o}{=}\PYG{n}{rt}\PYG{p}{;}
+        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{c}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{26}\PYG{p}{;}\PYG{o}{++}\PYG{n}{c}\PYG{p}{)}
         \PYG{p}{\PYGZob{}}
-            \PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{][}\PYG{n}{c}\PYG{p}{];}
-            \PYG{k}{if}\PYG{p}{(}\PYG{n}{u}\PYG{p}{)}
-            \PYG{p}{\PYGZob{}}
-                \PYG{n}{f}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-                \PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{u}\PYG{p}{);}
-                \PYG{n}{last}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{if}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{rt}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]}\PYG{o}{!=\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{n}{fail}\PYG{p}{[}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{rt}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]]}\PYG{o}{=}\PYG{n}{rt}\PYG{p}{,}\PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{rt}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]);}
+            \PYG{k}{else} \PYG{n}{ch}\PYG{p}{[}\PYG{n}{rt}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]}\PYG{o}{=}\PYG{n}{rt}\PYG{p}{;}\PYG{c+c1}{// 令根不存在的后继回到根重新走}
         \PYG{p}{\PYGZcb{}}
         \PYG{k}{while}\PYG{p}{(}\PYG{o}{!}\PYG{n}{q}\PYG{p}{.}\PYG{n}{empty}\PYG{p}{())}
         \PYG{p}{\PYGZob{}}
-            \PYG{k+kt}{int} \PYG{n}{r}\PYG{o}{=}\PYG{n}{q}\PYG{p}{.}\PYG{n}{front}\PYG{p}{();}\PYG{n}{q}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
-            \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{c}\PYG{o}{\PYGZlt{}}\PYG{n}{sigma\PYGZus{}size}\PYG{p}{;}\PYG{n}{c}\PYG{o}{++}\PYG{p}{)}
+            \PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{=}\PYG{n}{q}\PYG{p}{.}\PYG{n}{front}\PYG{p}{();}\PYG{n}{q}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
+            \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{c}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{c}\PYG{o}{\PYGZlt{}}\PYG{l+m+mi}{26}\PYG{p}{;}\PYG{o}{++}\PYG{n}{c}\PYG{p}{)}
             \PYG{p}{\PYGZob{}}
-                \PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{r}\PYG{p}{][}\PYG{n}{c}\PYG{p}{];}
-                \PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{u}\PYG{p}{)}
-                \PYG{p}{\PYGZob{}}
-                    \PYG{n}{ch}\PYG{p}{[}\PYG{n}{r}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{f}\PYG{p}{[}\PYG{n}{r}\PYG{p}{]][}\PYG{n}{c}\PYG{p}{];}
-                    \PYG{k}{continue}\PYG{p}{;}
-                \PYG{p}{\PYGZcb{}}
-                \PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{u}\PYG{p}{);}
-                \PYG{k+kt}{int} \PYG{n}{v}\PYG{o}{=}\PYG{n}{f}\PYG{p}{[}\PYG{n}{r}\PYG{p}{];}
-                \PYG{k}{while}\PYG{p}{(}\PYG{n}{v} \PYG{o}{\PYGZam{}\PYGZam{}!}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{c}\PYG{p}{])} \PYG{n}{v}\PYG{o}{=}\PYG{n}{f}\PYG{p}{[}\PYG{n}{v}\PYG{p}{];}
-                \PYG{n}{f}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{v}\PYG{p}{][}\PYG{n}{c}\PYG{p}{];}
-                \PYG{n}{last}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=} \PYG{n}{val}\PYG{p}{[}\PYG{n}{f}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]]}\PYG{o}{?} \PYG{n}{f}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{:}\PYG{n}{last}\PYG{p}{[}\PYG{n}{f}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]];}
+                \PYG{c+c1}{// 后继的失配应看前驱失配的下一个能否匹配，能就连过去，否则看根那有没有能配的}
+                \PYG{k}{if}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]}\PYG{o}{!=\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)} \PYG{n}{fail}\PYG{p}{[}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]]}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{fail}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]][}\PYG{n}{c}\PYG{p}{],}\PYG{n}{q}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]);}
+                \PYG{k}{else} \PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{]}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{fail}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]][}\PYG{n}{c}\PYG{p}{];}\PYG{c+c1}{// 没有这种后继的话就从其它能走的模式串后面继续走}
             \PYG{p}{\PYGZcb{}}
         \PYG{p}{\PYGZcb{}}
     \PYG{p}{\PYGZcb{}}
-    \PYG{k+kt}{void} \PYG{n+nf}{find}\PYG{p}{(}\PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{t}\PYG{p}{,}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{f}\PYG{p}{)}
+    \PYG{k+kt}{int} \PYG{n+nf}{query}\PYG{p}{(}\PYG{k}{const} \PYG{k+kt}{char} \PYG{o}{*}\PYG{n}{s}\PYG{p}{)}
     \PYG{p}{\PYGZob{}}
-        \PYG{k+kt}{int} \PYG{n}{n}\PYG{o}{=}\PYG{n}{strlen}\PYG{p}{(}\PYG{n}{t}\PYG{p}{);}
-        \PYG{k+kt}{int} \PYG{n}{j}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{n}\PYG{p}{;}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+        \PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{=}\PYG{n}{rt}\PYG{p}{,} \PYG{n}{ans}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
         \PYG{p}{\PYGZob{}}
-            \PYG{k}{if}\PYG{p}{(}\PYG{n}{t}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{\PYGZgt{}}\PYG{l+s+sc}{\PYGZsq{}Z\PYGZsq{}}\PYG{o}{||}\PYG{n}{t}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{\PYGZlt{}}\PYG{l+s+sc}{\PYGZsq{}A\PYGZsq{}}\PYG{p}{)}
+            \PYG{k+kt}{int} \PYG{n}{c}\PYG{o}{=}\PYG{n}{idx}\PYG{p}{(}\PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
+            \PYG{n}{u}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{u}\PYG{p}{][}\PYG{n}{c}\PYG{p}{];}
+            \PYG{k+kt}{int} \PYG{n}{temp}\PYG{o}{=}\PYG{n}{u}\PYG{p}{;}
+            \PYG{k}{while}\PYG{p}{(}\PYG{n}{temp}\PYG{o}{!=}\PYG{n}{rt}\PYG{p}{)}
             \PYG{p}{\PYGZob{}}
-                \PYG{n}{j}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-                \PYG{k}{continue}\PYG{p}{;}
+                \PYG{n}{ans}\PYG{o}{+=}\PYG{n}{val}\PYG{p}{[}\PYG{n}{temp}\PYG{p}{];}
+                \PYG{n}{val}\PYG{p}{[}\PYG{n}{temp}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+                \PYG{n}{temp}\PYG{o}{=}\PYG{n}{fail}\PYG{p}{[}\PYG{n}{temp}\PYG{p}{];}
             \PYG{p}{\PYGZcb{}}
-            \PYG{k+kt}{int} \PYG{n}{c}\PYG{o}{=}\PYG{n}{idx}\PYG{p}{(}\PYG{n}{t}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]);}
-            \PYG{n}{j}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{j}\PYG{p}{][}\PYG{n}{c}\PYG{p}{];}
-            \PYG{k}{if}\PYG{p}{(}\PYG{n}{val}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])} \PYG{n}{vis}\PYG{p}{[}\PYG{n}{val}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]]}\PYG{o}{++}\PYG{p}{;}
-            \PYG{k}{if}\PYG{p}{(}\PYG{n}{last}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])} \PYG{n}{bfind}\PYG{p}{(}\PYG{n}{last}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]);}
         \PYG{p}{\PYGZcb{}}
+        \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
-    \PYG{k+kt}{void} \PYG{n+nf}{bfind}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j}\PYG{p}{)}
-    \PYG{p}{\PYGZob{}}
-        \PYG{k}{if}\PYG{p}{(}\PYG{n}{j}\PYG{p}{)}
-        \PYG{p}{\PYGZob{}}
-            \PYG{n}{vis}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{o}{++}\PYG{p}{;}
-            \PYG{n}{bfind}\PYG{p}{(}\PYG{n}{last}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]);}
-        \PYG{p}{\PYGZcb{}}
-    \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{};}
+\PYG{p}{\PYGZcb{}}\PYG{n}{t}\PYG{p}{;}
 \end{Verbatim}

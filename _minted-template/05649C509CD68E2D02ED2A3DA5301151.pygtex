@@ -1,8 +1,7 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{void} \PYG{n+nf}{get\PYGZus{}rev}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{bit}\PYG{p}{)}\PYG{c+c1}{//bit±íÊ¾¶ş½øÖÆµÄÎ»Êı}
-\PYG{p}{\PYGZob{}}
-    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{bit}\PYG{p}{);}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}\PYG{c+c1}{//ÎÒÃ´Òª¶Ô1\PYGZti{}2\PYGZca{}bit\PYGZhy{}1ÖĞµÄËùÓĞÊı×ö³¤¶ÈÎªbitµÄ¶ş½øÖÆ·­×ª}
+\PYG{k+kt}{void} \PYG{n+nf}{get\PYGZus{}rev}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{bit}\PYG{p}{)}\PYG{c+c1}{//bitè¡¨ç¤ºäºŒè¿›åˆ¶çš„ä½æ•°}
+\PYG{p}{\PYGZob{}}\PYG{c+c1}{//å¯¹1\PYGZti{}2\PYGZca{}bit\PYGZhy{}1ä¸­çš„æ‰€æœ‰æ•°åšé•¿åº¦ä¸ºbitçš„äºŒè¿›åˆ¶ç¿»è½¬}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{bit}\PYG{p}{);}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
         \PYG{n}{rev}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{=}\PYG{p}{(}\PYG{n}{rev}\PYG{p}{[}\PYG{n}{i}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{|}\PYG{p}{((}\PYG{n}{i}\PYG{o}{\PYGZam{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{p}{(}\PYG{n}{bit}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{));}\PYG{c+c1}{//?!! SMG ?!!}
-\PYG{p}{\PYGZcb{}}
-\PYG{c+c1}{//ÔËÓÃµÄdpµÄË¼Ïë}
+\PYG{p}{\PYGZcb{}}\PYG{c+c1}{//è¿ç”¨çš„dpçš„æ€æƒ³}
 \end{Verbatim}

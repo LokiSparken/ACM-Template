@@ -1,6 +1,6 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k+kt}{int} \PYG{n}{block}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{cnt}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{a}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,}\PYG{n}{q}\PYG{p}{,}\PYG{n}{Ans}\PYG{p}{,}\PYG{n}{ans}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n}{block}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{cnt}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{a}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,}\PYG{n}{q}\PYG{p}{,}\PYG{n}{Ans}\PYG{p}{,}\PYG{n}{ans}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
 \PYG{k}{struct} \PYG{n}{Node}
 \PYG{p}{\PYGZob{}}
     \PYG{k+kt}{int} \PYG{n}{l}\PYG{p}{,}\PYG{n}{r}\PYG{p}{,}\PYG{n}{id}\PYG{p}{;}
@@ -9,7 +9,7 @@
         \PYG{k}{if}\PYG{p}{(}\PYG{n}{block}\PYG{p}{[}\PYG{n}{l}\PYG{p}{]}\PYG{o}{==}\PYG{n}{block}\PYG{p}{[}\PYG{n}{b}\PYG{p}{.}\PYG{n}{l}\PYG{p}{])} \PYG{k}{return} \PYG{p}{(}\PYG{n}{block}\PYG{p}{[}\PYG{n}{l}\PYG{p}{]}\PYG{o}{\PYGZam{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{?}\PYG{p}{(}\PYG{n}{r}\PYG{o}{\PYGZlt{}}\PYG{n}{b}\PYG{p}{.}\PYG{n}{r}\PYG{p}{)}\PYG{o}{:}\PYG{p}{(}\PYG{n}{b}\PYG{p}{.}\PYG{n}{r}\PYG{o}{\PYGZlt{}}\PYG{n}{r}\PYG{p}{);}
         \PYG{k}{return} \PYG{n}{block}\PYG{p}{[}\PYG{n}{l}\PYG{p}{]}\PYG{o}{\PYGZlt{}}\PYG{n}{block}\PYG{p}{[}\PYG{n}{b}\PYG{p}{.}\PYG{n}{l}\PYG{p}{];}
     \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{}}\PYG{n}{ask}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+\PYG{p}{\PYGZcb{}}\PYG{n}{ask}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
 \PYG{k+kr}{inline} \PYG{k+kt}{void} \PYG{n+nf}{add}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{pos}\PYG{p}{)\PYGZob{}\PYGZcb{}}
 \PYG{k+kr}{inline} \PYG{k+kt}{void} \PYG{n+nf}{del}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{pos}\PYG{p}{)\PYGZob{}\PYGZcb{}}
 \PYG{k+kt}{void} \PYG{n+nf}{Mos}\PYG{p}{()}

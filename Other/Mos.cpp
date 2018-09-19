@@ -1,5 +1,5 @@
-int block[MAXN],cnt[MAXN],a[MAXN];
-int n,q,Ans,ans[MAXN];
+int block[maxn],cnt[maxn],a[maxn];
+int n,q,Ans,ans[maxn];
 struct Node
 {
     int l,r,id;
@@ -8,7 +8,7 @@ struct Node
         if(block[l]==block[b.l]) return (block[l]&1)?(r<b.r):(b.r<r);
         return block[l]<block[b.l];
     }
-}ask[MAXN];
+}ask[maxn];
 inline void add(int pos){}
 inline void del(int pos){}
 void Mos()

@@ -4,18 +4,18 @@ struct Edge
 	int from,to,cap,flow;
 	Edge(int u,int v,int c,int f):from(u),to(v),cap(c),flow(f){}
 };
-int low[MAXN][MAXN],up[MAXN][MAXN];
-int rowsum[MAXN],colsum[MAXN];
-int in[MAXN],out[MAXN];
+int low[maxn][maxn],up[maxn][maxn];
+int rowsum[maxn],colsum[maxn];
+int in[maxn],out[maxn];
 int n,m,source;
 struct ISAP
 {
 	int n,m,s,t;
 	vector<Edge> edges;
-	vector<int> G[MAXN];
-	bool vis[MAXN];
-	int d[MAXN],cur[MAXN];
-	int p[MAXN],num[MAXN];
+	vector<int> G[maxn];
+	bool vis[maxn];
+	int d[maxn],cur[maxn];
+	int p[maxn],num[maxn];
 
 	void init(int n)
 	{
@@ -168,7 +168,7 @@ int main()
 	while(N--)
 	{
 		scanf("%d%d",&m,&n);
-		ans.init(MAXN);
+		ans.init(maxn);
 		init(m,n);
 		int row=0,col=0;
 		for(int i=1;i<=m;++i)

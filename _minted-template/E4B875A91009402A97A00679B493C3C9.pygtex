@@ -1,6 +1,4 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{typedef} \PYG{k+kt}{long} \PYG{k+kt}{long} \PYG{n}{ll}\PYG{p}{;}
-\PYG{c+c1}{//边乘边模}
 \PYG{n}{ll} \PYG{n+nf}{fast}\PYG{p}{(}\PYG{n}{ll} \PYG{n}{base}\PYG{p}{,}\PYG{n}{ll} \PYG{n}{exp}\PYG{p}{)}
 \PYG{p}{\PYGZob{}}
     \PYG{n}{ll} \PYG{n}{ans}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}

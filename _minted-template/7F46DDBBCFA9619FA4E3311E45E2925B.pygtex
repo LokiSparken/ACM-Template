@@ -1,0 +1,71 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{struct} \PYG{n}{node}
+\PYG{p}{\PYGZob{}}
+   \PYG{n}{node} \PYG{o}{*}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{];}
+   \PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{;} \PYG{c+c1}{//优先级rank,这个数值越大,优先级越高。}
+   \PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{;} \PYG{c+c1}{//值,满足左子树的值小于父亲，右子树的值大于父亲}
+   \PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{;} \PYG{c+c1}{//size}
+   \PYG{n}{node}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{)}\PYG{o}{:}\PYG{n}{v}\PYG{p}{(}\PYG{n}{v}\PYG{p}{)\PYGZob{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{=}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{=}\PYG{n+nb}{NULL}\PYG{p}{;}\PYG{n}{r}\PYG{o}{=}\PYG{n}{rand}\PYG{p}{();}\PYG{n}{s}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;\PYGZcb{}}\PYG{c+c1}{//new node(v);}
+   \PYG{k+kt}{int} \PYG{n}{cmp}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{x}\PYG{p}{)}\PYG{k}{const}
+   \PYG{p}{\PYGZob{}}
+       \PYG{k}{if}\PYG{p}{(}\PYG{n}{x}\PYG{o}{==}\PYG{n}{v}\PYG{p}{)}\PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
+       \PYG{k}{return} \PYG{n}{x}\PYG{o}{\PYGZlt{}}\PYG{n}{v}\PYG{o}{?}\PYG{l+m+mi}{0}\PYG{o}{:}\PYG{l+m+mi}{1}\PYG{p}{;}
+   \PYG{p}{\PYGZcb{}}
+   \PYG{k+kt}{void} \PYG{n}{maintain}\PYG{p}{()}   \PYG{c+c1}{//写在封装的结构体里面}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{s}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{!=}\PYG{n+nb}{NULL}\PYG{p}{)}\PYG{n}{s}\PYG{o}{+=}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{s}\PYG{p}{;}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{!=}\PYG{n+nb}{NULL}\PYG{p}{)}\PYG{n}{s}\PYG{o}{+=}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{s}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\PYG{c+c1}{//rank tree名次树}
+\PYG{c+c1}{//名次树中每个结点新加域size。表示以它为根的树的结点多少}
+\PYG{c+c1}{//Kth(k):找出第k小的元素；}
+\PYG{c+c1}{//Rank(x):值x的名词；}
+\PYG{k+kt}{void} \PYG{n+nf}{rotate}\PYG{p}{(}\PYG{n}{node}\PYG{o}{*} \PYG{o}{\PYGZam{}}\PYG{n}{o}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{d}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{//d=0是左旋,d=1是右旋}
+    \PYG{n}{node}\PYG{o}{*}\PYG{n}{k}\PYG{o}{=}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{d}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{1}\PYG{p}{];}
+    \PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{d}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{=}\PYG{n}{k}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{d}\PYG{p}{];}
+    \PYG{n}{k}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{d}\PYG{p}{]}\PYG{o}{=}\PYG{n}{o}\PYG{p}{;}
+    \PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{maintain}\PYG{p}{();}\PYG{n}{k}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{maintain}\PYG{p}{();}\PYG{n}{o}\PYG{o}{=}\PYG{n}{k}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void} \PYG{n+nf}{insert}\PYG{p}{(}\PYG{n}{node}\PYG{o}{*} \PYG{o}{\PYGZam{}}\PYG{n}{o}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{x}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{o}\PYG{o}{==}\PYG{n+nb}{NULL}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{n}{o}\PYG{o}{=}\PYG{k}{new} \PYG{n}{node}\PYG{p}{(}\PYG{n}{x}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{else}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{d}\PYG{o}{=}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{cmp}\PYG{p}{(}\PYG{n}{x}\PYG{p}{);}    \PYG{c+c1}{//堆的性质   当d=\PYGZhy{}1的时候要根据题目来}
+        \PYG{n}{insert}\PYG{p}{(}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{d}\PYG{p}{],}\PYG{n}{x}\PYG{p}{);} \PYG{c+c1}{//插入相应的子树}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{n}{d}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{r}\PYG{o}{\PYGZgt{}}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{r}\PYG{p}{)} \PYG{c+c1}{//比较优先级}
+        \PYG{n}{rotate}\PYG{p}{(}\PYG{n}{o}\PYG{p}{,}\PYG{n}{d}\PYG{o}{\PYGZca{}}\PYG{l+m+mi}{1}\PYG{p}{);}       \PYG{c+c1}{//调整旋转}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{maintain}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{kth}\PYG{p}{(}\PYG{n}{node} \PYG{o}{*}\PYG{n}{o}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{k}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{o}\PYG{o}{==}\PYG{n+nb}{NULL}\PYG{o}{||}\PYG{n}{k}\PYG{o}{\PYGZlt{}=}\PYG{l+m+mi}{0}\PYG{o}{||}\PYG{n}{k}\PYG{o}{\PYGZgt{}}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{s}\PYG{p}{)}\PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k+kt}{int} \PYG{n}{s}\PYG{o}{=}\PYG{p}{(}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{==}\PYG{n+nb}{NULL}\PYG{o}{?}\PYG{l+m+mi}{0}\PYG{o}{:}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{s}\PYG{p}{);}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{k}\PYG{o}{==}\PYG{n}{s}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{k}{return} \PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{v}\PYG{p}{;}
+    \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n}{k}\PYG{o}{\PYGZlt{}=}\PYG{n}{s}\PYG{p}{)}\PYG{k}{return} \PYG{n}{kth}\PYG{p}{(}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{n}{k}\PYG{p}{);}  \PYG{c+c1}{//因为满足二叉索引树的性质}
+    \PYG{k}{else} \PYG{k}{return} \PYG{n}{kth}\PYG{p}{(}\PYG{n}{o}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{k}\PYG{o}{\PYGZhy{}}\PYG{n}{s}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void} \PYG{n+nf}{mergeto}\PYG{p}{(}\PYG{n}{node}\PYG{o}{*} \PYG{o}{\PYGZam{}}\PYG{n}{src}\PYG{p}{,}\PYG{n}{node}\PYG{o}{*} \PYG{o}{\PYGZam{}}\PYG{n}{dest}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{src}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{!=}\PYG{n+nb}{NULL}\PYG{p}{)}\PYG{n}{mergeto}\PYG{p}{(}\PYG{n}{src}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{dest}\PYG{p}{);}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{src}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{!=}\PYG{n+nb}{NULL}\PYG{p}{)}\PYG{n}{mergeto}\PYG{p}{(}\PYG{n}{src}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{],}\PYG{n}{dest}\PYG{p}{);}
+    \PYG{n}{insert}\PYG{p}{(}\PYG{n}{dest}\PYG{p}{,}\PYG{n}{src}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{v}\PYG{p}{);}
+    \PYG{k}{delete} \PYG{n}{src}\PYG{p}{;}
+    \PYG{n}{src}\PYG{o}{=}\PYG{n+nb}{NULL}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void} \PYG{n+nf}{removetree}\PYG{p}{(}\PYG{n}{node}\PYG{o}{*} \PYG{o}{\PYGZam{}}\PYG{n}{x}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{x}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{!=}\PYG{n+nb}{NULL}\PYG{p}{)}\PYG{n}{removetree}\PYG{p}{(}\PYG{n}{x}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]);}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{x}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{!=}\PYG{n+nb}{NULL}\PYG{p}{)}\PYG{n}{removetree}\PYG{p}{(}\PYG{n}{x}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{ch}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]);}
+    \PYG{k}{delete} \PYG{n}{x}\PYG{p}{;}
+    \PYG{n}{x}\PYG{o}{=}\PYG{n+nb}{NULL}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

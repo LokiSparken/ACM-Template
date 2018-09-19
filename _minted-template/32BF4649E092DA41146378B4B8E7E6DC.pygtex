@@ -8,10 +8,10 @@
 \PYG{p}{\PYGZob{}}
 	\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,}\PYG{n}{m}\PYG{p}{,}\PYG{n}{s}\PYG{p}{,}\PYG{n}{t}\PYG{p}{;}
 	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{edges}\PYG{p}{;}
-	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-	\PYG{k+kt}{bool} \PYG{n}{vis}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-	\PYG{k+kt}{int} \PYG{n}{d}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{cur}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-	\PYG{k+kt}{int} \PYG{n}{p}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{num}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+	\PYG{k+kt}{bool} \PYG{n}{vis}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+	\PYG{k+kt}{int} \PYG{n}{d}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{cur}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+	\PYG{k+kt}{int} \PYG{n}{p}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{num}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
 	\PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)}
 	\PYG{p}{\PYGZob{}}
 		\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{n}\PYG{o}{=}\PYG{n}{n}\PYG{p}{;}
@@ -65,7 +65,7 @@
 		\PYG{p}{\PYGZcb{}}
 		\PYG{k}{return} \PYG{n}{flow}\PYG{p}{;}
 	\PYG{p}{\PYGZcb{}}
-	\PYG{k+kt}{int} \PYG{n+nf}{Maxflow}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{t}\PYG{p}{)}
+	\PYG{k+kt}{int} \PYG{n+nf}{Maxflow}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{t}\PYG{p}{)}\PYG{c+c1}{// 可以再加第三个参数流量\PYGZgt{}=UP剪枝直接return}
 	\PYG{p}{\PYGZob{}}
 		\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{s}\PYG{o}{=}\PYG{n}{s}\PYG{p}{;}\PYG{k}{this}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{t}\PYG{o}{=}\PYG{n}{t}\PYG{p}{;}
 		\PYG{k+kt}{int} \PYG{n}{flow}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
@@ -73,7 +73,7 @@
 		\PYG{k}{if}\PYG{p}{(}\PYG{n}{d}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{o}{\PYGZgt{}=}\PYG{n}{n}\PYG{p}{)} \PYG{k}{return} \PYG{l+m+mi}{0}\PYG{p}{;}
 		\PYG{n}{memset}\PYG{p}{(}\PYG{n}{num}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{num}\PYG{p}{));}
 		\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{n}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
-			\PYG{k}{if}\PYG{p}{(}\PYG{n}{d}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{\PYGZlt{}}\PYG{n}{INF}\PYG{p}{)} \PYG{o}{++}\PYG{n}{num}\PYG{p}{[}\PYG{n}{d}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]];}
+			\PYG{k}{if}\PYG{p}{(}\PYG{n}{d}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{\PYGZlt{}}\PYG{n}{inf}\PYG{p}{)} \PYG{o}{++}\PYG{n}{num}\PYG{p}{[}\PYG{n}{d}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]];}
 		\PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{=}\PYG{n}{s}\PYG{p}{;}
 		\PYG{n}{memset}\PYG{p}{(}\PYG{n}{cur}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{cur}\PYG{p}{));}
 		\PYG{k}{while}\PYG{p}{(}\PYG{n}{d}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{o}{\PYGZlt{}}\PYG{n}{n}\PYG{p}{)}
@@ -81,6 +81,7 @@
 			\PYG{k}{if}\PYG{p}{(}\PYG{n}{u}\PYG{o}{==}\PYG{n}{t}\PYG{p}{)}
 			\PYG{p}{\PYGZob{}}
 				\PYG{n}{flow}\PYG{o}{+=}\PYG{n}{Augment}\PYG{p}{();}
+				\PYG{c+c1}{// if(flow\PYGZgt{}=up) return flow;}
 				\PYG{n}{u}\PYG{o}{=}\PYG{n}{s}\PYG{p}{;}
 			\PYG{p}{\PYGZcb{}}
 			\PYG{k+kt}{int} \PYG{n}{ok}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}

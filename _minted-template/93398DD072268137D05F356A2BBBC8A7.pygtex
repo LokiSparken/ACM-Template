@@ -48,6 +48,7 @@
             \PYG{n}{ans}\PYG{o}{=}\PYG{n}{max}\PYG{p}{(}\PYG{n}{ans}\PYG{p}{,}\PYG{n}{dsquery}\PYG{p}{(}\PYG{n}{id}\PYG{p}{[}\PYG{n}{top}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]],}\PYG{n}{id}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{n}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{));}\PYG{c+c1}{// 查要上跳的点所在链的信息}
             \PYG{n}{u}\PYG{o}{=}\PYG{n}{par}\PYG{p}{[}\PYG{n}{top}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]];}\PYG{c+c1}{// 然后跳出这条链，上跳到该链链顶的父亲}
         \PYG{p}{\PYGZcb{}}
+        \PYG{c+c1}{// if(u==v) return ans;// 树状数组玄学RE时用}
         \PYG{c+c1}{// 此时u,v已经在同一条链上，又可以直接调用维护信息的数据结构的查询操作了qaq}
         \PYG{k}{if}\PYG{p}{(}\PYG{n}{dep}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{\PYGZgt{}}\PYG{n}{dep}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{n}{swap}\PYG{p}{(}\PYG{n}{u}\PYG{p}{,}\PYG{n}{v}\PYG{p}{);}\PYG{c+c1}{// 记深度小的点为u（令其dfs入栈序小）}
         \PYG{c+c1}{//此时的u应该是原来u,v的LCA了，因此注意若边权下放点权要去掉LCA}

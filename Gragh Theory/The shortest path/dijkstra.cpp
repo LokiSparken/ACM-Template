@@ -1,6 +1,4 @@
-// 时间复杂度：eloge
-typedef pair<int,int> P;
-struct Dijkstra
+struct Dijkstra // 时间复杂度：eloge
 {
     vector<P> G[maxn];
     int d[maxn],vis[maxn];

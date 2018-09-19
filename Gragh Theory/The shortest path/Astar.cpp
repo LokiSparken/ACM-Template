@@ -1,7 +1,6 @@
 struct Edge
 {
-	int from;
-	int d,f;
+	int from,d,f;
 	Edge(int u,int d,int f):from(u),d(d),f(f){}
 	bool operator <(const Edge &a)const     //从大到小排序，避免用反pq
 	{
@@ -11,29 +10,19 @@ struct Edge
 };
 struct Kpath
 {
-	vector<pair<int,int> > G[MAXN];
-	vector<pair<int,int> > GB[MAXN];
-	bool vis[MAXN];
-	int h[MAXN];
-	int t;
+	vector<pair<int,int> > G[maxn],GB[maxn];
+	int vis[maxn], h[maxn], t;
 	void init()
 	{
-		for(int i=0;i<=N;++i)
-		{
-			G[i].clear();
-			GB[i].clear();
-		}
+		for(int i=0;i<=N;++i) G[i].clear(), GB[i].clear();
 		t=0;
 		memset(h,0x3f,sizeof(h));
 		memset(vis,false,sizeof(vis));
 	}
 	void addEdge(int u,int v,int cost)
-	{
-		G[u].push_back(mp(cost,v));
-		GB[v].push_back(mp(cost,u));
-	}
-	void spfa(int s)    //dijstra可能效率更高，另注意题目会不会有负圈
-	{
+	{ G[u].push_back({cost,v}),GB[v].push_back({cost,u}); }
+	void spfa(int s)    // 先求所有点到终点最短路h[]
+	{//dijstra可能效率更高，另注意题目会不会有负圈
 		queue<int> q;
 		h[s]=0;
 		q.push(s);

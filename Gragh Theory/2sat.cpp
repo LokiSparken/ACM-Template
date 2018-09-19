@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int MAXN=1e3+5;
-vector<int> G[MAXN*2];
-bool mark[MAXN*2];
-int S[MAXN*2],c;
+const int maxn=1e3+5;
+vector<int> G[maxn*2];
+bool mark[maxn*2];
+int S[maxn*2],c;
 int n,m;
 void init()
 {
-    for(int i=0;i<MAXN*2;++i) G[i].clear();
+    for(int i=0;i<maxn*2;++i) G[i].clear();
     memset(mark,0,sizeof(mark));
     memset(S,0,sizeof(S));
 }

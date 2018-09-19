@@ -2,21 +2,19 @@
 \PYG{k+kt}{void} \PYG{n+nf}{TSP}\PYG{p}{()}
 \PYG{p}{\PYGZob{}}
     \PYG{n}{memset}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{,}\PYG{l+m+mh}{0x3f}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{));}
-    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{m}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
-        \PYG{n}{dp}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{i}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{m}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)} \PYG{n}{dp}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{i}\PYG{p}{][}\PYG{n}{i}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
     \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{m}\PYG{p}{);}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}\PYG{c+c1}{// 枚举状态：经过哪些点}
         \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{j}\PYG{o}{\PYGZlt{}}\PYG{n}{m}\PYG{p}{;}\PYG{o}{++}\PYG{n}{j}\PYG{p}{)}\PYG{c+c1}{// 经过这些点时到达的最后一个点}
-            \PYG{k}{if}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]}\PYG{o}{!=}\PYG{n}{INF}\PYG{p}{)}\PYG{c+c1}{// 这个状态是合法的}
-            \PYG{c+cm}{/** 我觉得其实i里存在j判断合法不太对？存在j也有可能到不了j状态是INF？}
-\PYG{c+cm}{            但i\PYGZam{}(1\PYGZlt{}\PYGZlt{}j)也可以过，是因为取小操作避免了从INF转移过去？}
-\PYG{c+cm}{            dp[i][j]!=INF这个判断比i\PYGZam{}(1\PYGZlt{}\PYGZlt{}j)快了15ms，可能的确存在符合后者但INF的情况。}
-\PYG{c+cm}{            好吧，再交次没区别了，甚至更慢了点，可能是看机器心情吧orz**/}
+            \PYG{k}{if}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]}\PYG{o}{!=}\PYG{n}{inf}\PYG{p}{)}\PYG{c+c1}{// 这个状态是合法的}
+\PYG{c+cm}{/** 我觉得其实i里存在j判断合法不太对？存在j也有可能到不了j状态是inf？}
+\PYG{c+cm}{但i\PYGZam{}(1\PYGZlt{}\PYGZlt{}j)也可以过，是因为取小操作避免了从inf转移过去？}
+\PYG{c+cm}{dp[i][j]!=inf这个判断比i\PYGZam{}(1\PYGZlt{}\PYGZlt{}j)快了15ms，可能的确存在符合后者但inf的情况。}
+\PYG{c+cm}{好吧，再交次没区别了，甚至更慢了点，可能是看机器心情吧orz**/}
                 \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{k}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{k}\PYG{o}{\PYGZlt{}}\PYG{n}{m}\PYG{p}{;}\PYG{o}{++}\PYG{n}{k}\PYG{p}{)}\PYG{c+c1}{// 枚举新走到的点，那么它一定是新的终点}
-                    \PYG{k}{if}\PYG{p}{(((}\PYG{n}{i}\PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{k}\PYG{p}{))}\PYG{o}{==}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{cost}\PYG{p}{[}\PYG{n}{j}\PYG{p}{][}\PYG{n}{k}\PYG{p}{]}\PYG{o}{!=}\PYG{n}{INF}\PYG{p}{)}
-                    \PYG{c+cm}{/** 注意如果i中已有k点，那么如果发生转移，有可能发生：}
-\PYG{c+cm}{                    经过i这个集合，终点在x，但是又转移到了y，也就是这个状态同时有两个终点了，而这个转移又修改了状态，就GG了！！！}
-\PYG{c+cm}{                    **/}
+                    \PYG{k}{if}\PYG{p}{(((}\PYG{n}{i}\PYG{o}{\PYGZam{}}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{k}\PYG{p}{))}\PYG{o}{==}\PYG{l+m+mi}{0}\PYG{p}{)} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{cost}\PYG{p}{[}\PYG{n}{j}\PYG{p}{][}\PYG{n}{k}\PYG{p}{]}\PYG{o}{!=}\PYG{n}{inf}\PYG{p}{)}
                         \PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{o}{|}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{k}\PYG{p}{)][}\PYG{n}{k}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{o}{|}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{n}{k}\PYG{p}{)][}\PYG{n}{k}\PYG{p}{],}\PYG{n}{dp}\PYG{p}{[}\PYG{n}{i}\PYG{p}{][}\PYG{n}{j}\PYG{p}{]}\PYG{o}{+}\PYG{n}{cost}\PYG{p}{[}\PYG{n}{j}\PYG{p}{][}\PYG{n}{k}\PYG{p}{]);}
+\PYG{c+cm}{/** 注意如果i中已有k点，那么如果发生转移，有可能发生：}
+\PYG{c+cm}{经过i这个集合，终点在x，但是又转移到了y，也就是这个状态同时有两个终点了，而这个转移又修改了状态，就GG了！！！}
+\PYG{c+cm}{**/}
 \PYG{p}{\PYGZcb{}}
 \end{Verbatim}

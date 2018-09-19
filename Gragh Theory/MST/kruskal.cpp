@@ -3,16 +3,12 @@ struct Edge
 {
     int u,v,d;
     Edge(int from,int to,int cost):u(from),v(to),d(cost){}
-    bool operator < (const Edge &a)const
-    {
-        return d<a.d;
-    }
+    bool operator < (const Edge &a)const { return d<a.d; }
 };
 struct Kruskal
 {
     vector<Edge> edges;
-    int par[MAXN];
-    int n;
+    int par[maxn],n;
     void init(int n)
     {
         this->n=n;

@@ -4,12 +4,12 @@
  */
 struct HK
 {
-    vector<int> G[MAXN];
+    vector<int> G[maxn];
     int uN;
 
-    bool used[MAXN];
-    int Mx[MAXN],My[MAXN];
-    int dx[MAXN],dy[MAXN];
+    bool used[maxn];
+    int Mx[maxn],My[maxn];
+    int dx[maxn],dy[maxn];
     int dis;
     bool SearchP()
     {

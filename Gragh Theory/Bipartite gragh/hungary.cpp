@@ -10,10 +10,7 @@ struct Hungary
         this->V=N;
         for(int i=0;i<=V;++i) G[i].clear();
     }
-    void add_edge(int u,int v)
-    {
-        G[u].push_back(v);
-    }
+    void add_edge(int u,int v) { G[u].push_back(v); }
     bool dfs(int v)
     {
         for(int i=0;i<G[v].size();++i)

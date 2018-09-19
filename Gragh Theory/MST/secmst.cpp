@@ -7,7 +7,7 @@ struct Edge
 struct SecMST
 {
     vector<Edge> es;
-    int par[MAXN],length[MAXN][MAXN];
+    int par[maxn],length[maxn][maxn];
     void init(int n)
     {
         for(int i=0;i<=n;++i) par[i]=i;
@@ -29,14 +29,10 @@ struct SecMST
     bool cmp(Edge a,Edge b){return a.cost<b.cost;}
     void update(int u,int v,int cost)
     {
-        for(int i=1;i<=N;++i)
-            for(int j=1;j<=N;++j)
-            {
+        for(int i=1;i<=n;++i)
+            for(int j=1;j<=n;++j)
                 if(i!=j && same(a,u) && same(b,v))
-                {
                     length[a][b]=length[b][a]=cost;
-                }
-            }
     }
     int kruskal()
     {
@@ -50,7 +46,7 @@ struct SecMST
             {
                 ans+=cost;
                 e.use=true;
-                update(u,v,cost);//若MST结束DFS遍历树得length效率更高
+                update(u,v,cost);// 若MST结束DFS遍历树得length效率更高
                 uni(u,v);
             }
         }
@@ -59,15 +55,15 @@ struct SecMST
     int secmst()
     {
         int MST=kruskal();
-		int SECMST=INF;
+		int SECMST=inf;
 		bool flag=false;
 		for(int i=0;i<es.size();++i)
 		{
 			Edge &e=es[i];
 			if(!e.use)
 			{
-			    //枚举非MST的边(u,v)，加入MST形成环
-			    //则SECMST=MST+该边w-所成环中uv间最长边
+			    // 枚举非MST的边(u,v)，加入MST形成环
+			    // 则SECMST=MST+该边w-所成环中uv间最长边
 				SECMST=min(SECMST,MST+e.cost-length[e.u][e.v]);
 				if(SECMST==MST)
 				{

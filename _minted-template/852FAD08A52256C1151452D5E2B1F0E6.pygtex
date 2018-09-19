@@ -5,18 +5,18 @@
 	\PYG{k+kt}{int} \PYG{n}{from}\PYG{p}{,}\PYG{n}{to}\PYG{p}{,}\PYG{n}{cap}\PYG{p}{,}\PYG{n}{flow}\PYG{p}{;}
 	\PYG{n}{Edge}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{c}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{f}\PYG{p}{)}\PYG{o}{:}\PYG{n}{from}\PYG{p}{(}\PYG{n}{u}\PYG{p}{),}\PYG{n}{to}\PYG{p}{(}\PYG{n}{v}\PYG{p}{),}\PYG{n}{cap}\PYG{p}{(}\PYG{n}{c}\PYG{p}{),}\PYG{n}{flow}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)\PYGZob{}\PYGZcb{}}
 \PYG{p}{\PYGZcb{};}
-\PYG{k+kt}{int} \PYG{n}{low}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{][}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{up}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{][}\PYG{n}{MAXN}\PYG{p}{];}
-\PYG{k+kt}{int} \PYG{n}{rowsum}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{colsum}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-\PYG{k+kt}{int} \PYG{n}{in}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{out}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n}{low}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{][}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{up}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{][}\PYG{n}{maxn}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n}{rowsum}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{colsum}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n}{in}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{out}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
 \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,}\PYG{n}{m}\PYG{p}{,}\PYG{n}{source}\PYG{p}{;}
 \PYG{k}{struct} \PYG{n}{ISAP}
 \PYG{p}{\PYGZob{}}
 	\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,}\PYG{n}{m}\PYG{p}{,}\PYG{n}{s}\PYG{p}{,}\PYG{n}{t}\PYG{p}{;}
 	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{Edge}\PYG{o}{\PYGZgt{}} \PYG{n}{edges}\PYG{p}{;}
-	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-	\PYG{k+kt}{bool} \PYG{n}{vis}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-	\PYG{k+kt}{int} \PYG{n}{d}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{cur}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-	\PYG{k+kt}{int} \PYG{n}{p}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{num}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
+	\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+	\PYG{k+kt}{bool} \PYG{n}{vis}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+	\PYG{k+kt}{int} \PYG{n}{d}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{cur}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+	\PYG{k+kt}{int} \PYG{n}{p}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{num}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
 
 	\PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{)}
 	\PYG{p}{\PYGZob{}}
@@ -169,7 +169,7 @@
 	\PYG{k}{while}\PYG{p}{(}\PYG{n}{N}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{)}
 	\PYG{p}{\PYGZob{}}
 		\PYG{n}{scanf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}\PYGZpc{}d\PYGZpc{}d\PYGZdq{}}\PYG{p}{,}\PYG{o}{\PYGZam{}}\PYG{n}{m}\PYG{p}{,}\PYG{o}{\PYGZam{}}\PYG{n}{n}\PYG{p}{);}
-		\PYG{n}{ans}\PYG{p}{.}\PYG{n}{init}\PYG{p}{(}\PYG{n}{MAXN}\PYG{p}{);}
+		\PYG{n}{ans}\PYG{p}{.}\PYG{n}{init}\PYG{p}{(}\PYG{n}{maxn}\PYG{p}{);}
 		\PYG{n}{init}\PYG{p}{(}\PYG{n}{m}\PYG{p}{,}\PYG{n}{n}\PYG{p}{);}
 		\PYG{k+kt}{int} \PYG{n}{row}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{col}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
 		\PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}=}\PYG{n}{m}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}

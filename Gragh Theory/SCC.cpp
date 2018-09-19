@@ -1,7 +1,7 @@
 struct SCC
 {
-    vector<int> G[MAXN];
-    int pre[MAXN],low[MAXN],sccno[MAXN],dfs_clock,scc;
+    vector<int> G[maxn];
+    int pre[maxn],low[maxn],sccno[maxn],dfs_clock,scc;
     // scc:强连通分量个数，sccno[i]:缩点后i所在点编号
     stack<int> s;
     void init()

@@ -1,4 +1,3 @@
-typedef pair<int,int> P;
 struct Dijkstra
 {
     vector<P> G[maxn];
@@ -34,5 +33,4 @@ struct Dijkstra
             }
         }
     }
-};
-// 另：正反最短路，枚举边<u,v,cost>是否在最短路，非则ds[u]+dt[v]+cost可能是次短路
+};// 另：正反最短路，枚举边<u,v,cost>是否在最短路，非则ds[u]+dt[v]+cost可能是次短路

@@ -1,6 +1,4 @@
-/*
- * fail为最终直接跳到底的地方，fail2原始跳转点。
- */
+// fail为最终直接跳到底的地方，fail2原始跳转点。
 int fail[maxn],fail2[maxn];
 void getfail(string &s,int fail[])
 {

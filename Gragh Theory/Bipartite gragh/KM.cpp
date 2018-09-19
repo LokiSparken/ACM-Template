@@ -5,11 +5,11 @@
 struct KM
 {
     int nx,ny;// 左右两边点数，两边编号都从0开始
-    int G[MAXN][MAXN];// 非完全图全覆盖应初始化为-inf
-    int linker[MAXN],lx[MAXN],ly[MAXN];
+    int G[maxn][maxn];// 非完全图全覆盖应初始化为-inf
+    int linker[maxn],lx[maxn],ly[maxn];
     // 最终左边的i点匹配到右边的点linker[i],lx[i]左边的i点连到右边的最大权边
-    int slack[MAXN];
-    bool visx[MAXN],visy[MAXN];
+    int slack[maxn];
+    bool visx[maxn],visy[maxn];
     bool dfs(int x)
     {
         visx[x]=true;

@@ -8,8 +8,8 @@ struct MCMF
 {
 	int n,m;
 	vector<Edge> edges;
-	vector<int> G[MAXN];
-	int inq[MAXN],d[MAXN],p[MAXN],a[MAXN];
+	vector<int> G[maxn];
+	int inq[maxn],d[maxn],p[maxn],a[maxn];
 
 	void init(int n)
 	{

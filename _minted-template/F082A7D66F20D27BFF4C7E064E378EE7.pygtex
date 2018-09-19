@@ -1,37 +1,17 @@
 \begin{Verbatim}[commandchars=\\\{\}]
-\PYG{k}{struct} \PYG{n}{kmp}\PYG{p}{\PYGZob{}}
-    \PYG{k+kt}{int} \PYG{n}{s}\PYG{p}{[}\PYG{n}{maxN}\PYG{p}{];}
-    \PYG{k+kt}{int} \PYG{n}{p}\PYG{p}{[}\PYG{n}{maxM}\PYG{p}{];}
-    \PYG{k+kt}{int} \PYG{n}{f}\PYG{p}{[}\PYG{n}{maxM}\PYG{p}{];}
-    \PYG{k+kt}{void} \PYG{n+nf}{getfail}\PYG{p}{(}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{p}\PYG{p}{,}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{f}\PYG{p}{)}
+\PYG{c+c1}{// fail为最终直接跳到底的地方，fail2原始跳转点。}
+\PYG{k+kt}{int} \PYG{n}{fail}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{fail2}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+\PYG{k+kt}{void} \PYG{n+nf}{getfail}\PYG{p}{(}\PYG{n}{string} \PYG{o}{\PYGZam{}}\PYG{n}{s}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{fail}\PYG{p}{[])}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{m}\PYG{o}{=}\PYG{n}{s}\PYG{p}{.}\PYG{n}{size}\PYG{p}{();}
+    \PYG{n}{fail}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{n}{fail}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{n}{fail2}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{=}\PYG{n}{fail2}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{m}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
     \PYG{p}{\PYGZob{}}
-        \PYG{k+kt}{int} \PYG{n}{m}\PYG{o}{=}\PYG{n}{M}\PYG{p}{;}
-        \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-        \PYG{n}{f}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{m}\PYG{p}{;}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
-        \PYG{p}{\PYGZob{}}
-            \PYG{k+kt}{int} \PYG{n}{j}\PYG{o}{=}\PYG{n}{f}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
-            \PYG{k}{while}\PYG{p}{(}\PYG{n}{j}\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{n}{p}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{!=}\PYG{n}{p}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])}
-                \PYG{n}{j}\PYG{o}{=}\PYG{n}{f}\PYG{p}{[}\PYG{n}{j}\PYG{p}{];}
-            \PYG{n}{f}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{=}\PYG{n}{p}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{==}\PYG{n}{p}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{o}{?}\PYG{n}{j}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{o}{:}\PYG{l+m+mi}{0}\PYG{p}{;}
-        \PYG{p}{\PYGZcb{}}
+        \PYG{k+kt}{int} \PYG{n}{j}\PYG{o}{=}\PYG{n}{fail2}\PYG{p}{[}\PYG{n}{i}\PYG{p}{];}
+        \PYG{k}{while}\PYG{p}{(}\PYG{n}{j} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{!=}\PYG{n}{s}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])} \PYG{n}{j}\PYG{o}{=}\PYG{n}{fail2}\PYG{p}{[}\PYG{n}{j}\PYG{p}{];}
+        \PYG{n}{fail2}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n}{fail}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{=}\PYG{p}{(}\PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{==}\PYG{n}{s}\PYG{p}{[}\PYG{n}{j}\PYG{p}{])}\PYG{o}{?}\PYG{n}{j}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{o}{:}\PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{fail}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{==}\PYG{n}{j}\PYG{o}{+}\PYG{l+m+mi}{1} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{s}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{==}\PYG{n}{s}\PYG{p}{[}\PYG{n}{j}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{])} \PYG{n}{fail}\PYG{p}{[}\PYG{n}{i}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{=}\PYG{n}{fail}\PYG{p}{[}\PYG{n}{j}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{];}
     \PYG{p}{\PYGZcb{}}
-    \PYG{k+kt}{int} \PYG{n+nf}{find}\PYG{p}{(}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{t}\PYG{p}{,}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{p}\PYG{p}{,}\PYG{k+kt}{int} \PYG{o}{*}\PYG{n}{f}\PYG{p}{)}
-    \PYG{p}{\PYGZob{}}
-        \PYG{k+kt}{int} \PYG{n}{n}\PYG{o}{=}\PYG{n}{N}\PYG{p}{;}
-        \PYG{k+kt}{int} \PYG{n}{m}\PYG{o}{=}\PYG{n}{M}\PYG{p}{;}
-        \PYG{n}{getfail}\PYG{p}{(}\PYG{n}{p}\PYG{p}{,}\PYG{n}{f}\PYG{p}{);}
-        \PYG{k+kt}{int} \PYG{n}{j}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
-        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{n}\PYG{p}{;}\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
-        \PYG{p}{\PYGZob{}}
-            \PYG{k}{while}\PYG{p}{(}\PYG{n}{j}\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{n}{p}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{o}{!=}\PYG{n}{t}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
-                \PYG{n}{j}\PYG{o}{=}\PYG{n}{f}\PYG{p}{[}\PYG{n}{j}\PYG{p}{];}
-            \PYG{k}{if}\PYG{p}{(}\PYG{n}{p}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{o}{==}\PYG{n}{t}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
-                \PYG{n}{j}\PYG{o}{++}\PYG{p}{;}
-            \PYG{k}{if}\PYG{p}{(}\PYG{n}{j}\PYG{o}{==}\PYG{n}{m}\PYG{p}{)}
-                \PYG{k}{return} \PYG{n}{i}\PYG{o}{\PYGZhy{}}\PYG{n}{m}\PYG{o}{+}\PYG{l+m+mi}{2}\PYG{p}{;}
-        \PYG{p}{\PYGZcb{}}
-        \PYG{k}{return} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{;}
-    \PYG{p}{\PYGZcb{}}
-\PYG{p}{\PYGZcb{}}\PYG{n}{ans}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
 \end{Verbatim}

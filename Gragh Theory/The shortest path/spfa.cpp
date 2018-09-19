@@ -1,6 +1,4 @@
-// O(ke),稀疏图k<2，一般为常数，网格图可hack
-typedef pair<int,int> P;
-struct Spfa
+struct Spfa // O(ke),稀疏图k<2，一般为常数，网格图可hack
 {
     vector<pair<int,int> > G[maxn];
     bool vis[maxn];
@@ -16,10 +14,7 @@ struct Spfa
     int spfa(int s)
     {
         queue<int> q;
-        d[s]=0;
-        q.push(s);
-        ++inq[s];
-        vis[s]=true;
+        d[s]=0, q.push(s), ++inq[s], vis[s]=true;
         while(!q.empty())
         {
             int v=q.front();q.pop();
@@ -30,12 +25,7 @@ struct Spfa
                 if(d[u]>d[v]+cost)
                 {
                     d[u]=d[v]+cost;
-                    if(!vis[u])
-                    {
-                        q.push(u);
-                        ++inq[u];
-                        vis[u]=true;
-                    }
+                    if(!vis[u]) q.push(u),++inq[u],vis[u]=true;
                 }
             }
             if(inq[v]>n) return -1;     //有负圈

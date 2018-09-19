@@ -7,8 +7,8 @@ ll dfs(int pos,/*state*/,int lead/*前导零*/,int limit/*上界*/)
     ll ans=0;
     for(int i=0;i<=up;i++)
     {
-        if()balabala
-        else if()balabala
+        if() ;
+        else if() ;
         ans+=dfs(pos-1,/*状态转移*/,(lead&&i)==0,limit&&i==a[pos])
         // 最后两个基本就这样
     }
@@ -20,11 +20,7 @@ ll dfs(int pos,/*state*/,int lead/*前导零*/,int limit/*上界*/)
 ll solve(ll x)
 {
     int pos=0;
-    while(x)
-    {
-        a[pos++]=x%10;
-        x/=10;
-    }
+    while(x) { a[pos++]=x%10, x/=10; }
     return dfs(pos-1,/*状态*/,1,1);
     // 刚开始最高位都是有限制并且有前导零的，显然比最高位还高的位视为0
 }

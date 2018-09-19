@@ -47,11 +47,11 @@
 
 \newpage
 \tableofcontents 														%创建目录
-
+	
 \newpage 																%换页 
 \section{默背一万遍的注意事项}
 	\input{"Other/Attentions.tex"}
-	% \inputminted[breaklines]{markdown}{"Other/headers.cpp"}
+	% \inputminted{markdown}{"Other/headers.cpp"}
 % 	\newpage
 % 	\subsection{配置Vim setting}
 % 		\noindent==========================================\\
@@ -64,7 +64,7 @@
 % 		set shiftwidth=4\\
 % 		set confirm\\
 % 		set mouse=a\\
-% \\
+% 
 % 		map<C-A> ggVG"+y\\
 % 		map <F5> :call Run()<CR>\\
 % 		func! Run()\par
@@ -91,24 +91,26 @@
 \section{图论Graph Theory}
 	\subsection{最短路The shortest path}
 		\subsubsection{Dijkstra}
-			\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/dijkstra.cpp"}
+			\inputminted{c++}{"Gragh Theory/The shortest path/dijkstra.cpp"}
 		\subsubsection{Spfa}
-			\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/spfa.cpp"}
+			\inputminted{c++}{"Gragh Theory/The shortest path/spfa.cpp"}
 		% \subsubsection{Floyd}
-		% \inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/floyd.cpp"}
+		% \inputminted{c++}{"Gragh Theory/The shortest path/floyd.cpp"}
 		\subsubsection{次短路}
-		\	inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/secdij.cpp"}
+			\inputminted{c++}{"Gragh Theory/The shortest path/secdij.cpp"}
 		\subsubsection{第K短路}
-			\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/Astar.cpp"}
+			\inputminted{c++}{"Gragh Theory/The shortest path/Astar.cpp"}
 
-	\subsection{生成树Spanning tree}
-		\subsubsection{最小生成树Minimum spanning tree}
-			\inputminted[breaklines]{c++}{"Gragh Theory/MST/kruskal.cpp"}
-			\inputminted[breaklines]{c++}{"Gragh Theory/MST/prim.cpp"}
-		\subsubsection{次小生成树}
+	% \subsection{生成树Spanning tree}
+		\subsection{最小生成树Minimum spanning tree}
+			\subsubsection{Kruskal}
+				\inputminted{c++}{"Gragh Theory/MST/kruskal.cpp"}
+			\subsubsection{Prim}
+				\inputminted{c++}{"Gragh Theory/MST/prim.cpp"}
+		\subsection{次小生成树}
 			\inputminted{c++}{"Gragh Theory/MST/secmst.cpp"}
 		% \subsubsection{最小树形图Minimum Arborescence}
-		
+
 
 	\subsection{网络流Network flow}
 		\subsubsection{最大流-Dinic}
@@ -120,12 +122,12 @@
 		\subsubsection{建图-有上下界的可行流}
 			\inputminted{c++}{"Gragh Theory/Network Flow/lowup.cpp"}
 
-	\subsection{二分图}
-		\subsubsection{概念公式}
-			\inputminted{c++}{"Gragh Theory/Bipartite gragh/emmm.cpp"}
-		\subsubsection{最大匹配-匈牙利}
-			\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungary.cpp"}
-			\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungarymatrix.cpp"}
+	% \subsection{二分图}
+	% 	\subsubsection{概念公式}
+	% 		\inputminted{c++}{"Gragh Theory/Bipartite gragh/emmm.cpp"}
+	% 	\subsubsection{最大匹配-匈牙利}
+	% 		\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungary.cpp"}
+	% 		\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungarymatrix.cpp"}
 		%\subsubsection{最大匹配-Hopcroft-Karp}
 		%\inputminted{c++}{"Gragh Theory/Bipartite gragh/HK.cpp"}
 		%\subsubsection{最大权完美匹配-KM}
@@ -176,8 +178,11 @@
 	\subsection{伸展树splay}
 		\subsubsection{维护序列}
 			\inputminted{c++}{"Data Structure/splay.cpp"}
-		\subsubsection{平衡树}
-
+		\subsubsection{平衡树(cc)}
+			\inputminted{c++}{"Data Structure/Rank tree.cpp"}
+	\subsection{Treap}
+		\inputminted{c++}{"Data Structure/treap.cpp"}
+		
 \newpage
 \section{数学Math}
 	% \input{"Maths/conclusions.tex"}
@@ -197,9 +202,9 @@
 			\inputminted{c++}{"Maths/Prime/SegmentSieve.cpp"}
 	\subsection{逆元}
 		\subsubsection{模n下a的逆元}
-			\inputminted{c++}{"Maths/Rev/模n下a的逆元.cpp"}
+			\inputminted{c++}{"Maths/Rev/modnreva.cpp"}
 		\subsubsection{线性求逆元}
-			\inputminted{c++}{"Maths/Rev/线性求逆元.cpp"}
+			\inputminted{c++}{"Maths/Rev/rev.cpp"}
 	\subsection{欧拉函数}
 		\inputminted{c++}{"Maths/Elur.cpp"}
 	\subsection{中国剩余定理求同余方程组}
@@ -220,9 +225,9 @@
 		\subsubsection{扩展卢卡斯ExLucas} 
 			\inputminted{c++}{"Maths/Lucas/exlucas.cpp"}
 	\subsection{线性基}
-		\inputminted{c++}{"Maths/线性基.cpp"}
+		\inputminted{c++}{"Maths/xianXingJi.cpp"}
 	\subsection{自适应辛普森}
-		\inputminted{c++}{"Maths/自适应辛普森.cpp"}
+		\inputminted{c++}{"Maths/Simpson.cpp"}
 	\subsection{高斯消元GauseElimination}
 		\inputminted{c++}{"Maths/GaussElimination.cpp"}
 	\subsection{对角阵GaussJordan}
@@ -230,7 +235,7 @@
 	\subsection{米勒罗宾素数测试MillerRabin}
 		\inputminted{c++}{"Maths/MillerRabin.cpp"}
 	\subsection{模方程(可非素数)}
-		\inputminted{c++}{"Maths/模方程（可非素数）.cpp"}
+		\inputminted{c++}{"Maths/modEquation.cpp"}
 
 	%\subsection{线性递推BM}
 	%\subsection{结论}
@@ -265,6 +270,7 @@
 	%\subsection{凸包}
 
 	\subsection{圆Circle}
+		\subsubsection{求两圆交点}
 		\inputminted{c++}{"Computation Geometry/Circle/twopoint.cpp"}
 
 \newpage
@@ -286,9 +292,9 @@
 \section{输入输出IO}
 	% \subsection{简陋IO挂}
 	% 	\inputminted{c++}{"IO/IO.cpp"}
-	% \subsection{Python输入输出}
-	% 	\inputminted{python}{"IO/IO.py"}
-	% \subsection{Java高精度BigDecimal}
-	% 	\inputminted{java}{"IO/IO.java"}
+	\subsection{Python输入输出}
+		\inputminted{python}{"IO/IO.py"}
+	\subsection{Java高精度BigDecimal}
+		\inputminted{java}{"IO/IO.java"}
 
 \end{document}

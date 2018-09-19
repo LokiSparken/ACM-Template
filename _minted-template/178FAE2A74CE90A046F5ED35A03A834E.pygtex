@@ -1,25 +1,22 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{k}{struct} \PYG{n}{SCC}
 \PYG{p}{\PYGZob{}}
-    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{];}
-    \PYG{k+kt}{int} \PYG{n}{pre}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{lowlink}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{sccno}\PYG{p}{[}\PYG{n}{MAXN}\PYG{p}{],}\PYG{n}{dfs\PYGZus{}clock}\PYG{p}{,}\PYG{n}{scc}\PYG{p}{;}
-    \PYG{c+c1}{//scc:强连通分量个数，sccno[i]:缩点后i所在点编号}
+    \PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+    \PYG{k+kt}{int} \PYG{n}{pre}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{low}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{sccno}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],}\PYG{n}{dfs\PYGZus{}clock}\PYG{p}{,}\PYG{n}{scc}\PYG{p}{;}
+    \PYG{c+c1}{// scc:强连通分量个数，sccno[i]:缩点后i所在点编号}
     \PYG{n}{stack}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}} \PYG{n}{s}\PYG{p}{;}
     \PYG{k+kt}{void} \PYG{n+nf}{init}\PYG{p}{()}
     \PYG{p}{\PYGZob{}}
-        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}=}\PYG{n}{N}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)} \PYG{n}{G}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{clear}\PYG{p}{();}
+        \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}=}\PYG{n}{n}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)} \PYG{n}{G}\PYG{p}{[}\PYG{n}{i}\PYG{p}{].}\PYG{n}{clear}\PYG{p}{();}
         \PYG{n}{memset}\PYG{p}{(}\PYG{n}{sccno}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{sccno}\PYG{p}{));}
         \PYG{n}{memset}\PYG{p}{(}\PYG{n}{pre}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{k}{sizeof}\PYG{p}{(}\PYG{n}{pre}\PYG{p}{));}
         \PYG{k}{while}\PYG{p}{(}\PYG{o}{!}\PYG{n}{s}\PYG{p}{.}\PYG{n}{empty}\PYG{p}{())} \PYG{n}{s}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
         \PYG{n}{dfs\PYGZus{}clock}\PYG{o}{=}\PYG{n}{scc}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}
     \PYG{p}{\PYGZcb{}}
-    \PYG{k+kt}{void} \PYG{n+nf}{add\PYGZus{}edge}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{)}
-    \PYG{p}{\PYGZob{}}
-        \PYG{n}{G}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
-    \PYG{p}{\PYGZcb{}}
+    \PYG{k+kt}{void} \PYG{n+nf}{addEdge}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{,}\PYG{k+kt}{int} \PYG{n}{v}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{n}{G}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);} \PYG{p}{\PYGZcb{}}
     \PYG{k+kt}{void} \PYG{n+nf}{tarjan}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{p}{)}
     \PYG{p}{\PYGZob{}}
-        \PYG{n}{pre}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{lowlink}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=++}\PYG{n}{dfs\PYGZus{}clock}\PYG{p}{;}
+        \PYG{n}{pre}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=++}\PYG{n}{dfs\PYGZus{}clock}\PYG{p}{;}
         \PYG{n}{s}\PYG{p}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{u}\PYG{p}{);}
         \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}}\PYG{n}{G}\PYG{p}{[}\PYG{n}{u}\PYG{p}{].}\PYG{n}{size}\PYG{p}{();}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
         \PYG{p}{\PYGZob{}}
@@ -27,17 +24,14 @@
             \PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{pre}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])}
             \PYG{p}{\PYGZob{}}
                 \PYG{n}{tarjan}\PYG{p}{(}\PYG{n}{v}\PYG{p}{);}
-                \PYG{n}{lowlink}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{lowlink}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],}\PYG{n}{lowlink}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
+                \PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],}\PYG{n}{low}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
             \PYG{p}{\PYGZcb{}}
-            \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{sccno}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])}
-            \PYG{p}{\PYGZob{}}
-                \PYG{n}{lowlink}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{lowlink}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],}\PYG{n}{pre}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
-            \PYG{p}{\PYGZcb{}}
+            \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{sccno}\PYG{p}{[}\PYG{n}{v}\PYG{p}{])} \PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{=}\PYG{n}{min}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{],}\PYG{n}{pre}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]);}
         \PYG{p}{\PYGZcb{}}
-        \PYG{k}{if}\PYG{p}{(}\PYG{n}{lowlink}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{==}\PYG{n}{pre}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{low}\PYG{p}{[}\PYG{n}{u}\PYG{p}{]}\PYG{o}{==}\PYG{n}{pre}\PYG{p}{[}\PYG{n}{u}\PYG{p}{])}
         \PYG{p}{\PYGZob{}}
             \PYG{o}{++}\PYG{n}{scc}\PYG{p}{;}
-            \PYG{k}{for}\PYG{p}{(;;)}
+            \PYG{k}{while}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
             \PYG{p}{\PYGZob{}}
                 \PYG{k+kt}{int} \PYG{n}{v}\PYG{o}{=}\PYG{n}{s}\PYG{p}{.}\PYG{n}{top}\PYG{p}{();}\PYG{n}{s}\PYG{p}{.}\PYG{n}{pop}\PYG{p}{();}
                 \PYG{n}{sccno}\PYG{p}{[}\PYG{n}{v}\PYG{p}{]}\PYG{o}{=}\PYG{n}{scc}\PYG{p}{;}
@@ -45,9 +39,6 @@
             \PYG{p}{\PYGZcb{}}
         \PYG{p}{\PYGZcb{}}
     \PYG{p}{\PYGZcb{}}
-    \PYG{c+cm}{/*全图缩点}
-\PYG{c+cm}{        for(int i=1;i\PYGZlt{}=N;++i)}
-\PYG{c+cm}{            if(!pre[i]) tarjan(i);}
-\PYG{c+cm}{    */}
+    \PYG{k+kt}{void} \PYG{n+nf}{findscc}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{n}{i}\PYG{o}{\PYGZlt{}=}\PYG{n}{n}\PYG{p}{;}\PYG{o}{++}\PYG{n}{i}\PYG{p}{)} \PYG{k}{if}\PYG{p}{(}\PYG{o}{!}\PYG{n}{pre}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])} \PYG{n}{tarjan}\PYG{p}{(}\PYG{n}{i}\PYG{p}{);} \PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{};}
 \end{Verbatim}
