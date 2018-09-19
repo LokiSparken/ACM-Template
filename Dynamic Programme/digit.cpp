@@ -1,24 +1,20 @@
-#include<bits/stdc++.h>//sum%(x*n)%x=sum%x;
-using namespace std;
-typedef long long ll;
-int num[20];
-ll dp[20][state];
-ll dfs(int pos,/*state*/,int lead/*Ç°µ¼0*/,int limit/*ÉÏ½ç*/)
+int num[20]; ll dp[20][state];
+ll dfs(int pos,/*state*/,int lead/*å‰å¯¼0*/,int limit/*ä¸Šç•Œ*/)
 {
-    if(pos==-1)return 1;//¿´Çé¿ö
+    if(pos==-1)return 1;//çœ‹æƒ…å†µ
     if(!limit&&dp[pos][state]!=-1)return dp[pos][state];
     int up=limit?a[pos]:9;
     ll ans=0;
     for(int i=0;i<=up;i++)
     {
         if()...
-            else if()...
-    ans+=dfs(pos-1,/*×´Ì¬×ªÒÆ*/,lead&&i==0,limit&&i==a[pos])//×îºóÁ½¸ö»ù±¾¾ÍÕâÑù
-
+        else if()...
+        ans+=dfs(pos-1,/*çŠ¶æ€è½¬ç§»*/,lead&&i==0,limit&&i==a[pos])
+        //æœ€åä¸¤ä¸ªåŸºæœ¬å°±è¿™æ ·
     }
     if(!limit&&!lead)dp[pos][state]=ans;
-    //±ÈÈç²»ÄÜÓĞ62ÄÇÃ´ÕâÀïÖ±½Ó¼ÇÂ¼ÊÇ²»ÊÇ6  ÓÃ10±íÊ¾
-    //ÕâÑùÖ®ºóµÄ×´Ì¬Ôò»áÓĞÖØ¸´¾Í¿ÉÒÔÖ±½ÓÓÃÁË
+    //æ¯”å¦‚ä¸èƒ½æœ‰62é‚£ä¹ˆè¿™é‡Œç›´æ¥è®°å½•æ˜¯ä¸æ˜¯6  ç”¨10è¡¨ç¤º
+    //è¿™æ ·ä¹‹åçš„çŠ¶æ€åˆ™ä¼šæœ‰é‡å¤å°±å¯ä»¥ç›´æ¥ç”¨äº†
     return ans;
 }
 ll solve(ll x)
@@ -29,17 +25,7 @@ ll solve(ll x)
         a[pos++]=x%10;
         x/=10;
     }
-    return dfs(pos-1,/*×´Ì¬*/,1,1);
-    //¸Õ¿ªÊ¼×î¸ßÎ»¶¼ÊÇÓĞÏŞÖÆ²¢ÇÒÓĞÇ°µ¼ÁãµÄ,
-    //ÏÔÈ»±È×î¸ßÎ»»¹Òª¸ßµÄÒ»Î»ÊÓÎª0Âï
+    return dfs(pos-1,/*çŠ¶æ€*/,1,1);
+    //åˆšå¼€å§‹æœ€é«˜ä½éƒ½æ˜¯æœ‰é™åˆ¶å¹¶ä¸”æœ‰å‰å¯¼é›¶çš„,
+    //æ˜¾ç„¶æ¯”æœ€é«˜ä½è¿˜è¦é«˜çš„ä¸€ä½è§†ä¸º0å˜›
 }
-int main()
-{
-
-}
-
-
-
-
-
-
