@@ -1,7 +1,7 @@
 const double exps=1e-5;
 double F(double x)
 {
-       return 0;
+    return 0;//写函数
 }
 double simpson(double a,double b,double A,double B)
 {
