@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/* }
+\PYG{c+cm}{ * [a,b)区间筛（长度\PYGZlt{}1e6，a、b范围1e12），函数返回区间内素数个数}
+\PYG{c+cm}{ * is\PYGZus{}prime[i\PYGZhy{}a]=true表示i是素数，把1当素数了，记得特判。}
+\PYG{c+cm}{ */}
+\PYG{k+kt}{bool} \PYG{n}{is\PYGZus{}prime\PYGZus{}small}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{],} \PYG{n}{is\PYGZus{}prime}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n}{prime}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{];}
+\PYG{k+kt}{int} \PYG{n+nf}{segment\PYGZus{}sieve}\PYG{p}{(}\PYG{n}{ll} \PYG{n}{a}\PYG{p}{,} \PYG{n}{ll} \PYG{n}{b}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{tot} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{ll} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{*} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{is\PYGZus{}prime\PYGZus{}small}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{true}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{ll} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{b} \PYG{o}{\PYGZhy{}} \PYG{n}{a}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{is\PYGZus{}prime}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{true}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{ll} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{;} \PYG{n}{i} \PYG{o}{*} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{is\PYGZus{}prime\PYGZus{}small}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}
+        \PYG{p}{\PYGZob{}}
+            \PYG{k}{for} \PYG{p}{(}\PYG{n}{ll} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{i}\PYG{p}{;} \PYG{n}{j} \PYG{o}{*} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{;} \PYG{n}{j} \PYG{o}{+=} \PYG{n}{i}\PYG{p}{)}
+                \PYG{n}{is\PYGZus{}prime\PYGZus{}small}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{;}
+            \PYG{k}{for} \PYG{p}{(}\PYG{n}{ll} \PYG{n}{j} \PYG{o}{=} \PYG{n}{max}\PYG{p}{(}\PYG{l+m+mi}{2LL}\PYG{p}{,} \PYG{p}{(}\PYG{n}{a} \PYG{o}{+} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{/} \PYG{n}{i}\PYG{p}{)} \PYG{o}{*} \PYG{n}{i}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{p}{;} \PYG{n}{j} \PYG{o}{+=} \PYG{n}{i}\PYG{p}{)}
+                \PYG{n}{is\PYGZus{}prime}\PYG{p}{[}\PYG{n}{j} \PYG{o}{\PYGZhy{}} \PYG{n}{a}\PYG{p}{]} \PYG{o}{=} \PYG{n+nb}{false}\PYG{p}{;}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{k}{for} \PYG{p}{(}\PYG{n}{ll} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{b} \PYG{o}{\PYGZhy{}} \PYG{n}{a}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{is\PYGZus{}prime}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])} \PYG{n}{prime}\PYG{p}{[}\PYG{n}{tot}\PYG{o}{++}\PYG{p}{]} \PYG{o}{=} \PYG{n}{i} \PYG{o}{+} \PYG{n}{a}\PYG{p}{;}
+    \PYG{k}{return} \PYG{n}{tot}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,12 +1,10 @@
 
-import java.util.*;
-import java.math.*;
-
-public class IO {// 比赛要用Main
-		public static class point { BigDecimal x,y; }// 自己定义的类
+import java.util.*;import java.math.*;
+public class IO {// in contests IO should be Main
+		public static class point { BigDecimal x,y; }// define one class
 		
         public static point temp=new point();
-        // 全局变量
+        // quanju value
 		
 		public static point center(point a,point b,point c)
 		{
@@ -27,9 +25,9 @@ public class IO {// 比赛要用Main
 	static point b=new point();
 	static point c=new point();
 	static point d=new point();
-	public static void main(String[] args) // 主函数格式
+	public static void main(String[] args) // main
 	{
-		Scanner in=new Scanner(System.in);// 输入
+		Scanner in=new Scanner(System.in);// scanf()
 		int T=in.nextInt();
 		while(T-->0) 
 		{
@@ -37,13 +35,11 @@ public class IO {// 比赛要用Main
 			b.x=in.nextBigDecimal();b.y=in.nextBigDecimal();
 			c.x=in.nextBigDecimal();c.y=in.nextBigDecimal();
 			d.x=in.nextBigDecimal();d.y=in.nextBigDecimal();
-            temp=center(a,b,c);// 函数调用
-            // 运算也特么是函数没错！
+            temp=center(a,b,c);// use the function
 			BigDecimal r=((temp.x.subtract(a.x)).multiply(temp.x.subtract(a.x))).add(((temp.y.subtract(a.y)).multiply(temp.y.subtract(a.y))));
 			BigDecimal dis=((temp.x.subtract(d.x)).multiply(temp.x.subtract(d.x))).add(((temp.y.subtract(d.y)).multiply(temp.y.subtract(d.y))));
-			if(dis.compareTo(r)>0)
-					System.out.println("Accepted");
-			else System.out.println("Rejected");// 输出
+			if(dis.compareTo(r)>0) System.out.println("Accepted");
+			else System.out.println("Rejected");// out
 		}
 	}
 }

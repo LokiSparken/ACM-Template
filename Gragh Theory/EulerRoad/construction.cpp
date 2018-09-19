@@ -11,3 +11,17 @@ void dfs(int u)
     }
     s.push(u);
 }
+
+// print
+void print(int u)
+{
+    for(int v=1;v<=50;++v)
+    {
+        if(edge[u][v])
+        {
+            --edge[u][v],--edge[v][u];
+            print(v);
+            printf("%d %d\n",v,u);
+        }
+    }
+}

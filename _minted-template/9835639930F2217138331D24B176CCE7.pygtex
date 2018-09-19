@@ -1,0 +1,54 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{const} \PYG{n}{ll} \PYG{n}{MOD} \PYG{o}{=} \PYG{l+m+mi}{998244353}\PYG{p}{;}
+\PYG{k}{const} \PYG{n}{ll} \PYG{n}{G} \PYG{o}{=} \PYG{l+m+mi}{3}\PYG{p}{;}
+\PYG{k}{const} \PYG{k+kt}{int} \PYG{n}{N} \PYG{o}{=} \PYG{l+m+mi}{15}\PYG{p}{;}
+\PYG{n}{ll} \PYG{n}{wn}\PYG{p}{[}\PYG{n}{N} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{2}\PYG{p}{],}\PYG{n}{rev}\PYG{p}{[}\PYG{n}{N} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{2}\PYG{p}{];}
+\PYG{n}{ll} \PYG{n+nf}{fmod}\PYG{p}{(}\PYG{n}{ll} \PYG{n}{x}\PYG{p}{,} \PYG{n}{ll} \PYG{n}{y}\PYG{p}{,} \PYG{n}{ll} \PYG{n}{z}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{ll} \PYG{n}{ans} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{while}\PYG{p}{(}\PYG{n}{y}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{y} \PYG{o}{\PYGZam{}} \PYG{l+m+mi}{1}\PYG{p}{)}\PYG{n}{ans} \PYG{o}{=} \PYG{n}{ans} \PYG{o}{*} \PYG{n}{x} \PYG{o}{\PYGZpc{}} \PYG{n}{z}\PYG{p}{;}
+        \PYG{n}{y} \PYG{o}{\PYGZgt{}\PYGZgt{}=} \PYG{l+m+mi}{1}\PYG{p}{;}
+        \PYG{n}{x} \PYG{o}{=} \PYG{n}{x} \PYG{o}{*} \PYG{n}{x} \PYG{o}{\PYGZpc{}} \PYG{n}{z}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{ans}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{int} \PYG{n+nf}{NTT\PYGZus{}init}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{n\PYGZus{}}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{step} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{k+kt}{int} \PYG{n}{n} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{for}\PYG{p}{(} \PYG{p}{;} \PYG{n}{n} \PYG{o}{\PYGZlt{}} \PYG{n}{n\PYGZus{}}\PYG{p}{;} \PYG{n}{n} \PYG{o}{\PYGZlt{}\PYGZlt{}=} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{++}\PYG{n}{step}\PYG{p}{;}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{rev}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{rev}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{|} \PYG{p}{((}\PYG{n}{i} \PYG{o}{\PYGZam{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{p}{(}\PYG{n}{step} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{));}
+    \PYG{c+c1}{// 蝴蝶操作，二进制反转}
+    \PYG{k+kt}{int} \PYG{n}{g} \PYG{o}{=} \PYG{n}{fmod}\PYG{p}{(}\PYG{n}{G}\PYG{p}{,} \PYG{p}{(}\PYG{n}{MOD} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{o}{/} \PYG{n}{n}\PYG{p}{,} \PYG{n}{MOD}\PYG{p}{);}
+    \PYG{n}{wn}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{n}{wn}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{wn}\PYG{p}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{*} \PYG{n}{g} \PYG{o}{\PYGZpc{}} \PYG{n}{MOD}\PYG{p}{;}
+    \PYG{c+c1}{// 求出n次单位根}
+    \PYG{k}{return} \PYG{n}{n}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void} \PYG{n+nf}{NTT}\PYG{p}{(}\PYG{n}{ll} \PYG{n}{a}\PYG{p}{[],} \PYG{k+kt}{int} \PYG{n}{n}\PYG{p}{,} \PYG{k+kt}{int} \PYG{n}{f}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+        \PYG{k}{if}\PYG{p}{(}\PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{rev}\PYG{p}{[}\PYG{n}{i}\PYG{p}{])}\PYG{n}{swap}\PYG{p}{(}\PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],} \PYG{n}{a}\PYG{p}{[}\PYG{n}{rev}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]]);}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{k} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;} \PYG{n}{k} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{n}{k} \PYG{o}{\PYGZlt{}\PYGZlt{}=} \PYG{l+m+mi}{1}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{n}{i} \PYG{o}{+=} \PYG{p}{(}\PYG{n}{k} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{))} \PYG{p}{\PYGZob{}}
+            \PYG{k+kt}{int} \PYG{n}{t} \PYG{o}{=} \PYG{n}{n} \PYG{o}{/} \PYG{p}{(}\PYG{n}{k} \PYG{o}{\PYGZlt{}\PYGZlt{}} \PYG{l+m+mi}{1}\PYG{p}{);}
+            \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{k}\PYG{p}{;} \PYG{o}{++}\PYG{n}{j}\PYG{p}{)\PYGZob{}}
+                \PYG{n}{ll} \PYG{n}{w} \PYG{o}{=} \PYG{n}{f} \PYG{o}{==} \PYG{l+m+mi}{1} \PYG{o}{?} \PYG{n}{wn}\PYG{p}{[}\PYG{n}{t} \PYG{o}{*} \PYG{n}{j}\PYG{p}{]} \PYG{o}{:} \PYG{n}{wn}\PYG{p}{[}\PYG{n}{n} \PYG{o}{\PYGZhy{}} \PYG{n}{t} \PYG{o}{*} \PYG{n}{j}\PYG{p}{];}
+                \PYG{n}{ll} \PYG{n}{x} \PYG{o}{=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{j}\PYG{p}{];}
+                \PYG{n}{ll} \PYG{n}{y} \PYG{o}{=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{j} \PYG{o}{+} \PYG{n}{k}\PYG{p}{]} \PYG{o}{*} \PYG{n}{w} \PYG{o}{\PYGZpc{}} \PYG{n}{MOD}\PYG{p}{;}
+                \PYG{n}{a}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{x} \PYG{o}{+} \PYG{n}{y}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{n}{MOD}\PYG{p}{;}
+                \PYG{n}{a}\PYG{p}{[}\PYG{n}{i} \PYG{o}{+} \PYG{n}{j} \PYG{o}{+} \PYG{n}{k}\PYG{p}{]} \PYG{o}{=} \PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n}{y} \PYG{o}{+} \PYG{n}{MOD}\PYG{p}{)} \PYG{o}{\PYGZpc{}} \PYG{n}{MOD}\PYG{p}{;}
+            \PYG{p}{\PYGZcb{}}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{k}{if}\PYG{p}{(}\PYG{n}{f} \PYG{o}{==} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n}{ll} \PYG{n}{ninv} \PYG{o}{=} \PYG{n}{fmod}\PYG{p}{(}\PYG{n}{n}\PYG{p}{,} \PYG{n}{MOD} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{n}{MOD}\PYG{p}{);}
+      \PYG{k}{for}\PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{p}{;} \PYG{o}{++}\PYG{n}{i}\PYG{p}{)}
+         \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{=} \PYG{n}{a}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{*} \PYG{n}{ninv} \PYG{o}{\PYGZpc{}} \PYG{n}{MOD}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

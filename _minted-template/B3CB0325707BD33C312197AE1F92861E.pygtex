@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// O(nloglogn)筛出maxn内所有素数}
+\PYG{c+c1}{// notprime[i] = 0/1 0为素数 1为非素数}
+\PYG{k+kt}{bool} \PYG{n}{notprime}\PYG{p}{[}\PYG{n}{maxn}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{};}   \PYG{c+c1}{// 0 \PYGZam{}\PYGZam{} 1 为非素数}
+\PYG{k+kt}{void} \PYG{n+nf}{GetPrime}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{2}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{maxn}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+        \PYG{k}{if} \PYG{p}{(}\PYG{o}{!}\PYG{n}{notprime}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{n}{maxn} \PYG{o}{/} \PYG{n}{i}\PYG{p}{)}  \PYG{c+c1}{// 筛到√n为止}
+            \PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{n}{i} \PYG{o}{*} \PYG{n}{i}\PYG{p}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{maxn}\PYG{p}{;} \PYG{n}{j} \PYG{o}{+=} \PYG{n}{i}\PYG{p}{)}
+                \PYG{n}{notprime}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

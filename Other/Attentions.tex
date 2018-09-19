@@ -1,0 +1,128 @@
+\subsection{浮点}
+  \begin{enumerate}
+    \item 浮点初始化memset(d,0x7f,sizeof(d));
+    \item 浮点数比大小
+      \begin{itemize}
+          \item 相等 if ( fabs (a-b) <= eps )
+          \item 大于 if ( a>b \&\& fabs (a-b) > eps )
+          \item 小于 if ( a<b \&\& fabs (a-b) > eps )
+      \end{itemize}
+  \end{enumerate}
+
+\subsection{整数类型范围}
+  \begin{enumerate}
+    \item 255：1111 1111B
+    \item 65535：2\^{}16-1， 16bit无符号整数
+    \item 2147483647：2\^{}31-1， 32bit带符号整数的最大值
+    \item 4294967296：2\^{}32， 32bit无符号整数的最大值
+    \item 92233720368547758072：2\^{}63-1， 64bit带符号整数的最大值
+    \item 1061109567：0x3f3f3f3f, int inf, 略大于1e9
+    \item 4557430888798830399：0x3f3f3f3f3f3f3f3f, ll inf      
+  \end{enumerate}
+
+\subsection{热身赛}
+  \begin{enumerate}
+    \item 测pbds
+    \item python3计算器
+  \end{enumerate}
+
+\subsection{计算器}
+  \begin{enumerate}
+    \item 终端
+      \begin{itemize}
+        \item 分解素因数factor num
+        \item 逆串rev+enter string
+      \end{itemize}
+    \item python3
+      \begin{itemize}
+        \item from fractions import * [Fraction,gcd]
+          \begin{itemize}
+            \item 最简分数fraction(a,b)
+            \item gcd(a,b)
+          \end{itemize}
+        \item from math import *
+          \begin{itemize}
+            \item 阶乘factorial(num)
+          \end{itemize}
+      \end{itemize}
+  \end{enumerate}
+
+\subsection{Attention}
+  \begin{enumerate}
+    \item 审题
+      \begin{itemize}
+        \item \textbf{读新题的优先级高于一切}
+        \item \textbf{注意限制条件}，不清楚的善用Clarification
+        \item 读完题、交题前都要看一遍clarification
+        \item 每题至少两人确认题意
+      \end{itemize}
+    \item 做题
+      \begin{enumerate}
+        \item \textbf{开题}
+          \begin{itemize}
+            \item 构造不要开场做
+            \item 想不出优雅复杂度但过了很多队的\textbf{暴力}莽一莽，单车变摩托
+
+          \end{itemize}
+        \item \textbf{上机}
+          \begin{itemize}
+            \item 和队友确认做法
+            \item 有猜想性质的后面写
+            \item 写了半小时以上的考虑是否弃题
+            \item \textbf{细节和公式纸上写好}，不要越码越乱
+            \item 中后期题考虑一人写一人辅助，及时发现手误
+            \item 多题要写时，容易码、码量小、想得无敌清楚的优先
+          \end{itemize}
+        \item \textbf{交题}
+          \begin{itemize}
+            \item 检查初始化和清空
+            \item 取模的输出前再模一次
+            \item claris: 检查solve(n,m)==solve(m,n)?
+            \item spj的题目提交前也应尽量与样例完全一致
+            \item claris: 舍入输出若abs不超过eps，需要强行设置0防止-0.000000的出现
+          \end{itemize}
+      \end{enumerate}
+    \item 打印
+      \begin{itemize}
+        \item 交完题目马上打印并让机
+        \item 打表时想清楚打哪些量，代码乱改前注意备份。善用打印，保留代码。
+      \end{itemize}
+    \item \textbf{心态}：签到莫急，最后半小时不要慌。
+  \end{enumerate}
+
+\subsection{Debug}
+  \begin{enumerate}
+    \item 初始化，清空图，0和n等边界，mem里面sizeof(int)还是ll
+    \item for里是给本层循环变量++咩？
+    \item 区间l,r为防坑：if(l>r) swap(l,r);
+    \item 考虑小数据有没有发生突变的地方
+    \item 注意板子有没有哪里要改ll
+    \item inf的大小符不符合
+  \end{enumerate}
+
+\subsection{打表找规律}
+  \begin{enumerate}
+    \item 直接找规律
+    \item 差分后找规律
+    \item 找积性
+    \item 点阵打表
+    \item 相除
+    \item 循环节
+    \item 凑量纲
+    \item 猜想满足P(n)f(n)=Q(n)f(n-2)+R(n)f(n-1)+C, 其中P、Q、R为关于n二次多项式
+  \end{enumerate}
+
+\subsection{优化}
+  \begin{enumerate}
+    \item 数论
+      \begin{itemize}
+        \item 分块加速O(sqrt(n))
+        \item 枚举除数、调和级数O(log(n))
+        \item floor函数求和、ceil函数求和(hdu6134)
+        \item getpre里的取模，以及连续取模注意顺序，还有爆精度取模和式子i从2开始(n/i)
+        \item \textbf{WA太久或出不了，考虑公式是否错误}
+      \end{itemize}
+    \item cdq分治
+    \item 树上点分治
+    \item 一般分块
+  \end{enumerate}

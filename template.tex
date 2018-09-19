@@ -15,7 +15,7 @@
 %页眉页脚设置
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{Mirai}
+\lhead{Queuing}
 \chead{}
 \rhead{}
 \lfoot{}
@@ -24,7 +24,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\headwidth}{\textwidth}
 \renewcommand{\footrulewidth}{0pt}
- 
+
 %标题居左
 \CTEXsetup[format={\Large\bfseries}]{section}
 
@@ -40,7 +40,7 @@
 
 %目录超链接
 \usepackage[colorlinks,linkcolor=black]{hyperref}
-	
+
 %====================以上导言区==========================
 \begin{document}
 \maketitle
@@ -48,81 +48,81 @@
 \newpage
 \tableofcontents 														%创建目录
 
-\newpage 																%换页
-\section{Pretreatment}												%一级标题
-	\subsection{头文件Headers and constants}
-	\inputminted[breaklines]{c++}{"Other/headers.cpp"}
-	\newpage
-	\subsection{配置Vim setting}
-		\noindent==========================================\\
-		14行基本设置\\
-		syntax on\\
-		set cindent\\
-		set nu		\\
-		set shortmess=atI	\\
-		set tabstop=4\\
-		set shiftwidth=4\\
-		set confirm\\
-		set mouse=a\\
-\\
-		map<C-A> ggVG"+y\\
-		map <F5> :call Run()<CR>\\
-		func! Run()\par
-			exec "w"\par
-			exec "!g++ -Wall \% -o \%<"\par
-			exec "!time ./\%<"\\
-		endfunc\\
-		==========================================\\
-		括号补全\\
-		inoremap \{ \{<CR>\}<ESC>kA<CR>\\
-		inoremap ( ()<ESC>i\\
-		inoremap [ []<ESC>i\\
-		inoremap " ""<ESC>i\\
-		跳转行末\\
-		inoremap <C- \ > <End>\\
-		==========================================\\
-		【快捷键】\\
-		:nu行跳转
-		/text查找text,n查找下一个，N查找前一个\\
-		u撤销，U撤销对整行的操作\\
-		Ctrl+r撤销的撤销\\
+\newpage 																%换页 
+\section{默背一万遍的注意事项}
+	\input{"Other/Attentions.tex"}
+	% \inputminted[breaklines]{markdown}{"Other/headers.cpp"}
+% 	\newpage
+% 	\subsection{配置Vim setting}
+% 		\noindent==========================================\\
+% 		14行基本设置\\
+% 		syntax on\\
+% 		set cindent\\
+% 		set nu		\\
+% 		set shortmess=atI	\\
+% 		set tabstop=4\\
+% 		set shiftwidth=4\\
+% 		set confirm\\
+% 		set mouse=a\\
+% \\
+% 		map<C-A> ggVG"+y\\
+% 		map <F5> :call Run()<CR>\\
+% 		func! Run()\par
+% 			exec "w"\par
+% 			exec "!g++ -Wall \% -o \%<"\par
+% 			exec "!time ./\%<"\\
+% 		endfunc\\
+% 		==========================================\\
+% 		括号补全\\
+% 		inoremap \{ \{<CR>\}<ESC>kA<CR>\\
+% 		inoremap ( ()<ESC>i\\
+% 		inoremap [ []<ESC>i\\
+% 		inoremap " ""<ESC>i\\
+% 		跳转行末\\
+% 		inoremap <C- \ > <End>\\
+% 		==========================================\\
+% 		【快捷键】\\
+% 		:nu行跳转
+% 		/text查找text,n查找下一个，N查找前一个\\
+% 		u撤销，U撤销对整行的操作\\
+% 		Ctrl+r撤销的撤销\\
 
 \newpage
 \section{图论Graph Theory}
 	\subsection{最短路The shortest path}
 		\subsubsection{Dijkstra}
-		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/dijkstra.cpp"}
+			\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/dijkstra.cpp"}
 		\subsubsection{Spfa}
-		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/spfa.cpp"}
+			\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/spfa.cpp"}
 		% \subsubsection{Floyd}
 		% \inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/floyd.cpp"}
 		\subsubsection{次短路}
-		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/secdij.cpp"}
+		\	inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/secdij.cpp"}
 		\subsubsection{第K短路}
-		\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/Astar.cpp"}
+			\inputminted[breaklines]{c++}{"Gragh Theory/The shortest path/Astar.cpp"}
 
 	\subsection{生成树Spanning tree}
 		\subsubsection{最小生成树Minimum spanning tree}
-		\inputminted[breaklines]{c++}{"Gragh Theory/MST/kruskal.cpp"}
-		\inputminted[breaklines]{c++}{"Gragh Theory/MST/prim.cpp"}
+			\inputminted[breaklines]{c++}{"Gragh Theory/MST/kruskal.cpp"}
+			\inputminted[breaklines]{c++}{"Gragh Theory/MST/prim.cpp"}
 		\subsubsection{次小生成树}
-		\inputminted{c++}{"Gragh Theory/MST/secmst.cpp"}
+			\inputminted{c++}{"Gragh Theory/MST/secmst.cpp"}
 		% \subsubsection{最小树形图Minimum Arborescence}
 		
 
 	\subsection{网络流Network flow}
 		\subsubsection{最大流-Dinic}
-		\inputminted{c++}{"Gragh Theory/Network Flow/dinic.cpp"}
+			\inputminted{c++}{"Gragh Theory/Network Flow/dinic.cpp"}
 		\subsubsection{最大流-ISAP}
-		\inputminted{c++}{"Gragh Theory/Network Flow/ISAP.cpp"}
+			\inputminted{c++}{"Gragh Theory/Network Flow/ISAP.cpp"}
 		\subsubsection{最小费用最大流-EdmondsKarp}
-		\inputminted{c++}{"Gragh Theory/Network Flow/MCMF.cpp"}
+			\inputminted{c++}{"Gragh Theory/Network Flow/MCMF.cpp"}
 		\subsubsection{建图-有上下界的可行流}
-		\inputminted{c++}{"Gragh Theory/Network Flow/lowup.cpp"}
+			\inputminted{c++}{"Gragh Theory/Network Flow/lowup.cpp"}
 
 	\subsection{二分图}
 		\subsubsection{概念公式}
-		\inputminted{c++}{"Gragh Theory/Bipartite gragh/emmm.cpp"}
+			\inputminted{c++}{"Gragh Theory/Bipartite gragh/emmm.cpp"}
 		\subsubsection{最大匹配-匈牙利}
 			\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungary.cpp"}
 			\inputminted{c++}{"Gragh Theory/Bipartite gragh/hungarymatrix.cpp"}
@@ -130,23 +130,23 @@
 		%\inputminted{c++}{"Gragh Theory/Bipartite gragh/HK.cpp"}
 		%\subsubsection{最大权完美匹配-KM}
 		%\inputminted{c++}{"Gragh Theory/Bipartite gragh/KM.cpp"}
-
+	
 	\subsection{强连通缩点tarjan}
-	\inputminted{c++}{"Gragh Theory/SCC.cpp"}
+		\inputminted{c++}{"Gragh Theory/SCC.cpp"}
 
 	\subsection{最近公共祖先LCA}
 		\subsubsection{tarjan}
-		\inputminted{c++}{"Gragh Theory/LeastCommonAncestors/tarjan.cpp"}
-		\subsubsection{dfs+ST}
-		\inputminted{c++}{"Gragh Theory/LeastCommonAncestors/dfs+ST.cpp"}
+			\inputminted{c++}{"Gragh Theory/LeastCommonAncestors/tarjan.cpp"}
+		\subsubsection{ST表}
+			\inputminted{c++}{"Gragh Theory/LeastCommonAncestors/dfs+ST.cpp"}
 
 	\subsection{欧拉回路}
 		\subsubsection{判定}
-		%\inputminted{c++}{"Gragh Theory/ouraroad.cpp"}
+			% \inputminted{c++}{"Gragh Theory/EulerRoad/judge.md"}
 		\subsubsection{求解}
-		%\inputminted{c++}{"Gragh Theory/ouraroadsolve.cpp"}
+			\inputminted{c++}{"Gragh Theory/EulerRoad/construction.cpp"}
 
-	\subsection{哈密顿回路}
+	% \subsection{哈密顿回路}
 
 
 \newpage
@@ -175,13 +175,12 @@
 		\inputminted{c++}{"Data Structure/HeavyLightDecomposition.cpp"}
 	\subsection{伸展树splay}
 		\subsubsection{维护序列}
-		\inputminted{c++}{"Data Structure/splay.cpp"}
+			\inputminted{c++}{"Data Structure/splay.cpp"}
 		\subsubsection{平衡树}
-	
 
 \newpage
 \section{数学Math}
-	\input{"Maths/conclusions.tex"}
+	% \input{"Maths/conclusions.tex"}
 	\subsection{快速乘-快速幂}
 		\inputminted{c++}{"Maths/fastmul.cpp"}
 		\inputminted{c++}{"Maths/fastpow.cpp"}
@@ -214,18 +213,18 @@
 		\subsubsection{FFT二进制反转问题}
 			\inputminted{c++}{"Maths/FFT/FFTbitrev.cpp"}
 		\subsubsection{NTT}
-			\inputminted{c++}{"Maths/NTT.cpp"}
+			\inputminted{c++}{"Maths/FFT/NTT.cpp"}
 	\subsection{卢卡斯Lucas}
 		\subsubsection{Lucas}
 			\inputminted{c++}{"Maths/Lucas/lucas.cpp"}
-		\subsubsection{扩展卢卡斯ExLucas}
-			\inputminted{c++}{"Maths/exlucas.cpp"}
+		\subsubsection{扩展卢卡斯ExLucas} 
+			\inputminted{c++}{"Maths/Lucas/exlucas.cpp"}
 	\subsection{线性基}
 		\inputminted{c++}{"Maths/线性基.cpp"}
 	\subsection{自适应辛普森}
 		\inputminted{c++}{"Maths/自适应辛普森.cpp"}
 	\subsection{高斯消元GauseElimination}
-		\inputminted{c++}{"Maths/GauseElimination.cpp"}
+		\inputminted{c++}{"Maths/GaussElimination.cpp"}
 	\subsection{对角阵GaussJordan}
 		\inputminted{c++}{"Maths/GaussJordan.cpp"}
 	\subsection{米勒罗宾素数测试MillerRabin}
@@ -252,7 +251,7 @@
 	\subsection{回文树}
 		\inputminted{c++}{"String/PAM.cpp"}
 	
-\section{动态规划}
+\section{动态规划Dynamic Programme}
 	\subsection{背包}
 		\inputminted{c++}{"Dynamic Programme/bag.cpp"}
 	\subsection{旅行商TSP}
@@ -260,11 +259,13 @@
 	\subsection{数位dp}
 		\inputminted{c++}{"Dynamic Programme/digit.cpp"}
 
-%\section{计算几何}
+\section{计算几何Computation Geometry}
 	%\subsection{基础函数}
 
 	%\subsection{凸包}
 
+	\subsection{圆Circle}
+		\inputminted{c++}{"Computation Geometry/Circle/twopoint.cpp"}
 
 \newpage
 \section{其它Other}
@@ -272,8 +273,8 @@
 	\inputminted{c++}{"Other/Mos.cpp"}
 	\subsection{离散化}
 	\inputminted{c++}{"Other/discretization.cpp"}
-	\subsection{简单大数}
-	\inputminted{c++}{"IO/BigInt.cpp"}	
+	% \subsection{简单大数}
+	% \inputminted{c++}{"IO/BigInt.cpp"}	
 	\subsection{STL}
 	\inputminted{c++}{"Other/STL.cpp"}
 	\subsection{pbds}
@@ -283,11 +284,11 @@
 
 \newpage
 \section{输入输出IO}
-	\subsection{简陋IO挂}
-	\inputminted{c++}{"IO/IO.cpp"}
-	\subsection{Python输入输出}
-	\inputminted{python}{"IO/IO.py"}
-	\subsection{Java高精度BigDecimal}
-	\inputminted{java}{"IO/IO.java"}
+	% \subsection{简陋IO挂}
+	% 	\inputminted{c++}{"IO/IO.cpp"}
+	% \subsection{Python输入输出}
+	% 	\inputminted{python}{"IO/IO.py"}
+	% \subsection{Java高精度BigDecimal}
+	% 	\inputminted{java}{"IO/IO.java"}
 
 \end{document}

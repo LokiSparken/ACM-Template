@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 线性求1\PYGZhy{}(p\PYGZhy{}1)modp的逆元}
+\PYG{k+kt}{int} \PYG{n+nf}{main}\PYG{p}{()}
+\PYG{p}{\PYGZob{}}
+    \PYG{n}{A}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{=\PYGZhy{}}\PYG{p}{(}\PYG{n}{p}\PYG{o}{/}\PYG{n}{i}\PYG{p}{)}\PYG{o}{*}\PYG{n}{A}\PYG{p}{[}\PYG{n}{p}\PYG{o}{\PYGZpc{}}\PYG{n}{i}\PYG{p}{];}
+    \PYG{n}{inv}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{=}\PYG{p}{(}\PYG{n}{p}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{n}{p}\PYG{o}{/}\PYG{n}{i}\PYG{p}{))}\PYG{o}{*}\PYG{n}{inv}\PYG{p}{[}\PYG{n}{p}\PYG{o}{\PYGZpc{}}\PYG{n}{i}\PYG{p}{]}\PYG{o}{\PYGZpc{}}\PYG{n}{p}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
