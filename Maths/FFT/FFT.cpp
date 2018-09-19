@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-//Êı×ÖµÍµÄÏîÔÚÇ°Ãæ
-using namespace std;
 const double PI = acos(-1);
 struct A{
     double r,i;
@@ -15,17 +12,16 @@ A operator - (const A& x, const A&y){
 A operator * (const A& x, const A&y){
     return A(x.r * y.r - x.i *y.i, x.r * y.i + x.i * y.r);
 }
-
 void FFT(A x[], int n,int p)
 {
     for(int i = 0, t = 0; i < n; ++i){
        if(i > t)swap(x[i], x[t]);
        for(int j = n >> 1; (t ^= j) < j; j >>= 1);
-       //¶ş½øÖÆ·´×ª
+       //äºŒè¿›åˆ¶åè½¬
     }
     for(int h = 2; h <= n; h <<= 1){
        A wn(cos(p * 2 * PI / h), sin(p * 2 * PI / h));
-       //È¡±én¸ö¸´Êı ÇÒÖ»ÓÃÈ¡2µÄÃİ´Î
+       //å–énä¸ªå¤æ•° ä¸”åªç”¨å–2çš„å¹‚æ¬¡
        for(int i = 0; i < n; i += h){
           A w(1,0),u;
           for(int j = i, k = h>>1; j < i + k; ++j){
@@ -34,7 +30,7 @@ void FFT(A x[], int n,int p)
              x[j] = x[j] + u;
              w = w * wn;
           }
-       //ÀûÓÃÕÛ°ëÒÔ¼°±³½ÇÔ­Àí½øĞĞ·ÖÖÎ;
+       //åˆ©ç”¨æŠ˜åŠä»¥åŠèƒŒè§’åŸç†è¿›è¡Œåˆ†æ²»;
        }
     }
     if(p == -1)
@@ -50,23 +46,7 @@ void conv(A a[], A b[], int n){
 }
 int main()
 {
-     int n,m;
-     scanf("%d%d",&n,&m);
-     int N = 1;
+     int n,m,N = 1;scanf("%d%d",&n,&m);
      while(N < n + m - 1)N <<= 1;
      conv(a, b, N);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

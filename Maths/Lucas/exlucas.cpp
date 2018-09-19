@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-typedef long long ll;
 const int maxn = 1e5+5;
 const ll mod = 1e9+7;
 ll fmod(ll x,ll y, ll M){ll res=1;while(y){if(y&1)res=res*x%M;y>>=1;x=x*x%M;}return res;}
@@ -65,16 +62,3 @@ int main()
    while(cin>>a>>b>>m)
     cout<<ex_lucas(a,b,m)<<endl;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

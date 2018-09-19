@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-typedef long long ll;
 const ll mod = 1e9+7;
 ll fac[100005];
 ll fmod(ll x, ll y){ll res = 1;while(y){if(y&1)res=res*x%mod;y>>=1;x=x*x%mod;}return res;}
@@ -22,8 +19,7 @@ ll lucas(ll a,ll b)
 }
 int main()
 {
-    ll x,y;
-    facinit();
+    ll x,y; facinit();
     while(cin>>x>>y)
         cout<<lucas(x,y)<<endl;
 }
