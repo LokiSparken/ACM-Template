@@ -1,30 +1,28 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/Debian) (preloaded format=xelatex 2018.7.18)  19 SEP 2018 16:39
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2018/W32TeX) (preloaded format=xelatex 2018.10.30)  20 JAN 2019 04:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/sparken/myTemplate/template
-(/home/sparken/myTemplate/template.tex
-LaTeX2e <2017-04-15>
+**f:/electronicSports/myTemplate/template
+(f:/electronicSports/myTemplate/template.tex
+LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexart.cls
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2018/02/21 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2018/02/21 L3 programming layer (code)
-\c_max_int=\count79
-\l_tmpa_int=\count80
-\l_tmpb_int=\count81
-\g_tmpa_int=\count82
-\g_tmpb_int=\count83
-\g__intarray_font_int=\count84
-\g__prg_map_int=\count85
-\c_log_iow=\count86
-\l_iow_line_count_int=\count87
-\l__iow_line_target_int=\count88
-\l__iow_one_indent_int=\count89
-\l__iow_indent_int=\count90
+(c:/texlive/2018/texmf-dist/tex/latex/ctex/ctexart.cls (c:/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2018/03/05 L3 programming layer (loader) 
+ (c:/texlive/2018/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2018/03/05 L3 programming layer (code)
+\c_max_int=\count80
+\l_tmpa_int=\count81
+\l_tmpb_int=\count82
+\g_tmpa_int=\count83
+\g_tmpb_int=\count84
+\g__intarray_font_int=\count85
+\g__prg_map_int=\count86
+\c_log_iow=\count87
+\l_iow_line_count_int=\count88
+\l__iow_line_target_int=\count89
+\l__iow_one_indent_int=\count90
+\l__iow_indent_int=\count91
 \c_zero_dim=\dimen102
 \c_max_dim=\dimen103
 \l_tmpa_dim=\dimen104
@@ -43,72 +41,72 @@ Package: expl3 2018/02/21 L3 programming layer (code)
 \l_tmpb_muskip=\muskip13
 \g_tmpa_muskip=\muskip14
 \g_tmpb_muskip=\muskip15
-\l_keys_choice_int=\count91
-\c__fp_leading_shift_int=\count92
-\c__fp_middle_shift_int=\count93
-\c__fp_trailing_shift_int=\count94
-\c__fp_big_leading_shift_int=\count95
-\c__fp_big_middle_shift_int=\count96
-\c__fp_big_trailing_shift_int=\count97
-\c__fp_Bigg_leading_shift_int=\count98
-\c__fp_Bigg_middle_shift_int=\count99
-\c__fp_Bigg_trailing_shift_int=\count100
-\l__sort_length_int=\count101
-\l__sort_min_int=\count102
-\l__sort_top_int=\count103
-\l__sort_max_int=\count104
-\l__sort_true_max_int=\count105
-\l__sort_block_int=\count106
-\l__sort_begin_int=\count107
-\l__sort_end_int=\count108
-\l__sort_A_int=\count109
-\l__sort_B_int=\count110
-\l__sort_C_int=\count111
-\l__tl_build_start_index_int=\count112
-\l__tl_build_index_int=\count113
-\l__tl_analysis_normal_int=\count114
-\l__tl_analysis_index_int=\count115
-\l__tl_analysis_nesting_int=\count116
-\l__tl_analysis_type_int=\count117
-\l__regex_internal_a_int=\count118
-\l__regex_internal_b_int=\count119
-\l__regex_internal_c_int=\count120
-\l__regex_balance_int=\count121
-\l__regex_group_level_int=\count122
-\l__regex_mode_int=\count123
-\c__regex_cs_in_class_mode_int=\count124
-\c__regex_cs_mode_int=\count125
-\l__regex_catcodes_int=\count126
-\l__regex_default_catcodes_int=\count127
-\c__regex_catcode_L_int=\count128
-\c__regex_catcode_O_int=\count129
-\c__regex_catcode_A_int=\count130
-\c__regex_all_catcodes_int=\count131
-\l__regex_show_lines_int=\count132
-\l__regex_min_state_int=\count133
-\l__regex_max_state_int=\count134
-\l__regex_left_state_int=\count135
-\l__regex_right_state_int=\count136
-\l__regex_capturing_group_int=\count137
-\l__regex_min_pos_int=\count138
-\l__regex_max_pos_int=\count139
-\l__regex_curr_pos_int=\count140
-\l__regex_start_pos_int=\count141
-\l__regex_success_pos_int=\count142
-\l__regex_curr_char_int=\count143
-\l__regex_curr_catcode_int=\count144
-\l__regex_last_char_int=\count145
-\l__regex_case_changed_char_int=\count146
-\l__regex_curr_state_int=\count147
-\l__regex_step_int=\count148
-\l__regex_min_active_int=\count149
-\l__regex_max_active_int=\count150
-\l__regex_replacement_csnames_int=\count151
-\l__regex_match_count_int=\count152
-\l__regex_min_submatch_int=\count153
-\l__regex_submatch_int=\count154
-\l__regex_zeroth_submatch_int=\count155
-\g__regex_trace_regex_int=\count156
+\l_keys_choice_int=\count92
+\c__fp_leading_shift_int=\count93
+\c__fp_middle_shift_int=\count94
+\c__fp_trailing_shift_int=\count95
+\c__fp_big_leading_shift_int=\count96
+\c__fp_big_middle_shift_int=\count97
+\c__fp_big_trailing_shift_int=\count98
+\c__fp_Bigg_leading_shift_int=\count99
+\c__fp_Bigg_middle_shift_int=\count100
+\c__fp_Bigg_trailing_shift_int=\count101
+\l__sort_length_int=\count102
+\l__sort_min_int=\count103
+\l__sort_top_int=\count104
+\l__sort_max_int=\count105
+\l__sort_true_max_int=\count106
+\l__sort_block_int=\count107
+\l__sort_begin_int=\count108
+\l__sort_end_int=\count109
+\l__sort_A_int=\count110
+\l__sort_B_int=\count111
+\l__sort_C_int=\count112
+\l__tl_build_start_index_int=\count113
+\l__tl_build_index_int=\count114
+\l__tl_analysis_normal_int=\count115
+\l__tl_analysis_index_int=\count116
+\l__tl_analysis_nesting_int=\count117
+\l__tl_analysis_type_int=\count118
+\l__regex_internal_a_int=\count119
+\l__regex_internal_b_int=\count120
+\l__regex_internal_c_int=\count121
+\l__regex_balance_int=\count122
+\l__regex_group_level_int=\count123
+\l__regex_mode_int=\count124
+\c__regex_cs_in_class_mode_int=\count125
+\c__regex_cs_mode_int=\count126
+\l__regex_catcodes_int=\count127
+\l__regex_default_catcodes_int=\count128
+\c__regex_catcode_L_int=\count129
+\c__regex_catcode_O_int=\count130
+\c__regex_catcode_A_int=\count131
+\c__regex_all_catcodes_int=\count132
+\l__regex_show_lines_int=\count133
+\l__regex_min_state_int=\count134
+\l__regex_max_state_int=\count135
+\l__regex_left_state_int=\count136
+\l__regex_right_state_int=\count137
+\l__regex_capturing_group_int=\count138
+\l__regex_min_pos_int=\count139
+\l__regex_max_pos_int=\count140
+\l__regex_curr_pos_int=\count141
+\l__regex_start_pos_int=\count142
+\l__regex_success_pos_int=\count143
+\l__regex_curr_char_int=\count144
+\l__regex_curr_catcode_int=\count145
+\l__regex_last_char_int=\count146
+\l__regex_case_changed_char_int=\count147
+\l__regex_curr_state_int=\count148
+\l__regex_step_int=\count149
+\l__regex_min_active_int=\count150
+\l__regex_max_active_int=\count151
+\l__regex_replacement_csnames_int=\count152
+\l__regex_match_count_int=\count153
+\l__regex_min_submatch_int=\count154
+\l__regex_submatch_int=\count155
+\l__regex_zeroth_submatch_int=\count156
+\g__regex_trace_regex_int=\count157
 \c_empty_box=\box26
 \l_tmpa_box=\box27
 \l_tmpb_box=\box28
@@ -149,82 +147,68 @@ Package: expl3 2018/02/21 L3 programming layer (code)
 \l__coffin_top_corner_dim=\dimen130
 \l__coffin_scaled_total_height_dim=\dimen131
 \l__coffin_scaled_width_dim=\dimen132
-)
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
+) (c:/texlive/2018/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
 File: l3xdvidpfmx.def 2017/03/18 v L3 Experimental driver: xdvipdfmx
-\g__driver_image_int=\count157
-\l__driver_tmp_box=\box41
+\g__driver_image_int=\count158
 ))
-Document Class: ctexart 2018/01/28 v2.4.12 Chinese adapter for class article (C
-TEX)
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Document Class: ctexart 2018/01/28 v2.4.12 Chinese adapter for class article (CTEX)
+(c:/texlive/2018/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2018/02/21 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count158
-\g__xparse_grabber_int=\count159
-\l__xparse_m_args_int=\count160
-\l__xparse_mandatory_args_int=\count161
-\l__xparse_v_nesting_int=\count162
-)
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+\l__xparse_current_arg_int=\count159
+\g__xparse_grabber_int=\count160
+\l__xparse_m_args_int=\count161
+\l__xparse_mandatory_args_int=\count162
+\l__xparse_v_nesting_int=\count163
+) (c:/texlive/2018/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2018/02/21 LaTeX2e option processing using LaTeX3 keys
 )
 \g__file_internal_ior=\read1
-
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexhook.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/ctex/ctexhook.sty
 Package: ctexhook 2018/01/28 v2.4.12 Document and package hooks (CTEX)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctexpatch.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/ctex/ctexpatch.sty
 Package: ctexpatch 2018/01/28 v2.4.12 Patching commands (CTEX)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/fix-cm.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/base/fix-cm.sty
 Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+ (c:/texlive/2018/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
-))
-(/usr/share/texlive/texmf-dist/tex/latex/ms/everysel.sty
+)) (c:/texlive/2018/texmf-dist/tex/latex/ms/everysel.sty
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\l__ctex_tmp_int=\count163
-\l__ctex_tmp_box=\box42
+\l__ctex_tmp_int=\count164
+\l__ctex_tmp_box=\box41
 \l__ctex_tmp_dim=\dimen133
-\g__ctex_font_size_flag=\count164
-
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
+\g__ctex_font_size_flag=\count165
+ (c:/texlive/2018/texmf-dist/tex/latex/ctex/config/ctexopts.cfg
 File: ctexopts.cfg 2018/01/28 v2.4.12 Option configuration file (CTEX)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+) (c:/texlive/2018/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+(c:/texlive/2018/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
-\c@part=\count165
-\c@section=\count166
-\c@subsection=\count167
-\c@subsubsection=\count168
-\c@paragraph=\count169
-\c@subparagraph=\count170
-\c@figure=\count171
-\c@table=\count172
+\c@part=\count166
+\c@section=\count167
+\c@subsection=\count168
+\c@subsubsection=\count169
+\c@paragraph=\count170
+\c@subparagraph=\count171
+\c@figure=\count172
+\c@table=\count173
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
+) (c:/texlive/2018/texmf-dist/tex/latex/ctex/engine/ctex-engine-xetex.def
 File: ctex-engine-xetex.def 2018/01/28 v2.4.12 XeLaTeX adapter (CTEX)
-
-(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
-Package: xeCJK 2018/02/27 v3.6.1 Typesetting CJK scripts with XeLaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
+ (c:/texlive/2018/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+Package: xeCJK 2018/04/07 v3.7.0 Typesetting CJK scripts with XeLaTeX
+ (c:/texlive/2018/texmf-dist/tex/latex/l3packages/xtemplate/xtemplate.sty
 Package: xtemplate 2018/02/21 L3 Experimental prototype document functions
 \l__xtemplate_tmp_dim=\dimen135
-\l__xtemplate_tmp_int=\count173
+\l__xtemplate_tmp_int=\count174
 \l__xtemplate_tmp_muskip=\muskip16
 \l__xtemplate_tmp_skip=\skip49
 )
-\l__xeCJK_tmp_int=\count174
-\l__xeCJK_tmp_box=\box43
+\l__xeCJK_tmp_int=\count175
+\l__xeCJK_tmp_box=\box42
 \l__xeCJK_tmp_dim=\dimen136
 \l__xeCJK_tmp_skip=\skip50
 .................................................
@@ -232,18 +216,18 @@ Package: xtemplate 2018/02/21 L3 Experimental prototype document functions
 . 
 . Defining command \xeCJKShipoutHook with sig. '' on line 150.
 .................................................
-\g__xeCJK_space_factor_int=\count175
-\l__xeCJK_begin_int=\count176
-\l__xeCJK_end_int=\count177
+\g__xeCJK_space_factor_int=\count176
+\l__xeCJK_begin_int=\count177
+\l__xeCJK_end_int=\count178
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \makexeCJKactive with sig. '' on line 394.
+. Defining command \makexeCJKactive with sig. '' on line 396.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \makexeCJKinactive with sig. '' on line 396.
+. Defining command \makexeCJKinactive with sig. '' on line 398.
 .................................................
 \c__xeCJK_CJK_class_int=\XeTeXcharclass1
 \c__xeCJK_FullLeft_class_int=\XeTeXcharclass2
@@ -257,31 +241,31 @@ Package: xtemplate 2018/02/21 L3 Experimental prototype document functions
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \xeCJKDeclareCharClass with sig. 's>{\TrimSpaces }mm' on
-. line 578.
+. line 580.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \__xeCJK_set_char_class_aux:Nnw with sig.
-. 'm>{\SplitArgument {1}{->}}m' on line 599.
+. 'm>{\SplitArgument {1}{->}}m' on line 601.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \normalspacedchars with sig. 'm' on line 645.
+. Defining command \normalspacedchars with sig. 'm' on line 647.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \xeCJKResetPunctClass with sig. '' on line 656.
+. Defining command \xeCJKResetPunctClass with sig. '' on line 658.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \xeCJKResetCharClass with sig. '' on line 668.
+. Defining command \xeCJKResetCharClass with sig. '' on line 670.
 .................................................
 \l__xeCJK_last_skip=\skip51
-\g__xeCJK_node_int=\count178
+\g__xeCJK_node_int=\count179
 \c__xeCJK_CJK_node_dim=\dimen137
 \c__xeCJK_CJK-space_node_dim=\dimen138
 \c__xeCJK_default_node_dim=\dimen139
@@ -291,45 +275,45 @@ Package: xtemplate 2018/02/21 L3 Experimental prototype document functions
 \l__xeCJK_ccglue_skip=\skip52
 \l__xeCJK_ecglue_skip=\skip53
 \l__xeCJK_punct_kern_skip=\skip54
-\l__xeCJK_last_penalty_int=\count179
+\l__xeCJK_last_penalty_int=\count180
 \l__xeCJK_last_bound_dim=\dimen143
 \l__xeCJK_last_kern_dim=\dimen144
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \xeCJKnobreak with sig. '' on line 1887.
+. Defining command \xeCJKnobreak with sig. '' on line 1889.
 .................................................
-\l__xeCJK_widow_penalty_int=\count180
+\l__xeCJK_widow_penalty_int=\count181
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \xeCJKDeclareSubCJKBlock with sig. 's>{\TrimSpaces }mm' on
-. line 2082.
+. line 2084.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \xeCJKCancelSubCJKBlock with sig. 'sm' on line 2093.
+. Defining command \xeCJKCancelSubCJKBlock with sig. 'sm' on line 2095.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \xeCJKRestoreSubCJKBlock with sig. 'sm' on line 2102.
+. Defining command \xeCJKRestoreSubCJKBlock with sig. 'sm' on line 2104.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \xeCJKsetwidth with sig. 'smm' on line 2200.
+. Defining command \xeCJKsetwidth with sig. 'smm' on line 2202.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \xeCJKsetkern with sig. 'mmm' on line 2204.
+. Defining command \xeCJKsetkern with sig. 'mmm' on line 2206.
 .................................................
 .................................................
 . xtemplate info: "declare-object-type"
 . 
-. Declaring object type 'xeCJK/punctuation' taking 0 argument(s) on line 2360.
+. Declaring object type 'xeCJK/punctuation' taking 0 argument(s) on line 2362.
 .................................................
 \l__xeCJK_fixed_punct_width_dim=\dimen145
 \l__xeCJK_mixed_punct_width_dim=\dimen146
@@ -354,118 +338,113 @@ Package: xtemplate 2018/02/21 L3 Experimental prototype document functions
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \xeCJKDeclarePunctStyle with sig. '>{\TrimSpaces }mm' on
-. line 2916.
+. line 2942.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \xeCJKEditPunctStyle with sig. '>{\TrimSpaces }mm' on line
-. 2929.
+. 2955.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setCJKfallbackfamilyfont with sig. 'mom' on line 3033.
+. Defining command \setCJKfallbackfamilyfont with sig. 'mom' on line 3059.
 .................................................
-\g__xeCJK_family_int=\count181
+\g__xeCJK_family_int=\count182
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \CJKfamily with sig. 't+t-m' on line 3467.
+. Defining command \CJKfamily with sig. 't+t-m' on line 3493.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
 . Defining command \__xeCJK_gobble_CJKfamily:wn with sig. 't+t-m' on line
-. 3532.
+. 3558.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \__xeCJK_post_arg:w with sig. 'mmmO{}' on line 3592.
+. Defining command \__xeCJK_post_arg:w with sig. 'mmmO{}' on line 3618.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setCJKmainfont with sig. 'om' on line 3598.
+. Defining command \setCJKmainfont with sig. 'om' on line 3624.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setCJKsansfont with sig. 'om' on line 3605.
+. Defining command \setCJKsansfont with sig. 'om' on line 3631.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setCJKmonofont with sig. 'om' on line 3611.
+. Defining command \setCJKmonofont with sig. 'om' on line 3637.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setCJKfamilyfont with sig. 'mom' on line 3622.
+. Defining command \setCJKfamilyfont with sig. 'mom' on line 3648.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \newCJKfontfamily with sig. 'omom' on line 3632.
+. Defining command \newCJKfontfamily with sig. 'omom' on line 3658.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \CJKfontspec with sig. 'om' on line 3638.
+. Defining command \CJKfontspec with sig. 'om' on line 3664.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \defaultCJKfontfeatures with sig. 'm' on line 3661.
+. Defining command \defaultCJKfontfeatures with sig. 'm' on line 3687.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addCJKfontfeatures with sig. 'sO{}m' on line 3667.
+. Defining command \addCJKfontfeatures with sig. 'sO{}m' on line 3693.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \setCJKmathfont with sig. 'om' on line 3844.
+. Defining command \setCJKmathfont with sig. 'om' on line 3870.
 .................................................
-\l__xeCJK_fam_int=\count182
-\g__xeCJK_fam_allocation_int=\count183
-\l__xeCJK_verb_case_int=\count184
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKVerbAddon with sig. '' on line 4091.
-.................................................
+\l__xeCJK_fam_int=\count183
+\g__xeCJK_fam_allocation_int=\count184
+\l__xeCJK_verb_case_int=\count185
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \xeCJKOffVerbAddon with sig. '' on line 4095.
+. Defining command \xeCJKVerbAddon with sig. '' on line 4117.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xeCJKOffVerbAddon with sig. '' on line 4121.
 .................................................
 \l__xeCJK_verb_exspace_skip=\skip55
-
-(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec.sty
 Package: fontspec 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
-Package: fontspec-xetex 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTe
-X
-\l__fontspec_script_int=\count185
-\l__fontspec_language_int=\count186
-\l__fontspec_strnum_int=\count187
-\l__fontspec_tmp_int=\count188
-\l__fontspec_em_int=\count189
-\l__fontspec_emdef_int=\count190
-\l__fontspec_strong_int=\count191
-\l__fontspec_strongdef_int=\count192
+ (c:/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2017/11/09 v2.6g Font selection for XeLaTeX and LuaLaTeX
+\l__fontspec_script_int=\count186
+\l__fontspec_language_int=\count187
+\l__fontspec_strnum_int=\count188
+\l__fontspec_tmp_int=\count189
+\l__fontspec_em_int=\count190
+\l__fontspec_emdef_int=\count191
+\l__fontspec_strong_int=\count192
+\l__fontspec_strongdef_int=\count193
 \l__fontspec_tmpa_dim=\dimen164
 \l__fontspec_tmpb_dim=\dimen165
 \l__fontspec_tmpc_dim=\dimen166
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/tuenc.def
+ (c:/texlive/2018/texmf-dist/tex/latex/base/tuenc.def
 File: tuenc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 ))
@@ -639,8 +618,7 @@ LaTeX Font Info:    Redeclaring font encoding TU on input line 82.
 . 
 . Defining command \UndeclareComposite with sig. 'mm' on line 3706.
 .................................................
-
-(/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)
+ (c:/texlive/2018/texmf-dist/tex/latex/fontspec/fontspec.cfg)
 LaTeX Info: Redefining \itshape on input line 3891.
 LaTeX Info: Redefining \slshape on input line 3896.
 LaTeX Info: Redefining \scshape on input line 3901.
@@ -659,307 +637,109 @@ LaTeX Info: Redefining \- on input line 4015.
 . Defining command \liningnums with sig. 'm' on line 4114.
 .................................................
 ))
-(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xunicode-addon.sty
-Package: xunicode-addon 2018/02/27 v3.6.1 addon file for xunicode
-
-(/usr/share/texlive/texmf-dist/tex/xelatex/xunicode/xunicode.sty
-File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
-other characters in Unicode lower plane
-
-(/usr/share/texmf/tex/latex/tipa/t3enc.def
-File: t3enc.def 2001/12/31 T3 encoding
-)
-\tipaTiiicode=\count193
-\tipasavetokens=\toks14
-\tipachecktokens=\toks15
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks16
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: xetex.def on input line 99.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/xetex.def
-File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
-))
-\Gin@req@height=\dimen167
-\Gin@req@width=\dimen168
-))
 .................................................
-. LaTeX info: "xparse/redefine-command"
+. LaTeX info: "xparse/define-command"
 . 
-. Redefining command \ReloadXunicode with sig. 'm' on line 82.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \DeclareUTFmathsymbols with sig. 'm' on line 127.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \UseMathAsText with sig. '' on line 136.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \UndeclareUTFcharacter with sig. 'O{\UTFencname }mm' on
-. line 171.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \UndeclareUTFcomposite with sig. 'O{\UTFencname }mmm' on
-. line 178.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \DeclareUTFcharacter with sig. 'O{\UTFencname }mm' on
-. line 209.
+. Defining command \xeCJKsetup with sig. '+m' on line 4422.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareUTFSymbol with sig. 'mO{\UTFencname }m' on line
-. 235.
+. Defining command \xeCJKsetemboldenfactor with sig. 'm' on line 4424.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \DeclareUTFCommand with sig. 'mO{\UTFencname }m' on line
-. 237.
+. Defining command \xeCJKsetslantfactor with sig. 'm' on line 4426.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \punctstyle with sig. 'm' on line 4427.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xeCJKplainchr with sig. '' on line 4428.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CJKsetecglue with sig. 'm' on line 4429.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CJKspace with sig. '' on line 4431.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \CJKnospace with sig. '' on line 4432.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xeCJKallowbreakbetweenpuncts with sig. '' on line 4434.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xeCJKnobreakbetweenpuncts with sig. '' on line 4436.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xeCJKenablefallback with sig. '' on line 4438.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xeCJKdisablefallback with sig. '' on line 4440.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \xeCJKsetcharclass with sig. 'mmm' on line 4445.
 .................................................
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
-. Redefining command \DeclareUTFcomposite with sig. 'O{\UTFencname }mmm' on
-. line 282.
+. Redefining command \fontfamily with sig. 'm' on line 4628.
 .................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFCompositeCommand with sig. 'mO{\UTFencname }mm'
-. on line 295.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFCompositeSymbol with sig. 'mO{\UTFencname }mm'
-. on line 300.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFComposite with sig. 'mO{\UTFencname }' on line
-. 302.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFEncodedAccent with sig. 'mO{\UTFencname }mm' on
-. line 304.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFEncodedAccents with sig. 'mO{\UTFencname }mm' on
-. line 306.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFEncodedSymbol with sig. 'mO{\UTFencname }mm' on
-. line 308.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFEncodedCircle with sig. 'mO{\UTFencname }mm' on
-. line 310.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \DeclareEncodedCompositeCharacter with sig. 'mmmm' on
-. line 312.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \DeclareEncodedCompositeAccents with sig. 'mmmm' on line
-. 314.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFDoubleEncodedAccent with sig. 'mO{\UTFencname
-. }mm' on line 316.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFDoubleEncodedSymbol with sig. 'mO{\UTFencname
-. }mm' on line 318.
-.................................................
-\l__xunadd_tmp_coffin=\box44
-\l__xunadd_circle_coffin=\box45
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \settextcircledratio with sig. 'm' on line 467.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \AtBeginUTFCommand with sig. 'sO{}+m' on line 536.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \AtEndUTFCommand with sig. 'sO{}+m' on line 546.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \DeclareUTFTIPACommand with sig. 'O{\UTFencname }m' on line
-. 578.
-.................................................
-)
-(/usr/share/texlive/texmf-dist/tex/xelatex/xunicode/xunicode.sty
-File: xunicode.sty 2011/09/09 v0.981 provides access to latin accents and many 
-other characters in Unicode lower plane
-
-*** Reloading Xunicode for encoding 'TU' ***
-) (/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xunicode-extra.def
-File: xunicode-extra.def 2018/02/27 v3.6.1 extra definition for xunicode
-)
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKsetup with sig. '+m' on line 4397.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKsetemboldenfactor with sig. 'm' on line 4399.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKsetslantfactor with sig. 'm' on line 4401.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \punctstyle with sig. 'm' on line 4402.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKplainchr with sig. '' on line 4403.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \CJKsetecglue with sig. 'm' on line 4404.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \CJKspace with sig. '' on line 4406.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \CJKnospace with sig. '' on line 4407.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKallowbreakbetweenpuncts with sig. '' on line 4409.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKnobreakbetweenpuncts with sig. '' on line 4411.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKenablefallback with sig. '' on line 4413.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKdisablefallback with sig. '' on line 4415.
-.................................................
-.................................................
-. LaTeX info: "xparse/define-command"
-. 
-. Defining command \xeCJKsetcharclass with sig. 'mmm' on line 4420.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \nobreakspace with sig. '' on line 4566.
-.................................................
-.................................................
-. LaTeX info: "xparse/redefine-command"
-. 
-. Redefining command \fontfamily with sig. 'm' on line 4606.
-.................................................
-
-(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
-File: xeCJK.cfg 2018/02/27 v3.6.1 Configuration file for xeCJK package
-))
-(/usr/share/texlive/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
-Package: xeCJKfntef 2018/02/27 v3.6.1 xeCJK font effect
-
-(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box46
-\UL@hyphenbox=\box47
+ (c:/texlive/2018/texmf-dist/tex/xelatex/xecjk/xeCJK.cfg
+File: xeCJK.cfg 2018/04/07 v3.7.0 Configuration file for xeCJK package
+)) (c:/texlive/2018/texmf-dist/tex/xelatex/xecjk/xeCJKfntef.sty
+Package: xeCJKfntef 2018/04/07 v3.7.0 xeCJK font effect
+ (c:/texlive/2018/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box43
+\UL@hyphenbox=\box44
 \UL@skip=\skip56
-\UL@hook=\toks17
-\UL@height=\dimen169
+\UL@hook=\toks14
+\UL@height=\dimen167
 \UL@pe=\count194
-\UL@pixel=\dimen170
-\ULC@box=\box48
+\UL@pixel=\dimen168
+\ULC@box=\box45
 Package: ulem 2012/05/18
-\ULdepth=\dimen171
-)
-(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
+\ULdepth=\dimen169
+) (c:/texlive/2018/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks18
-)
-(/usr/share/texmf/tex/latex/CJK/CJKfntef.sty
+\@envbody=\toks15
+) (c:/texlive/2018/texmf-dist/tex/latex/cjk/texinput/CJKfntef.sty
 Package: CJKfntef 2015/04/18 4.8.4
 \CJK@fntefSkip=\skip57
 \CJK@nest=\count195
-\CJK@fntefDimen=\dimen172
-\CJK@underdotBox=\box49
-\CJK@ULbox=\box50
-\CJK@underanyskip=\dimen173
+\CJK@fntefDimen=\dimen170
+\CJK@underdotBox=\box46
+\CJK@ULbox=\box47
+\CJK@underanyskip=\dimen171
 )
 \l__xeCJK_space_skip=\skip58
-\c__xeCJK_ulem-begin_node_dim=\dimen174
-\c__xeCJK_null_box=\box51
+\c__xeCJK_ulem-begin_node_dim=\dimen172
+\c__xeCJK_null_box=\box48
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1000,7 +780,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 . 
 . Redefining command \CJKunderanyline with sig. 'st-somm' on line 766.
 .................................................
-\l__xeCJK_fntef_box=\box52
+\l__xeCJK_fntef_box=\box49
 .................................................
 . LaTeX info: "xparse/redefine-command"
 . 
@@ -1011,7 +791,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 . 
 . Redefining command \CJKunderdot with sig. 'om' on line 949.
 .................................................
-\l__xeCJK_under_symbol_box=\box53
+\l__xeCJK_under_symbol_box=\box50
 .................................................
 . LaTeX info: "xparse/redefine-environment"
 . 
@@ -1019,7 +799,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 .................................................
 \c__xeCJK_filll_skip=\skip59
 )
-\ccwd=\dimen175
+\ccwd=\dimen173
 \l__ctex_ccglue_skip=\skip60
 )
 .................................................
@@ -1047,7 +827,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 . 
 . Defining command \ziju with sig. 'm' on line 490.
 .................................................
-\l__ctex_ziju_dim=\dimen176
+\l__ctex_ziju_dim=\dimen174
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1058,8 +838,7 @@ Package: CJKfntef 2015/04/18 4.8.4
 . 
 . Defining command \CTEXnoindent with sig. '' on line 537.
 .................................................
-
-(/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/zhnumber/zhnumber.sty
 Package: zhnumber 2018/01/28 v2.6 Typesetting numbers with Chinese glyphs
 .................................................
 . LaTeX info: "xparse/define-command"
@@ -1118,8 +897,7 @@ Package: zhnumber 2018/01/28 v2.6 Typesetting numbers with Chinese glyphs
 . 
 . Defining command \zhnumsetup with sig. '+m' on line 934.
 .................................................
-
-(/usr/share/texlive/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
+ (c:/texlive/2018/texmf-dist/tex/latex/zhnumber/zhnumber-utf8.cfg
 File: zhnumber-utf8.cfg 2018/01/28 v2.6 Chinese numerals with UTF8 encoding
 ))
 .................................................
@@ -1149,12 +927,9 @@ File: zhnumber-utf8.cfg 2018/01/28 v2.6 Chinese numerals with UTF8 encoding
 . 
 . Redefining command \refstepcounter with sig. 'm' on line 1201.
 .................................................
-
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-articl
-e.def
-File: ctex-scheme-chinese-article.def 2018/01/28 v2.4.12 Chinese scheme for art
-icle (CTEX)
- (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
+ (c:/texlive/2018/texmf-dist/tex/latex/ctex/scheme/ctex-scheme-chinese-article.def
+File: ctex-scheme-chinese-article.def 2018/01/28 v2.4.12 Chinese scheme for article (CTEX)
+ (c:/texlive/2018/texmf-dist/tex/latex/ctex/config/ctex-name-utf8.cfg
 File: ctex-name-utf8.cfg 2018/01/28 v2.4.12 Caption with encoding UTF8 (CTEX)
 ))
 .................................................
@@ -1162,7 +937,7 @@ File: ctex-name-utf8.cfg 2018/01/28 v2.4.12 Caption with encoding UTF8 (CTEX)
 . 
 . Defining command \zihao with sig. 'm' on line 1204.
 .................................................
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/ctex-c5size.clo
+ (c:/texlive/2018/texmf-dist/tex/latex/ctex/ctex-c5size.clo
 File: ctex-c5size.clo 2018/01/28 v2.4.12 c5size option (CTEX)
 )
 .................................................
@@ -1170,55 +945,77 @@ File: ctex-c5size.clo 2018/01/28 v2.4.12 c5size option (CTEX)
 . 
 . Defining command \CTeX with sig. '' on line 1308.
 .................................................
-
-(/usr/share/texlive/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-fandol.def
-File: ctex-fontset-fandol.def 2018/01/28 v2.4.12 Fandol fonts definition (CTEX)
-
-
-*************************************************
-* fontspec warning: "script-not-exist"
-* 
-* Font 'FandolSong-Regular' does not contain script 'CJK'.
-*************************************************
-\g__fontspec_family_FandolSong-Regular_int=\count197
+ (c:/texlive/2018/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windows.def
+File: ctex-fontset-windows.def 2018/01/28 v2.4.12 Windows fonts definition (CTEX)
+ (c:/texlive/2018/texmf-dist/tex/latex/ctex/fontset/ctex-fontset-windowsnew.def
+File: ctex-fontset-windowsnew.def 2018/01/28 v2.4.12 Windows fonts definition for Vista or later version (CTEX)
+\g__fontspec_family_SimSun_int=\count197
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "KaiTi/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "SimHei/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "SimSun/BI" (it probably doesn't exist).
+.................................................
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'FandolSong-Regular(0)' created for font 'FandolSong-Regular'
-. with options
-. [Script={CJK},Extension={.otf},BoldFont={FandolSong-Bold},ItalicFont={FandolK
-ai-Regular}].
+. Font family 'SimSun(0)' created for font 'SimSun' with options
+. [Script={CJK},BoldFont={SimHei},ItalicFont={KaiTi}].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
-. - 'normal' (m/n) with NFSS spec.: <->"[FandolSong-Regular.otf]/OT"
+. - 'normal' (m/n) with NFSS spec.: <->"SimSun/OT:script=hani;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
-. - 'bold' (bx/n) with NFSS spec.: <->"[FandolSong-Bold.otf]/OT"
+. - 'bold' (bx/n) with NFSS spec.: <->"SimHei/OT:script=hani;language=DFLT;"
 . - 'bold small caps'  (bx/sc) with NFSS spec.: 
-. - 'italic' (m/it) with NFSS spec.: <->"[FandolKai-Regular.otf]/OT"
+. - 'italic' (m/it) with NFSS spec.: <->"KaiTi/OT:script=hani;language=DFLT;"
 . - 'italic small caps'  (m/itsc) with NFSS spec.: 
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \songti with sig. '' on line 114.
+. Defining command \songti with sig. '' on line 111.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \heiti with sig. '' on line 115.
+. Defining command \heiti with sig. '' on line 112.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \fangsong with sig. '' on line 116.
+. Defining command \fangsong with sig. '' on line 113.
 .................................................
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \kaishu with sig. '' on line 117.
+. Defining command \kaishu with sig. '' on line 114.
 .................................................
-)) (/usr/share/texlive/texmf-dist/tex/latex/ctex/config/ctex.cfg
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \lishu with sig. '' on line 115.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \youyuan with sig. '' on line 116.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \yahei with sig. '' on line 117.
+.................................................
+))) (c:/texlive/2018/texmf-dist/tex/latex/ctex/config/ctex.cfg
 File: ctex.cfg 2018/01/28 v2.4.12 Configuration file (CTEX)
 )
 *************************************************
@@ -1227,35 +1024,33 @@ File: ctex.cfg 2018/01/28 v2.4.12 Configuration file (CTEX)
 * Command \CTEXoptions is deprecated.
 * \ctexset { today=old } is set.
 *************************************************
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2010/09/12 v5.6 Page Geometry
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(c:/texlive/2018/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/03/24 v5.7 Page Geometry
+ (c:/texlive/2018/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+) (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+) (c:/texlive/2018/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count198
 \Gm@cntv=\count199
 \c@Gm@tempcnt=\count266
-\Gm@bindingoffset=\dimen177
-\Gm@wd@mp=\dimen178
-\Gm@odd@mp=\dimen179
-\Gm@even@mp=\dimen180
-\Gm@layoutwidth=\dimen181
-\Gm@layoutheight=\dimen182
-\Gm@layouthoffset=\dimen183
-\Gm@layoutvoffset=\dimen184
-\Gm@dimlist=\toks19
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
-s
+\Gm@bindingoffset=\dimen175
+\Gm@wd@mp=\dimen176
+\Gm@odd@mp=\dimen177
+\Gm@even@mp=\dimen178
+\Gm@layoutwidth=\dimen179
+\Gm@layoutheight=\dimen180
+\Gm@layouthoffset=\dimen181
+\Gm@layoutvoffset=\dimen182
+\Gm@dimlist=\toks17
+) (c:/texlive/2018/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footers
 \f@nch@headwidth=\skip62
 \f@nch@O@elh=\skip63
 \f@nch@O@erh=\skip64
@@ -1272,25 +1067,19 @@ s
 * Command \CTEXsetup is deprecated.
 * \ctexset { section = { format={\Large \bfseries } } } is set.
 *************************************************
-(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
+(c:/texlive/2018/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+ (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+) (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+ (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+) (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+ (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -1298,35 +1087,25 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
-Package: fvextra 2017/07/08 v1.3.1 fvextra - extensions and patches for fancyvr
-b
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+))) (c:/texlive/2018/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2017/07/08 v1.3.1 fvextra - extensions and patches for fancyvrb
+ (c:/texlive/2018/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count267
-)
-(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
-
-Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
-<2008/02/07> (tvz)
+ Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix <2008/02/07> (tvz)
 \FV@CodeLineNo=\count268
 \FV@InFile=\read2
-\FV@TabBox=\box54
+\FV@TabBox=\box51
 \c@FancyVerbLine=\count269
 \FV@StepNumber=\count270
 \FV@OutFile=\write3
-)
-(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
-tim
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+ (c:/texlive/2018/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2017/04/05 v2.0i Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -1340,8 +1119,7 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.def
+ (c:/texlive/2018/texmf-dist/tex/latex/base/ts1enc.def
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 )
@@ -1370,7 +1148,6 @@ Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
 Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
 Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
 Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
-
 Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
 Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
 Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
@@ -1408,140 +1185,118 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
+)) (c:/texlive/2018/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 Invalid UTF-8 byte or sequence at line 296 replaced by U+FFFD.
 \linenopenalty=\count271
-\output=\toks20
+\output=\toks18
 \linenoprevgraf=\count272
-\linenumbersep=\dimen185
-\linenumberwidth=\dimen186
+\linenumbersep=\dimen183
+\linenumberwidth=\dimen184
 \c@linenumber=\count273
 \c@pagewiselinenumber=\count274
 \c@LN@truepage=\count275
 \c@internallinenumber=\count276
 \c@internallinenumbers=\count277
-\quotelinenumbersep=\dimen187
-\bframerule=\dimen188
-\bframesep=\dimen189
-\bframebox=\box55
+\quotelinenumbersep=\dimen185
+\bframerule=\dimen186
+\bframesep=\dimen187
+\bframebox=\box52
 LaTeX Info: Redefining \\ on input line 3056.
 )
 \c@FV@TrueTabGroupLevel=\count278
 \c@FV@TrueTabCounter=\count279
-\FV@TabBox@Group=\box56
+\FV@TabBox@Group=\box53
 \FV@TmpLength=\skip71
 \c@FV@HighlightLinesStart=\count280
 \c@FV@HighlightLinesStop=\count281
 \FV@LoopCount=\count282
-\FV@NCharsBox=\box57
-\FV@BreakIndent=\dimen190
+\FV@NCharsBox=\box54
+\FV@BreakIndent=\dimen188
 \FV@BreakIndentNChars=\count283
-\FV@BreakSymbolSepLeft=\dimen191
+\FV@BreakSymbolSepLeft=\dimen189
 \FV@BreakSymbolSepLeftNChars=\count284
-\FV@BreakSymbolSepRight=\dimen192
+\FV@BreakSymbolSepRight=\dimen190
 \FV@BreakSymbolSepRightNChars=\count285
-\FV@BreakSymbolIndentLeft=\dimen193
+\FV@BreakSymbolIndentLeft=\dimen191
 \FV@BreakSymbolIndentLeftNChars=\count286
-\FV@BreakSymbolIndentRight=\dimen194
+\FV@BreakSymbolIndentRight=\dimen192
 \FV@BreakSymbolIndentRightNChars=\count287
 \c@FancyVerbLineBreakLast=\count288
-\FV@LineBox=\box58
-\FV@LineIndentBox=\box59
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\FV@LineBox=\box55
+\FV@LineIndentBox=\box56
+) (c:/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count289
 \calc@Bcount=\count290
-\calc@Adimen=\dimen195
-\calc@Bdimen=\dimen196
+\calc@Adimen=\dimen193
+\calc@Bdimen=\dimen194
 \calc@Askip=\skip72
 \calc@Bskip=\skip73
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count291
 \calc@Cskip=\skip74
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 67.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
-)
+ (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/catchfile.sty
+) (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/catchfile.sty
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
-)
-runsystem(uname -s > "template.w18")...executed.
-
-
-(./template.w18)
-runsystem(rm -- "template.w18")...executed.
-
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+)) (c:/texlive/2018/texmf-dist/tex/generic/xstring/xstring.sty (c:/texlive/2018/texmf-dist/tex/generic/xstring/xstring.tex
 \@xs@message=\write4
 \integerpart=\count292
 \decimalpart=\count293
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip75
-\fb@frw=\dimen197
-\fb@frh=\dimen198
-\FrameRule=\dimen199
-\FrameSep=\dimen256
-)
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+\fb@frw=\dimen195
+\fb@frh=\dimen196
+\FrameRule=\dimen197
+\FrameSep=\dimen198
+) (c:/texlive/2018/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count294
-\float@exts=\toks21
-\float@box=\box60
-\@float@everytoks=\toks22
-\@floatcapt=\box61
+\float@exts=\toks19
+\float@box=\box57
+\@float@everytoks=\toks20
+\@floatcapt=\box58
 )
 \minted@appexistsfile=\read3
-\minted@bgbox=\box62
+\minted@bgbox=\box59
 \minted@code=\write5
 \c@minted@FancyVerbLineTemp=\count295
 \c@minted@pygmentizecounter=\count296
-\@float@every@listing=\toks23
+\@float@every@listing=\toks21
 \c@listing=\count297
 )
-runsystem(mkdir -p _minted-template)...executed.
+runsystem(if not exist _minted-template mkdir _minted-template)...executed.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip76
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(c:/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks24
-\ex@=\dimen257
-))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+\@emptytoks=\toks22
+\ex@=\dimen199
+)) (c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen258
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+\pmbraise@=\dimen256
+) (c:/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count298
@@ -1554,9 +1309,9 @@ LaTeX Info: Redefining \overline on input line 375.
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box63
-\strutbox@=\box64
-\big@size=\dimen259
+\Mathstrutbox@=\box60
+\strutbox@=\box61
+\big@size=\dimen257
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count303
@@ -1564,40 +1319,52 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \dotsspace@=\muskip17
 \c@parentequation=\count305
 \dspbrk@lvl=\count306
-\tag@help=\toks25
+\tag@help=\toks23
 \row@=\count307
 \column@=\count308
 \maxfields@=\count309
-\andhelp@=\toks26
-\eqnshift@=\dimen260
-\alignsep@=\dimen261
-\tagshift@=\dimen262
-\tagwidth@=\dimen263
-\totwidth@=\dimen264
-\lineht@=\dimen265
-\@envbody=\toks27
+\andhelp@=\toks24
+\eqnshift@=\dimen258
+\alignsep@=\dimen259
+\tagshift@=\dimen260
+\tagwidth@=\dimen261
+\totwidth@=\dimen262
+\lineht@=\dimen263
+\@envbody=\toks25
 \multlinegap=\skip77
 \multlinetaggap=\skip78
-\mathdisplay@stack=\toks28
+\mathdisplay@stack=\toks26
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 2017/06/25 v1.7b (e)psfig emulation (SPQR)
+ (c:/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 99.
+ (c:/texlive/2018/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2017/06/24 v5.0h Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen264
+\Gin@req@width=\dimen265
+)
 \epsfxsize=\dimen266
 \epsfysize=\dimen267
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+)) (c:/texlive/2018/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip79
 \subfigcapskip=\skip80
@@ -1613,29 +1380,23 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(c:/texlive/2018/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip83
 \subfig@bottom=\skip84
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
 \symboldletters=\mathgroup7
 \symboldsymbols=\mathgroup8
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 207.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+ (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
-
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+ (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -1649,8 +1410,7 @@ Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
-)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -1662,25 +1422,21 @@ Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen270
 \Hy@linkcounter=\count314
 \Hy@pagecounter=\count315
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (c:/texlive/2018/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count316
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+ (c:/texlive/2018/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Option `unicode' set `true' on input line 4383.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+ (c:/texlive/2018/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 4383.
@@ -1692,8 +1448,7 @@ Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4762.
 \c@Hy@tempcnt=\count317
-
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -1716,35 +1471,24 @@ LaTeX Info: Redefining \pageref on input line 6443.
 \c@Hfootnote=\count321
 )
 Package hyperref Info: Driver (autodetected): hxetex.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
+ (c:/texlive/2018/texmf-dist/tex/latex/hyperref/hxetex.def
 File: hxetex.def 2018/02/06 v6.86b Hyperref driver for XeTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
-Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
+ (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/stringenc.sty
+Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO)
 )
-)
-\pdfm@box=\box65
+\pdfm@box=\box62
 \c@Hy@AnnotLevel=\count322
 \HyField@AnnotCount=\count323
 \Fld@listcount=\count324
 \c@bookmark@seq@number=\count325
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+ (c:/texlive/2018/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
-(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
-
-(rerunfilecheck)             Therefore file contents cannot be checked efficien
-tly
-(rerunfilecheck)             and the loading of the package is aborted.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip85
-)
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+) (c:/texlive/2018/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (c:/texlive/2018/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: xetex.def on input line 225.
@@ -1757,12 +1501,11 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-runsystem(which pygmentize && touch template.aex)...executed.
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > template.aex <nul: /p x=^%~$PATH:i>> template.aex)...executed.
 
-runsystem(rm template.aex)...executed.
+runsystem(del template.aex)...executed.
 
-
-(./template.aux)
+ (./template.aux)
 \openout1 = `template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -1781,18 +1524,11 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T3/cmr/m/n on input line 45.
-LaTeX Font Info:    Try loading font information for T3+cmr on input line 45.
- (/usr/share/texmf/tex/latex/tipa/t3cmr.fd
-File: t3cmr.fd 2001/12/31 TIPA font definitions
-)
-LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
-
-ABD: EverySelectfont initializing macros
+ ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 45.
 .................................................
 . fontspec info: "setup-math"
@@ -1886,12 +1622,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box66
+\AtBeginShipoutBox=\box63
 Package hyperref Info: Link coloring ON on input line 45.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+(c:/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+ (c:/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count326
@@ -1899,19 +1634,16 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 45.
 LaTeX Info: Redefining \pageref on input line 45.
 LaTeX Info: Redefining \nameref on input line 45.
-
-(./template.out) (./template.out)
+ (./template.out) (./template.out)
 \@outlinefile=\write6
 \openout6 = `template.out'.
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 47.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 47.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
@@ -1961,32 +1693,41 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7] (./_minted-template/default-pyg-prefix.pygstyle)
-(./_minted-template/default.pygstyle)
-(./_minted-template/B96695E76A15D27793CA377A4288FB5E.pygtex
-*************************************************
-* fontspec warning: "script-not-exist"
-* 
-* Font 'FandolFang-Regular' does not contain script 'CJK'.
-*************************************************
-\g__fontspec_family_FandolFang-Regular_int=\count327
+[7] (./_minted-template/default-pyg-prefix.pygstyle) (./_minted-template/default.pygstyle) (./_minted-template/B96695E76A15D27793CA377A4288FB5E.pygtex
+\g__fontspec_family_FangSong_int=\count327
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "FangSong/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "FangSong/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "FangSong/I" (it probably doesn't exist).
+.................................................
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'FandolFang-Regular(0)' created for font 'FandolFang-Regular'
-. with options [Script={CJK},Extension={.otf}].
+. Font family 'FangSong(0)' created for font 'FangSong' with options
+. [Script={CJK}].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
-. - 'normal' (m/n) with NFSS spec.: <->"[FandolFang-Regular.otf]/OT"
+. - 'normal' (m/n) with NFSS spec.:
+. <->"FangSong/OT:script=hani;language=DFLT;"
 . - 'small caps'  (m/sc) with NFSS spec.: 
 .................................................
 LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.53937> not available
 (Font)              Font shape `TU/lmtt/b/n' tried instead on input line 2.
 
-LaTeX Font Warning: Font shape `TU/FandolFang-Regular(0)/m/it' undefined
-(Font)              using `TU/FandolFang-Regular(0)/m/n' instead on input line 
-2.
+
+LaTeX Font Warning: Font shape `TU/FangSong(0)/m/it' undefined
+(Font)              using `TU/FangSong(0)/m/n' instead on input line 2.
 
 ) (./_minted-template/1D5EB20795DE132207E089899F32E4E9.pygtex
 
@@ -2036,8 +1777,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]) (./_minted-template/53695102D7FACF419C3C67B4A73130F9.pygtex)
-(./_minted-template/E0889ACA38B0023E66122A10B86EA6B8.pygtex
+[13]) (./_minted-template/53695102D7FACF419C3C67B4A73130F9.pygtex) (./_minted-template/E0889ACA38B0023E66122A10B86EA6B8.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2217,7 +1957,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [33] (./_minted-template/15D4832EDF696BC44211278A912A0996.pygtex
-Underfull \vbox (badness 4193) has occurred while \output is active []
+Underfull \vbox (badness 3428) has occurred while \output is active []
 
 
 
@@ -2271,8 +2011,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[40]) (./_minted-template/A8B5FB00A0B045C36AA5518A7E71E2BB.pygtex)
-(./_minted-template/2E1ECD2D049329124E58376A705EB8A2.pygtex
+[40]) (./_minted-template/A8B5FB00A0B045C36AA5518A7E71E2BB.pygtex) (./_minted-template/2E1ECD2D049329124E58376A705EB8A2.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2281,8 +2020,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [41]
 Overfull \hbox (81.28561pt too wide) in paragraph at lines 43--43
-\TU/lmtt/m/it/10.53937 num=%d+%d-%d=%d\n",i,bit,cnt[ch[u][bit^1]],cnt[ch[v][bit
-^1]],2*cnt[ch[lca][bit^1]],num);[]|  
+\TU/lmtt/m/it/10.53937 num=%d+%d-%d=%d\n",i,bit,cnt[ch[u][bit^1]],cnt[ch[v][bit^1]],2*cnt[ch[lca][bit^1]],num);[]|  
  []
 
 
@@ -2377,9 +2115,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[52] (./_minted-template/CFAC8979CBC49931271C3F2516910949.pygtex)
-(./_minted-template/E4B875A91009402A97A00679B493C3C9.pygtex)
-(./_minted-template/FAD7CB192BFD76B1BEB647A9BF3F9C7D.pygtex
+[52] (./_minted-template/CFAC8979CBC49931271C3F2516910949.pygtex) (./_minted-template/E4B875A91009402A97A00679B493C3C9.pygtex) (./_minted-template/FAD7CB192BFD76B1BEB647A9BF3F9C7D.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2396,9 +2132,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[54]) (./_minted-template/8858A56705E1C48DEB2A5C7B4DD73C3E.pygtex)
-(./_minted-template/B3CB0325707BD33C312197AE1F92861E.pygtex)
-(./_minted-template/70D05FD025E0F0B42858FE327170B2E6.pygtex
+[54]) (./_minted-template/8858A56705E1C48DEB2A5C7B4DD73C3E.pygtex) (./_minted-template/B3CB0325707BD33C312197AE1F92861E.pygtex) (./_minted-template/70D05FD025E0F0B42858FE327170B2E6.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2422,8 +2156,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[57]) (./_minted-template/5DA7019773E0E3821E2E7704DEB4DC55.pygtex)
-(./_minted-template/4C15C705C617D0C481F88910138865E7.pygtex
+[57]) (./_minted-template/5DA7019773E0E3821E2E7704DEB4DC55.pygtex) (./_minted-template/4C15C705C617D0C481F88910138865E7.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2451,8 +2184,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[61]) (./_minted-template/05649C509CD68E2D02ED2A3DA5301151.pygtex)
-(./_minted-template/9835639930F2217138331D24B176CCE7.pygtex
+[61]) (./_minted-template/05649C509CD68E2D02ED2A3DA5301151.pygtex) (./_minted-template/9835639930F2217138331D24B176CCE7.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2469,8 +2201,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[63]) (./_minted-template/824A8DD5336E697F7C23629AD898C886.pygtex)
-(./_minted-template/798D7B31C3D93FEA6B4E84B2A7128DE5.pygtex
+[63]) (./_minted-template/824A8DD5336E697F7C23629AD898C886.pygtex) (./_minted-template/798D7B31C3D93FEA6B4E84B2A7128DE5.pygtex
 Underfull \vbox (badness 5217) has occurred while \output is active []
 
 
@@ -2521,8 +2252,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[69]) (./_minted-template/348C166985E732A46A25623047AA6446.pygtex)
-(./_minted-template/AFCF0A86476D83DD382000D9F78324E6.pygtex
+[69]) (./_minted-template/348C166985E732A46A25623047AA6446.pygtex) (./_minted-template/AFCF0A86476D83DD382000D9F78324E6.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2546,8 +2276,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[72]) (./_minted-template/E9EBDD21006073A573BFD84392C36D99.pygtex)
-(./_minted-template/F082A7D66F20D27BFF4C7E064E378EE7.pygtex
+[72]) (./_minted-template/E9EBDD21006073A573BFD84392C36D99.pygtex) (./_minted-template/F082A7D66F20D27BFF4C7E064E378EE7.pygtex
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 12.64723pt.
@@ -2605,8 +2334,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[79]) (./_minted-template/78B0988025063096547C595C53EC3AF0.pygtex)
-(./_minted-template/F133B4696580BB1D86693059AD22410F.pygtex
+[79]) (./_minted-template/78B0988025063096547C595C53EC3AF0.pygtex) (./_minted-template/F133B4696580BB1D86693059AD22410F.pygtex
 Underfull \vbox (badness 3942) has occurred while \output is active []
 
 
@@ -2630,8 +2358,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[82] (./_minted-template/C7A8C71562F789E47A3C94DA06EB5CEC.pygtex)
-(./_minted-template/CBBD00C42ECAAC03D9CA19BE1828230F.pygtex
+[82] (./_minted-template/C7A8C71562F789E47A3C94DA06EB5CEC.pygtex) (./_minted-template/CBBD00C42ECAAC03D9CA19BE1828230F.pygtex
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -2656,7 +2383,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [85] (./_minted-template/657418B150060A7433A2A1A6D9CE1DB0.pygtex
-Underfull \vbox (badness 4181) has occurred while \output is active []
+Underfull \vbox (badness 3333) has occurred while \output is active []
 
 
 
@@ -2667,16 +2394,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [86]) (./_minted-template/51E0F764030BE19C22B1C4C80F34363E.pygtex
 Overfull \hbox (14.88765pt too wide) in paragraph at lines 20--20
-| | | |[][][]\TU/lmtt/m/n/10.53937 temp[].[][]x[][]=[]a[].[][]x[][].[][]add[][]
-(([]c1[].[][]multiply[][]([]b2[]).[][]subtract[][]([]c2[].[][]multiply[][]([]b1
-[]))).[][]divide[][]([]dd[],[][]20[][],[][]0[][]));[]|  
+| | | |[][][]\TU/lmtt/m/n/10.53937 temp[].[][]x[][]=[]a[].[][]x[][].[][]add[][](([]c1[].[][]multiply[][]([]b2[]).[][]subtract[][]([]c2[].[][]multiply[][]([]b1[]))).[][]divide[][]([]dd[],[][]20[][],[][]0[][]));[]|  
  []
 
 
 Overfull \hbox (14.88765pt too wide) in paragraph at lines 21--21
-| | | |[][][]\TU/lmtt/m/n/10.53937 temp[].[][]y[][]=[]a[].[][]y[][].[][]add[][]
-(([]a1[].[][]multiply[][]([]c2[]).[][]subtract[][]([]a2[].[][]multiply[][]([]c1
-[]))).[][]divide[][]([]dd[],[][]20[][],[][]0[][]));[]|  
+| | | |[][][]\TU/lmtt/m/n/10.53937 temp[].[][]y[][]=[]a[].[][]y[][].[][]add[][](([]a1[].[][]multiply[][]([]c2[]).[][]subtract[][]([]a2[].[][]multiply[][]([]c1[]))).[][]divide[][]([]dd[],[][]20[][],[][]0[][]));[]|  
  []
 
 
@@ -2687,18 +2410,12 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [87]
 Overfull \hbox (274.9467pt too wide) in paragraph at lines 39--39
-\TU/lmtt/m/n/10.53937 r[]=(([]temp[].[][]x[][].[][]subtract[][]([]a[].[][]x[][]
-)).[][]multiply[][]([]temp[].[][]x[][].[][]subtract[][]([]a[].[][]x[][]))).[][]
-add[][]((([]temp[].[][]y[][].[][]subtract[][]([]a[].[][]y[][])).[][]multiply[][
-]([]temp[].[][]y[][].[][]subtract[][]([]a[].[][]y[][]))));[]|  
+\TU/lmtt/m/n/10.53937 r[]=(([]temp[].[][]x[][].[][]subtract[][]([]a[].[][]x[][])).[][]multiply[][]([]temp[].[][]x[][].[][]subtract[][]([]a[].[][]x[][]))).[][]add[][]((([]temp[].[][]y[][].[][]subtract[][]([]a[].[][]y[][])).[][]multiply[][]([]temp[].[][]y[][].[][]subtract[][]([]a[].[][]y[][]))));[]|  
  []
 
 
 Overfull \hbox (286.01303pt too wide) in paragraph at lines 40--40
-\TU/lmtt/m/n/10.53937 dis[]=(([]temp[].[][]x[][].[][]subtract[][]([]d[].[][]x[]
-[])).[][]multiply[][]([]temp[].[][]x[][].[][]subtract[][]([]d[].[][]x[][]))).[]
-[]add[][]((([]temp[].[][]y[][].[][]subtract[][]([]d[].[][]y[][])).[][]multiply[
-][]([]temp[].[][]y[][].[][]subtract[][]([]d[].[][]y[][]))));[]|  
+\TU/lmtt/m/n/10.53937 dis[]=(([]temp[].[][]x[][].[][]subtract[][]([]d[].[][]x[][])).[][]multiply[][]([]temp[].[][]x[][].[][]subtract[][]([]d[].[][]x[][]))).[][]add[][]((([]temp[].[][]y[][].[][]subtract[][]([]d[].[][]y[][])).[][]multiply[][]([]temp[].[][]y[][].[][]subtract[][]([]d[].[][]y[][]))));[]|  
  []
 
 )
@@ -2714,19 +2431,21 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (./template.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 300.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
+Package rerunfilecheck Info: File `template.out' has not changed.
+(rerunfilecheck)             Checksum: A3C2A4FC4B3C7913EF636C477185670B.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32353 strings out of 493007
- 645220 string characters out of 6136719
- 733249 words of memory out of 5000000
- 35754 multiletter control sequences out of 15000+600000
- 546417 words of font info for 109 fonts, out of 8000000 for 9000
+ 27708 strings out of 492970
+ 570382 string characters out of 6137297
+ 686934 words of memory out of 5000000
+ 31154 multiletter control sequences out of 15000+600000
+ 546425 words of font info for 110 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 57i,12n,74p,10470b,585s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,12n,68p,10476b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on template.pdf (88 pages).
